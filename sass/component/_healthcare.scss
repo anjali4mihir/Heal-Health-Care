@@ -1,0 +1,50 @@
+.healthcare-section {
+    background-color: #f2f2f2;
+    padding: 4rem 0;
+    margin-top: 4rem;
+
+    .container {
+        display: flex;
+        align-items: center;
+    }
+
+    .healthcare-left {
+        width: 30%;
+
+        h2 { 
+            color: $interface-black;
+            @extend %o-header--h3;
+            padding-bottom: 3rem;
+        }       
+        p {
+            color: #004e47;
+            @extend %o-paragraph-large;
+            font-weight: weight(bold);
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            max-width: 35rem;
+
+            span {
+                padding-top: 1.5rem;
+                width: 100%;
+            }
+        }
+
+        .download-option {
+            margin-top: 5rem;
+        }
+        .app-icons {
+            padding-top: 2rem;
+        }
+    }
+    .healthcare-right {
+        width: 70%;
+        padding-left: 7rem;
+
+        img {
+            width: 100%;
+            border-radius: 2.5rem;
+        }
+    }
+}

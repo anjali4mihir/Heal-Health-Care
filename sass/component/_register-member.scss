@@ -1,0 +1,52 @@
+.register-member-section {
+    background-image: url(../images/register-bg-img.png);
+    padding: 8rem 1.5rem 4rem 1.5rem;
+    background-size: cover;
+    background-repeat: repeat;
+
+    .container {
+        position: relative;
+    }
+
+    h1 {
+        @extend %o-header--h1;
+        color: $interface-red;
+        padding-bottom: 2rem;
+    }
+    p {
+        @extend %o-header--h2;
+        text-transform: capitalize;
+        color: $interface-black;
+    }
+    .member-block-img {
+        padding-top: 6rem;
+            
+        img {
+            width: 70%;
+        }
+    }
+}
+.member-btm-section {
+    position: absolute;
+    bottom: -4.8rem;
+    right: 15rem;
+    text-align: right;
+
+    img {
+        width: 78%;
+    }
+}
+.sign-up-button {
+    display: flex;
+    align-items: center;
+    width: 69%;
+    margin-top: 4.2rem;
+
+    .o-button {
+        border-radius: 1rem;
+        margin: auto;
+        display: inline-flex;
+        align-items: center;
+        text-align: center;
+    }
+}

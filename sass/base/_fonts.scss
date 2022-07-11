@@ -1,0 +1,102 @@
+$asset-path: "tdgcorp/assets";
+$font-directory: "../fonts";
+$font-size-zero: 0;
+$font-size-base: 62.5%;
+
+
+
+
+$font-family: (
+  primary: #{"'Montserrat', sans-serif;"}
+
+);
+
+$font-weight: (
+  thin: 100,
+  light: 300,
+  regular: 400,
+  CC: 500,
+  semibold: 600,
+  bold: 700,
+  extrabold: 900,
+);
+
+$font-size: (
+  title: (
+    h1: 5rem,
+    h1-tablet: 2rem,
+    h2: 4rem,
+    h2-tablet: 1.8rem,
+    h3: 2.4rem,
+    h3-tablet: 1.6rem,
+    h4: 2rem,
+    h4-tablet: 1.4rem,     
+  ),
+  paragraph: (
+    large: 1.6rem,
+    medium: 1.4rem,
+    small: 1.2rem,
+  )
+);
+
+$line-height: (
+  title: (
+    h1: 5.5rem,
+    h1-tablet: 2.4rem,
+    h2: 4.4rem,
+    h2-tablet: 2.2rem,
+    h3: 2.8rem,
+    h3-tablet: 2rem,
+    h4: 2.4rem,
+    h4-tablet: 1.8rem,     
+  ),
+  paragraph: (
+    large: 2rem,
+    medium: 1.8rem,
+    small: 1.6rem,
+  )
+);
+
+@mixin font($family: null, $type: null, $size: null, $weight: null) {
+  @if $family {
+    font-family: family($family);
+  }
+  @if $type and $size {
+    font-size: map-get(map-get($font-size, $type), $size);
+  }
+  @if $weight {
+    font-weight: weight($weight); /* stylelint-disable-line */
+  }
+}
+
+@function weight($key) {
+  @if map-has-key($font-weight, $key) {
+    @return map-get($font-weight, $key);
+  }
+  @warn 'Unknown `#{$key}` in $font-weight.';
+  @return null;
+}
+
+@function family($key) {
+  @if map-has-key($font-family, $key) {
+    @return map-get($font-family, $key);
+  }
+  @warn 'Unknown `#{$key}` in $font-family.';
+  @return null;
+}
+
+@function size($key, $value) {
+  @if map-has-key($font-size, $key) {
+    @return map-get(map-get($font-size, $key), $value);
+  }
+  @warn 'Unknown `#{$key}` in $font-size.';
+  @return null;
+}
+
+@function lineheight($key, $value) {
+  @if map-has-key($line-height, $key) {
+    @return map-get(map-get($line-height, $key), $value);
+  }
+  @warn 'Unknown `#{$key}` in $line-height.';
+  @return null;
+}

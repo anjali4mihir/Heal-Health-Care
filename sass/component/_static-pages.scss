@@ -1,0 +1,165 @@
+.consultant-section {
+    padding: 5rem 0;
+
+    h2 {
+        color: $interface-black;
+        text-align: center;
+        padding-bottom: 4rem;
+        @extend %o-header--h2;
+    }
+    p {
+        color: #004e47;
+        @extend %o-header--h2;
+        font-weight: weight(bold);
+        text-align: center;
+    }
+}
+.veterians-img {
+    width: 100%;
+    margin: 4rem 0;
+}
+.app-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.book-section {
+    padding: 4rem 0;
+    
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+
+            li {
+                color: $interface-black;
+                @extend %o-paragraph-large;
+                font-weight: weight(bold);
+                padding: 0 0.8rem;
+            }
+        }
+    }
+}
+.book-service {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+
+    .service-card {
+        width: 33.33%;
+        padding: 0 1.5rem;
+
+        img {
+            border: none;
+            border-radius: 3rem;
+            height: 25rem;
+        }
+        p {
+            background-color: rgba(0, 78, 71, 0.8);
+            width: 92%;
+            bottom: 4rem;
+            border-radius: 0 0 3rem 3rem;
+        }
+        h5 {
+            color: $interface-black;
+            @extend %o-paragraph-small;
+            margin-top: 1.7rem;
+        }
+    }
+}
+.book-btm {
+    margin-top: 7rem;
+    width: 100%;
+}
+.how-work {
+    margin-top: 7rem;
+
+    h2 {
+        color: $interface-black;
+        @extend %o-header--h2;
+        text-align: center;
+    }
+}
+.work-step {
+    background-color: #f2f2f2;
+    padding: 4rem 0;
+    margin-top: 3rem;
+
+    img {
+        width: 100%;
+    }
+}
+.step-text {
+    display: flex;
+
+    .step-block {
+        margin-top: 2rem;
+        padding-right: 5.3rem;
+
+        h4 {
+            color: $interface-black;
+            @extend %o-paragraph-large;
+        }
+
+        ul {
+            padding-top: 1rem;
+            li {
+                color: $interface-black;
+                @extend %o-paragraph-small;
+                margin: 0.3rem 0;
+                position: relative;
+                padding-left: 1rem;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: #004e47;
+                    width: 0.5rem;
+                    height: 0.5rem;
+                    border-radius: 100%;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+.health-concern-section {
+    &.health-feed-section {
+        .health-concern-card {
+            padding-right: 0;
+
+            .concern-card {
+                width: 18.3%;
+                box-shadow: none;
+
+                .concern-card-inner {
+                    box-shadow: 0px 0px 12px 1px rgb(0 0 0 / 30%);
+                    height: 20rem;
+                }
+                p {
+                    padding-top: 1rem;
+                }
+            }
+        }
+        
+    }
+}
+.testimonial-slider {
+    padding-top: 8rem;
+    padding-bottom: 20rem;
+
+    h2 {
+        color: $interface-black;
+        @extend %o-header--h2;
+        padding-bottom: 3.5rem;
+    }
+}
