@@ -97,7 +97,7 @@
 .service-card {
     position: relative;
 
-    img {
+    img, &.service-card-text {
         border: 1px solid $interface-red;
         border-radius: 2rem;
         width: 100%;
@@ -114,5 +114,29 @@
         width: 84%;
         padding: 1.5rem;
         border-radius: 0 0 2rem 2rem;
+    }
+
+    &.service-card-text {
+        ul {
+            padding: 1.5rem 1.5rem;
+
+            li {
+                color: $interface-black;
+                @extend %o-paragraph-large;
+                padding: 1rem 0 0 3rem;
+                position: relative;
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 1.8rem;
+                    height: 1.8rem;
+                    border: 0;
+                    position: absolute;
+                    left: 0;
+                }
+            }
+        }
+        
     }
 }
