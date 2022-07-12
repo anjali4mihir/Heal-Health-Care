@@ -1,0 +1,127 @@
+.contact-section {
+    padding-top: 8rem;
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .contact-section-left {
+        width: 50%;
+
+        img {
+            width: 40%;
+        }
+
+        p {
+            color: $interface-black;
+            padding-top: 2.5rem;
+            @extend %o-paragraph-large;
+        }
+
+        h5 {
+            @extend %o-paragraph-medium;
+            color: $brand-primary;
+            padding-top: 3rem;
+        }
+
+        a {
+            color: $interface-black;
+            @extend %o-paragraph-medium;
+            padding-top: 1.5rem;
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 2rem;
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    .contact-section-right {
+        h5 {
+            @extend %o-paragraph-medium;
+            color: $brand-primary;
+            text-transform: uppercase;
+            padding-bottom: 1.5rem;
+        }
+
+        a {
+            color: $interface-black;
+            @extend %o-paragraph-medium;
+            display: flex;
+            width: 100%;
+            padding: 0.3rem 0;
+        }
+
+        h5.work-hr {
+            padding-top: 6rem;
+        }
+
+        p {
+            @extend %o-paragraph-medium;
+            color: $interface-black;
+        }
+    }
+    .contact-form {
+        display: flex;
+        width: 100%;
+        background-color: $interface-grey;
+        margin-top: 4rem;
+        padding: 5rem 0 6rem 0;
+
+        h2 {
+            color: $brand-primary;
+            @extend %o-header--h2;
+            font-weight: weight(bold);
+            text-align: center;
+            margin: auto;
+            width: 100%;
+
+            span {
+                font-weight: weight(regular);
+                color: $interface-black;
+            }
+        }
+
+        .contact-form-btm {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-top: 2rem;
+            background-color: $interface-white;
+            padding: 4rem 2rem;
+            border-radius: 2rem;
+
+            .form-group {
+                width: 33.33%;
+                padding: 1.5rem;
+
+                input, textarea {
+                    width: 100%;
+                    border: 1px solid #dddddd;
+                    padding: 1.2rem 1.5rem;
+                    color: $interface-black;
+                    @extend %o-paragraph-medium;
+                } 
+                
+                &.text-area {
+                    width: 100%;
+                }
+            }
+
+            .submit-btn {
+                width: 100%;
+                margin-bottom: 1.5rem;
+
+                .o-button {
+                    border-radius: 1.2rem;
+                    text-transform: uppercase;
+                    display: flex;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
