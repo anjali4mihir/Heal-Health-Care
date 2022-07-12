@@ -1,0 +1,26 @@
+.doctor-detail {
+    &.nurse-detail {
+        h2 {
+            @extend %o-header--h2;
+        }
+    
+        img {
+            margin-top: -4rem;
+        }
+    }
+}
+.consultant-section {
+    &.nurse-consultant-section {
+        h2 {
+            color: $interface-black;
+            @extend %o-header--h2;
+            text-align: center;
+        }
+
+        img {            
+            width: 55%;
+            margin: auto;
+            display: flex;
+        }
+    }
+}
