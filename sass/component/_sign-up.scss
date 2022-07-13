@@ -1,0 +1,54 @@
+.registration-section {
+    padding: 7rem 0;
+    h2 {
+        color: $interface-black;
+        @extend %o-header--h1;
+        text-align: center;
+    }
+    h3 {
+        color: $brand-primary;
+        padding-top: 3rem;
+        text-align: center;
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+    .registratin-btn {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding-top: 3rem;
+    }
+}
+.register-video-section {
+    display: flex;
+    background-color: #f2f2f2;
+    padding: 5rem 0;
+
+    .register-video-section-left {
+        width: 50%;
+
+        .sign-title {
+            text-transform: uppercase;
+            color: $brand-primary;
+            @extend %o-header--h3;
+            font-weight: weight(bold);
+            text-align: center;
+            padding-bottom: 1.5rem;
+        }
+
+        .sign-services {
+            .service-card {
+                width: 30%;
+                padding: 0 1.5rem;
+
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .register-video-section-right {
+        width: 50%;
+    }
+}

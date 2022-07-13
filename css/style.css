@@ -1609,20 +1609,20 @@ ul {
   padding: 0;
 }
 
-.doctor-detail .container h2, .doctor-banner h1, .page-banner h1, .health-section h2, .register-member-section h1, .member-section .member-right p, .home-banner .banner-left h1,
+.registration-section h2, .doctor-detail .container h2, .doctor-banner h1, .page-banner h1, .health-section h2, .register-member-section h1, .member-section .member-right p, .home-banner .banner-left h1,
 .o-header--h1 {
   font-size: 5rem;
-  line-height: 5.5rem;
+  line-height: 6rem;
 }
 @media (max-width: 1359.98px) {
-  .doctor-detail .container h2, .doctor-banner h1, .page-banner h1, .health-section h2, .register-member-section h1, .member-section .member-right p, .home-banner .banner-left h1,
+  .registration-section h2, .doctor-detail .container h2, .doctor-banner h1, .page-banner h1, .health-section h2, .register-member-section h1, .member-section .member-right p, .home-banner .banner-left h1,
 .o-header--h1 {
     font-size: 2rem;
     line-height: 2.4rem;
   }
 }
 @media (max-width: 767.98px) {
-  .doctor-detail .container h2, .doctor-banner h1, .page-banner h1, .health-section h2, .register-member-section h1, .member-section .member-right p, .home-banner .banner-left h1,
+  .registration-section h2, .doctor-detail .container h2, .doctor-banner h1, .page-banner h1, .health-section h2, .register-member-section h1, .member-section .member-right p, .home-banner .banner-left h1,
 .o-header--h1 {
     font-size: 2rem;
   }
@@ -1640,13 +1640,13 @@ ul {
     line-height: 2.2rem;
   }
 }
-.offering-section h2, .healthcare-section .healthcare-left h2,
+.register-video-section .register-video-section-left .sign-title, .offering-section h2, .healthcare-section .healthcare-left h2,
 .o-header--h3 {
   font-size: 2.4rem;
   line-height: 2.8rem;
 }
 @media (max-width: 1359.98px) {
-  .offering-section h2, .healthcare-section .healthcare-left h2,
+  .register-video-section .register-video-section-left .sign-title, .offering-section h2, .healthcare-section .healthcare-left h2,
 .o-header--h3 {
     font-size: 1.6rem;
     line-height: 2rem;
@@ -3103,6 +3103,53 @@ footer .footer-link ul li a:hover::after {
   width: 75%;
   margin: auto;
   display: flex;
+}
+
+.registration-section {
+  padding: 7rem 0;
+}
+.registration-section h2 {
+  color: #000000;
+  text-align: center;
+}
+.registration-section h3 {
+  color: #004e47;
+  padding-top: 3rem;
+  text-align: center;
+  font-size: 3rem;
+  line-height: 4rem;
+}
+.registration-section .registratin-btn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+.register-video-section {
+  display: flex;
+  background-color: #f2f2f2;
+  padding: 5rem 0;
+}
+.register-video-section .register-video-section-left {
+  width: 50%;
+}
+.register-video-section .register-video-section-left .sign-title {
+  text-transform: uppercase;
+  color: #004e47;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+.register-video-section .register-video-section-left .sign-services .service-card {
+  width: 30%;
+  padding: 0 1.5rem;
+}
+.register-video-section .register-video-section-left .sign-services .service-card p {
+  text-align: center;
+}
+.register-video-section .register-video-section-right {
+  width: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */
