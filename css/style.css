@@ -1653,13 +1653,13 @@ ul {
   }
 }
 
-.health-section h5, footer .footer-link h4, .home-banner .banner-left p,
+.signup-profile .register-btm a, .health-section h5, footer .footer-link h4, .home-banner .banner-left p,
 .o-header--h4 {
   font-size: 2rem;
   line-height: 2.4rem;
 }
 @media (max-width: 1359.98px) {
-  .health-section h5, footer .footer-link h4, .home-banner .banner-left p,
+  .signup-profile .register-btm a, .health-section h5, footer .footer-link h4, .home-banner .banner-left p,
 .o-header--h4 {
     font-size: 1.4rem;
     line-height: 1.8rem;
@@ -3131,6 +3131,9 @@ footer .footer-link ul li a:hover::after {
   background-color: #f2f2f2;
   padding: 5rem 0;
 }
+.register-video-section .container {
+  display: flex;
+}
 .register-video-section .register-video-section-left {
   width: 50%;
 }
@@ -3141,15 +3144,54 @@ footer .footer-link ul li a:hover::after {
   text-align: center;
   padding-bottom: 1.5rem;
 }
+.register-video-section .register-video-section-left .sign-services {
+  display: flex;
+}
 .register-video-section .register-video-section-left .sign-services .service-card {
   width: 30%;
-  padding: 0 1.5rem;
+  padding: 0 0.8rem;
+}
+.register-video-section .register-video-section-left .sign-services .service-card img {
+  border: 1px solid #004e47;
 }
 .register-video-section .register-video-section-left .sign-services .service-card p {
   text-align: center;
+  background-color: rgba(0, 78, 71, 0.8);
+  width: 91%;
 }
 .register-video-section .register-video-section-right {
   width: 50%;
+}
+
+.signup-profile {
+  padding: 6rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.signup-profile img {
+  width: 70%;
+  margin: auto;
+  display: flex;
+}
+.signup-profile .register-btm {
+  display: flex;
+  justify-content: center;
+  margin-top: 7rem;
+}
+.register-video-section.register-video-section-btm .register-video-section-left .sign-services {
+  padding-left: 1rem;
+}
+.register-video-section.register-video-section-btm .register-video-section-left .sign-services .service-card {
+  width: 75%;
+  margin: auto;
+}
+.register-video-section.register-video-section-btm .register-video-section-left .sign-services .service-card img {
+  height: 24rem;
+}
+.register-video-section.register-video-section-btm .register-video-section-left .sign-services .service-card p {
+  width: 96.2%;
 }
 
 /*# sourceMappingURL=style.css.map */
