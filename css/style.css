@@ -3099,4 +3099,10 @@ footer .footer-link ul li a:hover::after {
   display: flex;
 }
 
+.consultant-section.store-consultant img {
+  width: 75%;
+  margin: auto;
+  display: flex;
+}
+
 /*# sourceMappingURL=style.css.map */
