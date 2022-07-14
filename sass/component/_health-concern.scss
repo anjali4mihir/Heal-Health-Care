@@ -18,6 +18,12 @@
         padding: 2rem 8rem 2rem 0;
         width: 100%;
         position: relative;
+        display: flex;
+        flex-wrap: wrap;
+
+        @include media-down(tablet) {
+            padding: 0rem 6rem 2rem 0;
+        }
     }
 
     .right-arrow {
@@ -27,6 +33,15 @@
         bottom: 0;
         margin: auto;
         width: 10rem;
+
+        @include media-down(tablet-large) {
+            right: 2rem;
+            width: 5rem;
+        }
+    }
+
+    @include media-down(tablet) {
+        padding: 5rem 1.5rem 3rem 1.5rem;
     }
 }
 
@@ -50,6 +65,20 @@
         @extend %o-paragraph-small;
         padding-top: 0.8rem;
         text-align: center;
+
+        @include media-down(tablet) {
+            padding-top: 0;
+        }
+    }
+
+    @include media-down(tablet-large) {
+        width: 17%;
+        height: 22rem;
+    }
+
+    @include media-down(tablet) {
+        width: 21%;
+        height: 20rem;
     }
 }
 
@@ -61,4 +90,8 @@
     font-weight: weight(medium);
     padding: 0.6rem 2rem;
     margin-left: auto;
+
+    @include media-down(tablet-large) {
+        margin-right: 2rem;
+    }
 }

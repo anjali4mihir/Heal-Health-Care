@@ -4,6 +4,7 @@
 
    .container {
     display: flex;
+    align-items: center;
    }
 
    .member-left {
@@ -12,6 +13,14 @@
     img {
         width: 100%;
         margin-left: 8rem;
+
+        @include media-down(tablet) {
+            margin-left: 4rem;
+        }
+    }
+
+    @include media-down(tablet) {
+        width: 68%;
     }
    }
 
@@ -31,6 +40,10 @@
             font-weight: weight(medium);
             max-width: 70rem;
             padding-top: 2rem;
+
+            @include media-down(tablet) {
+                padding-top: 0.8rem;
+            }
         }
    }
 }
@@ -41,5 +54,9 @@
 
     .app-icons {
         margin: initial;
+    }
+
+    @include media-down(tablet) {
+        padding-top: 2rem;
     }
 }

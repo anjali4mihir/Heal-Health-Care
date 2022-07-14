@@ -15,6 +15,9 @@
         display: inline-block;
     }
     
+    @include media-down(tablet) {
+        padding: 4rem 0 0 0;
+    }
 }
 .specialities-option {
     display: flex;
@@ -54,6 +57,18 @@
                 bottom: 2rem;
                 width: 87%;
                 text-align: center;
+
+                @include media-down(tablet-large) {
+                    width: 85%;
+                }
+
+                @include media-down(tablet) {
+                    width: 83%;
+                }
+            }
+
+            @include media-down(tablet) {
+                width: 25%;
             }
         }
     }

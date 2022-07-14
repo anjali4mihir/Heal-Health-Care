@@ -49,7 +49,7 @@
         <img class="animation-element fadeUp animation-element-fast" src="images/sign-up-banner.jpg" alt="About Us">
     </div>
 
-    <div class="registration-section animation-element fadeUp animation-element-fast">
+    <div class="registration-section animation-element fadeUp animation-element-slow">
         <div class="container">
             <h2> List You Profile And Serve <br/> Bilion of Indians </h2>
             <h3> Become a @Heal Partner <br/> a Maximize Your Growth Across India  </h3>
@@ -86,7 +86,7 @@
             </div>
         </div>
     </div>
-    <div class="signup-profile animation-element fadeUp animation-element-fast">
+    <div class="signup-profile animation-element fadeUp animation-element-slow">
         <div class="container">
             <img src="images/signup-register.jpg" alt="Sign Up">
             <div class="register-btm">
@@ -140,7 +140,7 @@
         </div>
     </div>
 
-    <div class="signup-profile animation-element fadeUp animation-element-fast">
+    <div class="signup-profile animation-element fadeRight animation-element-fast">
         <div class="container">
             <img src="images/physio-sign.jpg" alt="Sign Up">
             <div class="register-btm">
@@ -167,13 +167,110 @@
         </div>
     </div>
 
-    <div class="signup-profile animation-element fadeUp animation-element-fast">
+    <div class="signup-profile animation-element fadeLeft animation-element-slow">
         <div class="container">
             <img src="images/nurse-profile.jpg" alt="Sign Up">
             <div class="register-btm">
                 <a href="#" class="o-button"> Register Now </a>
             </div>
         </div>        
+    </div>
+
+    <div class="register-video-section">
+        <div class="container">
+            <div class="register-video-section-left">
+                <p class="sign-title"> If You Are </p>
+
+                <div class="sign-services specialities-services">
+                    <div class="service-card animation-element fadeUp animation-element-fast">
+                        <img src="images/pharmacis.jpg" alt="Pharmacists"> 
+                        <p> Pharmacists </p> 
+                    </div>
+
+                    <div class="service-card animation-element fadeUp animation-element-slow">
+                        <img src="images/pathologist.jpg" alt="Pathologists"> 
+                        <p> Pathologists </p> 
+                    </div>
+
+                    <div class="service-card animation-element fadeUp animation-element-exslow">
+                        <img src="images/rediologist-sign.jpg" alt="Radiologists"> 
+                        <p> Radiologists </p> 
+                    </div>
+                </div>
+            </div>
+            <div class="register-video-section-right video-section-right animation-element fadeRight animation-element-exslow">
+                <a id="myBtn" class="modal-trigger no-select"> 
+                    <img src="images/video-thumbnail.jpg" alt="Video">
+                </a>
+
+                <a id="myBtn" class="modal-trigger no-select"> 
+                    <img src="images/video-thumbnail.jpg" alt="Video">
+                </a>
+
+                <a id="myBtn" class="modal-trigger no-select radiological-video"> 
+                    <img src="images/video-thumbnail.jpg" alt="Video">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="signup-profile inventory-profile animation-element fadeLeft animation-element-slow">
+        <div class="container">
+            <img src="images/inventory-img.png" alt="Sign Up">
+            <div class="register-btm">
+                <a href="#" class="o-button"> Register Now </a>
+            </div>
+        </div>        
+    </div>
+
+    <div class="registration-form animation-element fadeRight animation-element-slow in-view">
+        <div class="container">
+            <div class="register-form-left">
+                <div class="card">
+                    <div class="card_title">
+                        <h2>Create Account</h2>
+                        <span>Already have an account? <a href="login">Sign In</a></span>
+                    </div>
+                    <div class="register-form">
+                        <form action="/register" method="post">
+                            <div class="selectdiv">
+                                <label>
+                                    <select>
+                                        <option selected> Select Box </option>
+                                        <option>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Last long option</option>
+                                    </select>
+                                </label>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Email ID">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Password">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card_terms">
+                        <input type="checkbox" name="" id="terms"> <span>I have read and agree to the <a href="">Terms of Service</a></span>
+                    </div>
+
+                    <a class="o-button" href="#"> Sign In </a>
+                </div>
+            </div>
+
+            <div class="register-form-right banner-left animation-element fadeRight animation-element-exslow in-view">
+                <div class="download-option">
+                    <a class="o-button" href="#"> Download @Heal App </a>
+                </div>
+                <div class="app-icons">
+                    <a href="#"> <img src="images/google-play-img.png" alt="Google Play"> </a>
+                    <a href="#"> <img src="images/app-store.png" alt="Google Play"> </a>
+                </div>
+            </div>
+
+          </div>
     </div>
 
     <footer>
@@ -238,6 +335,15 @@
         </div>
     </footer>
 
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+        <span id="modalClose" class="close no-select">&times;</span>
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/yAoLSRbwxL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        </div>
+    </div>
+
     <a href="#" id="scroll" style="display: none;"><span></span></a>
 
     <script src="js/jquery-3.6.0.min.js"></script>
@@ -276,6 +382,44 @@
         $("html, body").animate({ scrollTop: 0 }, 600); 
         return false; 
     }); 
+});
+    </script>
+
+    <script>
+        $(document).ready(function(){
+	$('#myBtn').click(function(event){
+		showModal();
+		event.stopPropagation(); 
+	});
+	$('#modalClose').click(function(){
+		hideModal();
+	});
+	
+	// Do nothing when clicking on the modal content
+	$('.modal-content').click(function(event){
+       event.stopPropagation(); 
+    });
+});
+
+function showModal(){
+	$('#myModal').fadeIn('slow');
+		(function fun(){
+			$('.modal-content').css({'transform':'translateY(-50px)'});
+		})();
+}
+
+function hideModal(){
+	$('#myModal').fadeOut('fast');
+		(function fun2(){
+			$('.modal-content').css({ 'transform':'translateY(0px)' });
+		})();
+}
+
+
+
+$(document).on("click", function () {
+    //click outside of ".nav__dropdown" class itself and menu will be hidden
+	hideModal();
 });
     </script>
 </body>
