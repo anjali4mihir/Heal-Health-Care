@@ -6,6 +6,10 @@
         text-align: center;
         padding-bottom: 4rem;
         @extend %o-header--h2;
+
+        @include media-down(tablet-large) {
+            padding-bottom: 1rem;
+        }
     }
     p {
         color: #004e47;
@@ -64,17 +68,31 @@
             width: 92%;
             bottom: 4rem;
             border-radius: 0 0 3rem 3rem;
+
+            @include media-down(tablet) {
+                width: 88%;
+                bottom: 6rem;
+                
+            }
         }
         h5 {
             color: $interface-black;
             @extend %o-paragraph-small;
             margin-top: 1.7rem;
+
+            @include media-down(tablet) {
+                margin-top: 1.5rem;
+            }
         }
     }
 }
 .book-btm {
     margin-top: 7rem;
     width: 100%;
+
+    @include media-down(tablet) {
+        margin-top: 5rem;
+    }
 }
 .how-work {
     margin-top: 7rem;
@@ -83,6 +101,10 @@
         color: $interface-black;
         @extend %o-header--h2;
         text-align: center;
+    }
+
+    @include media-down(tablet) {
+        margin-top: 2rem;
     }
 }
 .work-step {
@@ -130,6 +152,11 @@
                 }
             }
         }
+
+        @include media-down(tablet) {
+            margin-top: 1rem;
+            padding-right: 1rem;
+        }
     }
 }
 .health-concern-section {
@@ -148,6 +175,11 @@
                 p {
                     padding-top: 1rem;
                 }
+
+                @include media-down(tablet) {
+                    margin: 3rem 0;
+                    width: 25%;
+                }
             }
         }
         
@@ -161,5 +193,14 @@
         color: $interface-black;
         @extend %o-header--h2;
         padding-bottom: 3.5rem;
+
+        @include media-down(tablet) {
+            text-align: center;
+        }
+    }
+
+    @include media-down(tablet) {
+        padding-top: 5rem;
+        padding-bottom: 15rem;
     }
 }

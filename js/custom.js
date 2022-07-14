@@ -1,4 +1,4 @@
-
+$( document ).ready(function() {
   if ($(window).width() >= 767) {
     var $animation_elements = $('.animation-element');
     var $window = $(window);
@@ -25,7 +25,12 @@
     $window.on('scroll resize', check_if_in_view);
     $window.trigger('scroll');
   }
-  
+
+  $('.mobile-menu').click( function() {
+    $(".menu").toggleClass("show-menu");
+  });
+
+});
 
     
  

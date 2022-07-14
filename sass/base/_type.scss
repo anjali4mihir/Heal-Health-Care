@@ -21,6 +21,17 @@ body {
 .container {
   width: 120rem;
   margin: auto;
+
+  @media (max-width: 1024px) {
+    width: 100rem !important;
+    max-width: 100rem !important;
+    margin: auto;
+  }
+  @media (max-width: 768px) {
+    width: 75rem !important;
+    max-width: 75rem !important;
+    margin: auto;
+  }
 }
 *:focus {
   outline: none !important;

@@ -23,7 +23,15 @@
             
         img {
             width: 70%;
+
+            @include media-down(tablet) {
+                width: 64%;
+            }
         }
+    }
+
+    @include media-down(tablet) {
+        padding: 5rem 1.5rem 4rem 1.5rem;
     }
 }
 .member-btm-section {
@@ -34,6 +42,10 @@
 
     img {
         width: 78%;
+    }
+
+    @include media-down(tablet-large) {
+        right: 5rem;
     }
 }
 .sign-up-button {

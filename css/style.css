@@ -1550,6 +1550,20 @@ body {
   width: 120rem;
   margin: auto;
 }
+@media (max-width: 1024px) {
+  .container {
+    width: 100rem !important;
+    max-width: 100rem !important;
+    margin: auto;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 75rem !important;
+    max-width: 75rem !important;
+    margin: auto;
+  }
+}
 
 *:focus {
   outline: none !important;
@@ -1617,8 +1631,8 @@ ul {
 @media (max-width: 1359.98px) {
   .registration-section h2, .doctor-detail .container h2, .doctor-banner h1, .page-banner h1, .health-section h2, .register-member-section h1, .member-section .member-right p, .home-banner .banner-left h1,
 .o-header--h1 {
-    font-size: 2rem;
-    line-height: 2.4rem;
+    font-size: 3.5rem;
+    line-height: 3.6rem;
   }
 }
 @media (max-width: 767.98px) {
@@ -1636,20 +1650,20 @@ ul {
 @media (max-width: 1359.98px) {
   .consultant-section.nurse-consultant-section h2, .doctor-detail.nurse-detail h2, .doctor-detail.diagnostics-detail h2, .contact-section .contact-form h2, .mission-vision h2, .testimonial-slider h2, .how-work h2, .consultant-section p, .consultant-section h2, .specialities-section h2, .health-concern-section h2, .register-member-section p, .member-section .member-right h2,
 .o-header--h2 {
-    font-size: 1.8rem;
-    line-height: 2.2rem;
+    font-size: 3rem;
+    line-height: 4rem;
   }
 }
-.register-video-section .register-video-section-left .sign-title, .offering-section h2, .healthcare-section .healthcare-left h2,
+.registration-form .register-form-left h2, .register-video-section .register-video-section-left .sign-title, .offering-section h2, .healthcare-section .healthcare-left h2,
 .o-header--h3 {
   font-size: 2.4rem;
   line-height: 2.8rem;
 }
 @media (max-width: 1359.98px) {
-  .register-video-section .register-video-section-left .sign-title, .offering-section h2, .healthcare-section .healthcare-left h2,
+  .registration-form .register-form-left h2, .register-video-section .register-video-section-left .sign-title, .offering-section h2, .healthcare-section .healthcare-left h2,
 .o-header--h3 {
-    font-size: 1.6rem;
-    line-height: 2rem;
+    font-size: 2.2rem;
+    line-height: 4.2rem;
   }
 }
 
@@ -1661,8 +1675,8 @@ ul {
 @media (max-width: 1359.98px) {
   .signup-profile .register-btm a, .health-section h5, footer .footer-link h4, .home-banner .banner-left p,
 .o-header--h4 {
-    font-size: 1.4rem;
-    line-height: 1.8rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
   }
 }
 
@@ -1672,7 +1686,7 @@ ul {
   line-height: 2.4rem;
 }
 
-.contact-section .contact-form .contact-form-btm .form-group input, .contact-section .contact-form .contact-form-btm .form-group textarea, .contact-section .contact-section-right p, .contact-section .contact-section-right a, .contact-section .contact-section-right h5, .contact-section .contact-section-left a, .contact-section .contact-section-left h5, footer .footer-link ul li a, .specialities-option ul li,
+.registration-form .register-form-left .register-form .selectdiv select, .registration-form .register-form-left .register-form input, .contact-section .contact-form .contact-form-btm .form-group input, .contact-section .contact-form .contact-form-btm .form-group textarea, .contact-section .contact-section-right p, .contact-section .contact-section-right a, .contact-section .contact-section-right h5, .contact-section .contact-section-left a, .contact-section .contact-section-left h5, footer .footer-link ul li a, .specialities-option ul li,
 .o-paragraph-medium {
   font-size: 1.4rem;
   line-height: 2.2rem;
@@ -1843,8 +1857,35 @@ nav ul li a:hover {
 nav ul li a:hover::after {
   width: 100%;
 }
+@media (max-width: 1279.98px) {
+  nav ul li a {
+    padding: 0.5rem 1.2rem;
+  }
+}
 nav ul li:last-child {
   padding-right: 0;
+}
+@media (max-width: 1279.98px) {
+  nav ul li {
+    width: 50%;
+  }
+}
+@media (max-width: 767.98px) {
+  nav ul li {
+    width: 100%;
+  }
+}
+@media (max-width: 1279.98px) {
+  nav ul {
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.2);
+    width: 55%;
+    right: 2rem;
+    padding: 2rem 2rem;
+    z-index: 2;
+    top: 9rem;
+  }
 }
 
 #logo {
@@ -1854,8 +1895,16 @@ nav ul li:last-child {
   line-height: 60px;
   padding-right: 1.5rem;
 }
+#logo a {
+  display: flex;
+}
 #logo a img {
   width: 10rem;
+}
+@media (max-width: 1279.98px) {
+  #logo a img {
+    width: 7rem;
+  }
 }
 #logo a:hover {
   background-color: transparent;
@@ -1881,7 +1930,8 @@ nav ul li:last-child {
 
 header {
   transition: height 0.5s ease-in;
-  padding-top: 2rem;
+  padding: 2rem 0;
+  position: relative;
 }
 header.fixed {
   width: 100%;
@@ -1896,6 +1946,41 @@ header.fixed {
 header.fixed #logo img {
   width: 5rem;
   padding-top: 2rem;
+}
+@media (max-width: 1279.98px) {
+  header .menu {
+    position: absolute;
+  }
+}
+@media (max-width: 1023.98px) {
+  header {
+    padding: 1.5rem 0;
+  }
+}
+
+.mobile-menu {
+  display: inline-flex;
+  margin-left: auto;
+}
+.mobile-menu img {
+  width: 45%;
+}
+
+@media (min-width: 1025px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+@media (max-width: 1279.98px) {
+  .menu {
+    display: none;
+  }
+  .menu.show-menu {
+    display: block;
+    animation-name: fadeRight;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+  }
 }
 
 .home-banner {
@@ -1924,6 +2009,12 @@ header.fixed #logo img {
   display: inline-flex;
   border-radius: 2rem;
 }
+@media (max-width: 1023.98px) {
+  .home-banner .banner-left {
+    padding: 2rem 3rem;
+    width: 45%;
+  }
+}
 .home-banner .banner-right {
   width: 50%;
   background-color: #f2f1f6;
@@ -1931,6 +2022,16 @@ header.fixed #logo img {
 .home-banner .banner-right img {
   width: 100%;
   height: 100%;
+}
+@media (max-width: 1023.98px) {
+  .home-banner .banner-right img {
+    object-fit: cover;
+  }
+}
+@media (max-width: 1023.98px) {
+  .home-banner .banner-right {
+    width: 55%;
+  }
 }
 
 .download-option {
@@ -1948,6 +2049,11 @@ header.fixed #logo img {
 }
 .app-icons a img {
   width: 16rem;
+}
+@media (max-width: 1279.98px) {
+  .app-icons a img {
+    width: 14rem;
+  }
 }
 .app-icons a:last-child {
   margin-right: 0;
@@ -1978,6 +2084,26 @@ header.fixed #logo img {
   position: relative;
   top: 1.3rem;
 }
+@media (max-width: 1279.98px) {
+  .top-services-section .before-border::after {
+    width: 18rem;
+  }
+}
+@media (max-width: 1023.98px) {
+  .top-services-section .before-border::after {
+    display: none;
+  }
+}
+@media (max-width: 1279.98px) {
+  .top-services-section .before-border {
+    width: 18rem;
+  }
+}
+@media (max-width: 1023.98px) {
+  .top-services-section .before-border {
+    display: none;
+  }
+}
 .top-services-section .after-border {
   background-color: #808080;
   width: 26rem;
@@ -1997,10 +2123,35 @@ header.fixed #logo img {
   position: absolute;
   top: 1.3rem;
 }
+@media (max-width: 1279.98px) {
+  .top-services-section .after-border::after {
+    width: 18rem;
+  }
+}
+@media (max-width: 1023.98px) {
+  .top-services-section .after-border::after {
+    display: none;
+  }
+}
+@media (max-width: 1279.98px) {
+  .top-services-section .after-border {
+    width: 18rem;
+  }
+}
+@media (max-width: 1023.98px) {
+  .top-services-section .after-border {
+    display: none;
+  }
+}
 .top-services-section h2 {
   color: #000000;
   padding-bottom: 3rem;
   text-align: center;
+}
+@media (max-width: 1023.98px) {
+  .top-services-section {
+    padding: 4rem 0;
+  }
 }
 
 .services-block {
@@ -2015,6 +2166,11 @@ header.fixed #logo img {
   text-align: center;
   line-height: 9.4rem;
 }
+@media (max-width: 1279.98px) {
+  .services-block .services-left .service-card p {
+    font-size: 6rem;
+  }
+}
 .services-block .services-left .service-card img {
   height: 61rem;
 }
@@ -2028,12 +2184,28 @@ header.fixed #logo img {
   font-size: 10rem;
   line-height: 10.5rem;
 }
+@media (max-width: 1279.98px) {
+  .services-block .services-right h2 {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 1023.98px) {
+  .services-block .services-right h2 {
+    font-size: 4rem;
+    line-height: 3rem;
+  }
+}
 .services-block .services-right .service-card {
   width: 25%;
   padding: 1.5rem;
 }
 .services-block .services-right .service-card p {
   bottom: 2rem;
+}
+@media (max-width: 1023.98px) {
+  .services-block .services-right .service-card {
+    width: 33.33%;
+  }
 }
 
 .service-card {
@@ -2055,6 +2227,16 @@ header.fixed #logo img {
   width: 84%;
   padding: 1.5rem;
   border-radius: 0 0 2rem 2rem;
+}
+@media (max-width: 1279.98px) {
+  .service-card p {
+    width: 82%;
+  }
+}
+@media (max-width: 1023.98px) {
+  .service-card p {
+    width: 81%;
+  }
 }
 .service-card.service-card-text ul {
   padding: 1.5rem 1.5rem;
@@ -2080,6 +2262,7 @@ header.fixed #logo img {
 }
 .member-section .container {
   display: flex;
+  align-items: center;
 }
 .member-section .member-left {
   width: 40%;
@@ -2087,6 +2270,16 @@ header.fixed #logo img {
 .member-section .member-left img {
   width: 100%;
   margin-left: 8rem;
+}
+@media (max-width: 1023.98px) {
+  .member-section .member-left img {
+    margin-left: 4rem;
+  }
+}
+@media (max-width: 1023.98px) {
+  .member-section .member-left {
+    width: 68%;
+  }
 }
 .member-section .member-right {
   margin-right: 10rem;
@@ -2102,6 +2295,11 @@ header.fixed #logo img {
   max-width: 70rem;
   padding-top: 2rem;
 }
+@media (max-width: 1023.98px) {
+  .member-section .member-right p {
+    padding-top: 0.8rem;
+  }
+}
 
 .member-download {
   display: flex;
@@ -2110,6 +2308,11 @@ header.fixed #logo img {
 }
 .member-download .app-icons {
   margin: initial;
+}
+@media (max-width: 1023.98px) {
+  .member-download {
+    padding-top: 2rem;
+  }
 }
 
 .register-member-section {
@@ -2135,6 +2338,16 @@ header.fixed #logo img {
 .register-member-section .member-block-img img {
   width: 70%;
 }
+@media (max-width: 1023.98px) {
+  .register-member-section .member-block-img img {
+    width: 64%;
+  }
+}
+@media (max-width: 1023.98px) {
+  .register-member-section {
+    padding: 5rem 1.5rem 4rem 1.5rem;
+  }
+}
 
 .member-btm-section {
   position: absolute;
@@ -2144,6 +2357,11 @@ header.fixed #logo img {
 }
 .member-btm-section img {
   width: 78%;
+}
+@media (max-width: 1279.98px) {
+  .member-btm-section {
+    right: 5rem;
+  }
 }
 
 .sign-up-button {
@@ -2177,6 +2395,13 @@ header.fixed #logo img {
   padding: 2rem 8rem 2rem 0;
   width: 100%;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 1023.98px) {
+  .health-concern-section .health-concern-card {
+    padding: 0rem 6rem 2rem 0;
+  }
 }
 .health-concern-section .right-arrow {
   position: absolute;
@@ -2185,6 +2410,17 @@ header.fixed #logo img {
   bottom: 0;
   margin: auto;
   width: 10rem;
+}
+@media (max-width: 1279.98px) {
+  .health-concern-section .right-arrow {
+    right: 2rem;
+    width: 5rem;
+  }
+}
+@media (max-width: 1023.98px) {
+  .health-concern-section {
+    padding: 5rem 1.5rem 3rem 1.5rem;
+  }
 }
 
 .concern-card {
@@ -2206,6 +2442,23 @@ header.fixed #logo img {
   padding-top: 0.8rem;
   text-align: center;
 }
+@media (max-width: 1023.98px) {
+  .concern-card p {
+    padding-top: 0;
+  }
+}
+@media (max-width: 1279.98px) {
+  .concern-card {
+    width: 17%;
+    height: 22rem;
+  }
+}
+@media (max-width: 1023.98px) {
+  .concern-card {
+    width: 21%;
+    height: 20rem;
+  }
+}
 
 .view-btn {
   color: #ffffff;
@@ -2213,6 +2466,11 @@ header.fixed #logo img {
   border-radius: 1rem;
   padding: 0.6rem 2rem;
   margin-left: auto;
+}
+@media (max-width: 1279.98px) {
+  .view-btn {
+    margin-right: 2rem;
+  }
 }
 
 .specialities-section {
@@ -2227,6 +2485,11 @@ header.fixed #logo img {
   background-color: #b3b3b3;
   padding: 1rem 2rem;
   display: inline-block;
+}
+@media (max-width: 1023.98px) {
+  .specialities-section {
+    padding: 4rem 0 0 0;
+  }
 }
 
 .specialities-option {
@@ -2263,6 +2526,21 @@ header.fixed #logo img {
   width: 87%;
   text-align: center;
 }
+@media (max-width: 1279.98px) {
+  .specialities-section .specialities-services .service-card p {
+    width: 85%;
+  }
+}
+@media (max-width: 1023.98px) {
+  .specialities-section .specialities-services .service-card p {
+    width: 83%;
+  }
+}
+@media (max-width: 1023.98px) {
+  .specialities-section .specialities-services .service-card {
+    width: 25%;
+  }
+}
 
 .healthcare-section {
   background-color: #f2f2f2;
@@ -2273,12 +2551,18 @@ header.fixed #logo img {
   display: flex;
   align-items: center;
 }
+@media (max-width: 1023.98px) {
+  .healthcare-section .container {
+    flex-wrap: wrap;
+  }
+}
 .healthcare-section .healthcare-left {
   width: 30%;
 }
 .healthcare-section .healthcare-left h2 {
   color: #000000;
   padding-bottom: 3rem;
+  text-align: center;
 }
 .healthcare-section .healthcare-left p {
   color: #004e47;
@@ -2292,11 +2576,21 @@ header.fixed #logo img {
   padding-top: 1.5rem;
   width: 100%;
 }
+@media (max-width: 1023.98px) {
+  .healthcare-section .healthcare-left p {
+    margin: auto;
+  }
+}
 .healthcare-section .healthcare-left .download-option {
   margin-top: 5rem;
 }
 .healthcare-section .healthcare-left .app-icons {
   padding-top: 2rem;
+}
+@media (max-width: 1023.98px) {
+  .healthcare-section .healthcare-left {
+    width: 100%;
+  }
 }
 .healthcare-section .healthcare-right {
   width: 70%;
@@ -2306,6 +2600,18 @@ header.fixed #logo img {
   width: 100%;
   border-radius: 2.5rem;
 }
+@media (max-width: 1023.98px) {
+  .healthcare-section .healthcare-right {
+    width: 100%;
+    padding-left: 0;
+    padding-top: 2.5rem;
+  }
+}
+@media (max-width: 1279.98px) {
+  .healthcare-section {
+    padding: 4rem 2rem;
+  }
+}
 
 .consultant-section {
   padding: 5rem 0;
@@ -2314,6 +2620,11 @@ header.fixed #logo img {
   color: #000000;
   text-align: center;
   padding-bottom: 4rem;
+}
+@media (max-width: 1279.98px) {
+  .consultant-section h2 {
+    padding-bottom: 1rem;
+  }
 }
 .consultant-section p {
   color: #004e47;
@@ -2371,14 +2682,30 @@ header.fixed #logo img {
   bottom: 4rem;
   border-radius: 0 0 3rem 3rem;
 }
+@media (max-width: 1023.98px) {
+  .book-service .service-card p {
+    width: 88%;
+    bottom: 6rem;
+  }
+}
 .book-service .service-card h5 {
   color: #000000;
   margin-top: 1.7rem;
+}
+@media (max-width: 1023.98px) {
+  .book-service .service-card h5 {
+    margin-top: 1.5rem;
+  }
 }
 
 .book-btm {
   margin-top: 7rem;
   width: 100%;
+}
+@media (max-width: 1023.98px) {
+  .book-btm {
+    margin-top: 5rem;
+  }
 }
 
 .how-work {
@@ -2387,6 +2714,11 @@ header.fixed #logo img {
 .how-work h2 {
   color: #000000;
   text-align: center;
+}
+@media (max-width: 1023.98px) {
+  .how-work {
+    margin-top: 2rem;
+  }
 }
 
 .work-step {
@@ -2430,6 +2762,12 @@ header.fixed #logo img {
   bottom: 0;
   margin: auto;
 }
+@media (max-width: 1023.98px) {
+  .step-text .step-block {
+    margin-top: 1rem;
+    padding-right: 1rem;
+  }
+}
 
 .health-concern-section.health-feed-section .health-concern-card {
   padding-right: 0;
@@ -2445,6 +2783,12 @@ header.fixed #logo img {
 .health-concern-section.health-feed-section .health-concern-card .concern-card p {
   padding-top: 1rem;
 }
+@media (max-width: 1023.98px) {
+  .health-concern-section.health-feed-section .health-concern-card .concern-card {
+    margin: 3rem 0;
+    width: 25%;
+  }
+}
 
 .testimonial-slider {
   padding-top: 8rem;
@@ -2453,6 +2797,17 @@ header.fixed #logo img {
 .testimonial-slider h2 {
   color: #000000;
   padding-bottom: 3.5rem;
+}
+@media (max-width: 1023.98px) {
+  .testimonial-slider h2 {
+    text-align: center;
+  }
+}
+@media (max-width: 1023.98px) {
+  .testimonial-slider {
+    padding-top: 5rem;
+    padding-bottom: 15rem;
+  }
 }
 
 /* slider styles */
@@ -2660,6 +3015,11 @@ footer .footer-logo {
 footer .footer-logo img {
   width: 13rem;
 }
+@media (max-width: 1023.98px) {
+  footer .footer-logo {
+    width: 29%;
+  }
+}
 footer .footer-link {
   width: 20%;
   padding: 0 1.5rem;
@@ -2689,6 +3049,16 @@ footer .footer-link ul li a:after {
 footer .footer-link ul li a:hover::after {
   width: 100%;
 }
+@media (max-width: 1279.98px) {
+  footer .footer-link {
+    width: 18%;
+  }
+}
+@media (max-width: 1023.98px) {
+  footer .footer-link {
+    width: 35%;
+  }
+}
 
 .social-media {
   display: inline-flex;
@@ -2704,6 +3074,11 @@ footer .footer-link ul li a:hover::after {
 }
 .social-media ul li a img {
   width: 3.5rem;
+}
+@media (max-width: 1279.98px) {
+  .social-media {
+    width: 22%;
+  }
 }
 
 #scroll {
@@ -3180,6 +3555,10 @@ footer .footer-link ul li a:hover::after {
   justify-content: center;
   margin-top: 7rem;
 }
+.signup-profile.inventory-profile .register-btm {
+  margin-top: 3rem;
+}
+
 .register-video-section.register-video-section-btm .register-video-section-left .sign-services {
   padding-left: 1rem;
 }
@@ -3192,6 +3571,158 @@ footer .footer-link ul li a:hover::after {
 }
 .register-video-section.register-video-section-btm .register-video-section-left .sign-services .service-card p {
   width: 96.2%;
+}
+
+.modal-trigger {
+  font-variant: small-caps;
+  background: #eee;
+  font-size: 1.5em;
+  color: #333;
+  padding: 0.6em 1em;
+  border: 0;
+  border-radius: 0.2em;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  outline: 0;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.modal .modal-content {
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  transition: all 0.3s ease;
+}
+.modal .close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 0.5em;
+  top: 0.3em;
+}
+.modal .close:hover, .modal .close:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.video-section-right {
+  display: flex;
+  flex-wrap: wrap;
+}
+.video-section-right a {
+  display: flex;
+  width: 50%;
+}
+.video-section-right a img {
+  width: 100%;
+}
+.video-section-right a.radiological-video {
+  width: 100%;
+}
+
+.registration-form {
+  display: flex;
+  align-items: center;
+  padding-bottom: 8rem;
+}
+.registration-form .container {
+  display: flex;
+  align-items: center;
+}
+.registration-form .register-form-left {
+  width: 50%;
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #dddddd;
+  border-radius: 1.5rem;
+  padding: 4rem 4rem;
+}
+.registration-form .register-form-left h2 {
+  color: #000000;
+  padding-bottom: 0.8rem;
+}
+.registration-form .register-form-left .o-button {
+  margin-top: 3rem;
+}
+.registration-form .register-form-left .register-form {
+  padding-top: 2rem;
+  /* IE11 hide native button (thanks Matt!) */
+}
+.registration-form .register-form-left .register-form input {
+  width: 100%;
+  border: 1px solid #dddddd;
+  padding: 1.2rem 1.5rem;
+  color: #000000;
+  margin-bottom: 1.5rem;
+}
+.registration-form .register-form-left .register-form .selectdiv {
+  position: relative;
+  /* float: left; */
+  min-width: 100%;
+}
+.registration-form .register-form-left .register-form select::-ms-expand {
+  display: none;
+}
+.registration-form .register-form-left .register-form .selectdiv:after {
+  content: "<>";
+  font: 17px "Consolas", monospace;
+  color: #333;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  right: 11px;
+  /*Adjust for position however you want*/
+  top: 12px;
+  padding: 0 0 2px;
+  border-bottom: 1px solid #999;
+  /*left line */
+  position: absolute;
+  pointer-events: none;
+}
+.registration-form .register-form-left .register-form .selectdiv select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Add some styling */
+  width: 100%;
+  border: 1px solid #dddddd;
+  padding: 1.2rem 1.5rem;
+  color: #000000;
+  margin-bottom: 1.5rem;
+}
+.registration-form .register-form-right {
+  width: 50%;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card .card_title, .card .register-form, .card .card_terms {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

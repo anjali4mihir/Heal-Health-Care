@@ -13,6 +13,10 @@ footer {
         img {
             width: 13rem;
         }
+
+        @include media-down(tablet) {
+            width: 29%;
+        }
     }
 
     .footer-link {
@@ -55,6 +59,14 @@ footer {
                 }
             }
         }
+
+        @include media-down(tablet-large) {
+            width: 18%;
+        }
+
+        @include media-down(tablet) {
+            width: 35%;
+        }
     }
 }
 .social-media {
@@ -75,5 +87,9 @@ footer {
                 }
             }
         }
+    }
+
+    @include media-down(tablet-large) {
+        width: 22%;
     }
 }
