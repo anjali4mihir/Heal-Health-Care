@@ -140,6 +140,10 @@ header {
 		z-index: zindex(nav);
 		padding-top: 0;
 
+		nav ul {
+			padding-top: 2rem;
+		}
+
 		#logo img {
 			width: 5rem;
 			padding-top: 2rem;
