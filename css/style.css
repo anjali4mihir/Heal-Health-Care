@@ -1943,6 +1943,9 @@ header.fixed {
   z-index: 2;
   padding-top: 0;
 }
+header.fixed nav ul {
+  padding-top: 2rem;
+}
 header.fixed #logo img {
   width: 5rem;
   padding-top: 2rem;
