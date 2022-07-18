@@ -26,7 +26,7 @@ nav {
 			a {
 				@extend %o-paragraph-small;
 				display:block;
-				padding:1.4rem 1.2rem;	
+				padding:1.4rem 1rem;	
 				color: $interface-black;
 				text-decoration:none;
 				transition: all 0.5s ease;
@@ -47,6 +47,10 @@ nav {
 					&::after {
 						width: 100%;
 					}
+				}
+
+				@include media-down(laptop) {
+					padding: 0.5rem 1rem;
 				}
 
 				@include media-down(tablet-large) {
@@ -77,6 +81,15 @@ nav {
 			z-index: zindex(nav);
 			top: 9rem;
 		}
+
+		@include media-down(mobile) {
+			width: 94%;
+			right: 2rem;
+			padding: 1rem 1rem;
+			z-index: 2;
+			top: 9rem;
+			left: 1rem;
+		}
 	}
 }
 
@@ -85,7 +98,7 @@ nav {
 	float: left;
 	font-size:20px;
 	line-height: 60px;
-	padding-right: 1.5rem;
+	padding-right: 0;
 
 	a {
 		display: flex;
@@ -130,6 +143,14 @@ header {
 	padding: 2rem 0;
 	position: relative;
 
+	.container {
+		padding: 0;
+
+		@include media-down(tablet-large) {
+			padding: 0 1.5rem;
+		}
+	}
+
 	&.fixed {
 		width: 100%;
 		position: fixed;
@@ -168,8 +189,12 @@ header {
 	img {
 		width: 45%;
 	}
+
+	@include media-down(mobile) {
+		margin-right: -3.5rem;
+	}
 }
-@media (min-width:1025px) {
+@media (min-width:1280px) {
 	.mobile-menu {
 		display: none;
 	}
@@ -188,4 +213,32 @@ header {
 	}
 
 	
+}
+
+.dropdown {
+	a {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+
+	img {
+		width: 46%;
+		margin-top: 2px;
+		margin-left: 7px;
+	}
+}
+
+.sub-menu {
+	@include media-down(laptop) {
+		display: none;
+
+		&.show-menu {
+			display: block;
+			left: 1.5rem;
+			top: 4rem;
+		}
+	}
+
+
 }

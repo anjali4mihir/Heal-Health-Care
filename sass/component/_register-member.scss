@@ -12,6 +12,10 @@
         @extend %o-header--h1;
         color: $interface-red;
         padding-bottom: 2rem;
+
+        @include media-down(mobile) {
+            padding-bottom: 1rem;
+        }
     }
     p {
         @extend %o-header--h2;
@@ -27,11 +31,24 @@
             @include media-down(tablet) {
                 width: 64%;
             }
+
+            @include media-down(mobile) {
+                width: 100%;
+            }
+        }
+
+        @include media-down(mobile) {
+            padding-bottom: 0;
+            padding-top: 3rem;
         }
     }
 
     @include media-down(tablet) {
         padding: 5rem 1.5rem 4rem 1.5rem;
+    }
+
+    @include media-down(tablet) {
+        padding: 2.5rem 0 4rem 0;
     }
 }
 .member-btm-section {
@@ -47,6 +64,10 @@
     @include media-down(tablet-large) {
         right: 5rem;
     }
+
+    @include media-down(mobile) {
+        display: none;
+    }
 }
 .sign-up-button {
     display: flex;
@@ -60,5 +81,10 @@
         display: inline-flex;
         align-items: center;
         text-align: center;
+    }
+
+    @include media-down(mobile) {
+        width: 100%;
+        margin-top: 2rem;
     }
 }

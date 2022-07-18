@@ -59,10 +59,10 @@ button.slick-prev.slick-arrow {
     border: none;
     outline: none;
     cursor: pointer;
-    height: 15px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     padding: 0;
-    background-image: url(https://farsighttechnologies.com/wp-content/uploads/2021/03/left-icon.png);
+    background-image: url(../images/left-arrow.png);
     background-size: 100% 100%;
 }
 button.slick-next.slick-arrow {
@@ -75,9 +75,9 @@ button.slick-next.slick-arrow {
     padding: 0;
     cursor: pointer;
     outline: none;
-    height: 18px;
-    width: 40px;
-    background-image: url(https://farsighttechnologies.com/wp-content/uploads/2021/03/right-icon.png);
+    height: 35px;
+    width: 35px;
+    background-image: url(../images/right-arrow.png);
     background-size: 100% 100%;
 }
 .pagingInfo {
