@@ -57,6 +57,11 @@
 
         h5.work-hr {
             padding-top: 6rem;
+
+            @include media-down(mobile) {
+                padding-top: 3rem;
+                padding-bottom: 0.8rem;
+            }
         }
 
         p {
@@ -109,6 +114,11 @@
                 &.text-area {
                     width: 100%;
                 }
+
+                @include media-down(mobile) {
+                    width: 100%;
+                    padding: 0.5rem 0;
+                }
             }
 
             .submit-btn {
@@ -122,6 +132,16 @@
                     margin: auto;
                 }
             }
+
+            @include media-down(mobile) {
+                padding: 2rem 2rem;
+                margin-top: 1rem;
+            }
+        }
+
+        @include media-down(mobile) {
+            margin-top: 3rem;
+            padding: 3rem 0 3rem 0;
         }
     }
 }

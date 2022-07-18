@@ -19,6 +19,16 @@
         @extend %o-header--h1;
         font-weight: weight(bold);
         text-transform: uppercase;
+
+        @include media-down(tablet-large) {
+            left: calc((100vw - 92rem) / 2);
+            bottom: 6rem;
+        }
+
+        @include media-down(mobile) {
+            left: 25px;
+            bottom: 3rem;
+        }
     }
 
     &:after {
@@ -32,5 +42,17 @@
         background: linear-gradient(118.99deg, #060C10 48.25%, rgba(24, 22, 27, 0) 88.16%);
         mix-blend-mode: hard-light;
         opacity: 0.4;
+    }
+
+    @include media-down(tablet-large) {
+        height: 40rem;
+    }
+
+    @include media-down(tablet) {
+        height: 30rem;
+    }
+
+    @include media-down(mobile) {
+        height: 20rem;
     }
 }

@@ -21,6 +21,10 @@
 .veterians-img {
     width: 100%;
     margin: 4rem 0;
+
+    @include media-down(mobile) {
+        margin: 2rem 0;
+    }
 }
 .app-icons {
     display: flex;
@@ -41,11 +45,15 @@
 
             li {
                 color: $interface-black;
-                @extend %o-paragraph-large;
+                @extend %o-header--h4;
                 font-weight: weight(bold);
                 padding: 0 0.8rem;
             }
         }
+    }
+
+    @include media-down(mobile) {
+        padding: 3rem 0;
     }
 }
 .book-service {
@@ -66,7 +74,7 @@
         p {
             background-color: rgba(0, 78, 71, 0.8);
             width: 92%;
-            bottom: 4rem;
+            bottom: 7.5rem;
             border-radius: 0 0 3rem 3rem;
 
             @include media-down(tablet) {
@@ -74,15 +82,30 @@
                 bottom: 6rem;
                 
             }
+
+            @include media-down(mobile) {
+                width: 100%;
+                bottom: 6rem;
+            }
         }
         h5 {
             color: $interface-black;
-            @extend %o-paragraph-small;
+            @extend %o-header--h4;
             margin-top: 1.7rem;
 
             @include media-down(tablet) {
                 margin-top: 1.5rem;
             }
+
+            @include media-down(mobile) {
+                margin-top: 0;
+                margin-bottom: 3rem;
+            }
+        }
+
+        @include media-down(mobile) {
+            width: 100%;
+            padding: 0;
         }
     }
 }
@@ -92,6 +115,10 @@
 
     @include media-down(tablet) {
         margin-top: 5rem;
+    }
+
+    @include media-down(tablet) {
+        margin-top: 2rem;
     }
 }
 .how-work {
@@ -113,7 +140,15 @@
     margin-top: 3rem;
 
     img {
-        width: 100%;
+        width: 90%;
+
+        @include media-down(mobile) {
+            display: none;
+        }
+    }
+
+    @include media-down(mobile) {
+        padding: 1rem 0;
     }
 }
 .step-text {
@@ -151,12 +186,61 @@
                     margin: auto;
                 }
             }
+
+            @include media-down(mobile) {
+                padding-top: 0;
+            }
         }
 
         @include media-down(tablet) {
             margin-top: 1rem;
             padding-right: 1rem;
         }
+
+        @include media-down(mobile) {
+            margin-top: 1.5rem;
+            padding-right: 1rem;
+            width: 50% !important;
+        }
+
+        &:first-child {
+            width: 16.6%;
+            padding-right: 0;
+        }
+
+        &:nth-child(2) {
+            width: 17.6%;
+            padding-right: 0;
+        }
+
+        &:nth-child(3) {
+            width: 18.6%;
+            padding-right: 0;
+        }
+
+        &:nth-child(4) {
+            width: 17.6%;
+            padding-right: 0;
+        }
+
+        &:nth-child(5) {
+            width: 13.6%;
+            padding-right: 0;
+        }
+
+        &:last-child {
+            width: 15.6%;
+            padding-right: 0;
+            padding-left: 4.5rem;
+
+            @include media-down(mobile) {
+                padding-left: 0;
+            }
+        }
+    }
+
+    @include media-down(mobile) {
+        flex-wrap: wrap;
     }
 }
 .health-concern-section {
@@ -165,12 +249,16 @@
             padding-right: 0;
 
             .concern-card {
-                width: 18.3%;
+                width: 18%;
                 box-shadow: none;
 
                 .concern-card-inner {
                     box-shadow: 0px 0px 12px 1px rgb(0 0 0 / 30%);
                     height: 20rem;
+
+                    @include media-down(mobile) {
+                        height: 16rem;
+                    }
                 }
                 p {
                     padding-top: 1rem;
@@ -179,6 +267,12 @@
                 @include media-down(tablet) {
                     margin: 3rem 0;
                     width: 25%;
+                }
+
+                @include media-down(mobile) {
+                    margin: 3rem 0;
+                    width: 50%;
+                    height: 16rem;
                 }
             }
         }
@@ -202,5 +296,87 @@
     @include media-down(tablet) {
         padding-top: 5rem;
         padding-bottom: 15rem;
+    }
+
+    @include media-down(tablet) {
+        padding-top: 3rem;
+        padding-bottom: 13rem;
+    }
+}
+
+.wrapper{
+    width:100%;
+    padding-top: 20px;
+    text-align:center;
+
+    .carousel{
+        width:100%;
+        margin:0px auto;
+        padding: 0 3.2rem;
+    }
+    .slick-slide{
+        margin:10px;
+    }
+    .slick-slide img{
+        width:100%;
+        border: 2px solid #fff;
+    }
+    .slick-arrow {
+        position: absolute;
+
+        &.slick-prev {
+            &::before {
+                content: none;
+            }
+        }
+
+        &.slick-next 
+
+            &::before {
+                content: none;
+            }
+        }
+}
+
+.show-all {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    display: none;
+    transition: all 0.5s ease;
+
+    &.visible {
+        display: inline-flex;
+        transition: all 0.5s ease;
+    }
+}
+
+.carousel {
+    .slick-arrow {
+        &.slick-prev {
+            left: -1rem;
+        
+            &::before {
+                content: none;
+            }
+        }
+        
+        &.slick-next {
+            right: -1rem;
+        
+            &::before {
+                content: none;
+            }
+        }
+    }
+}
+
+.testimonial-slider {
+    .slick-prev {
+        left: auto;      
+    }
+    .slick-prev, .slick-next {
+        bottom: 0;
+        top: initial;
     }
 }

@@ -12,10 +12,14 @@
         @extend %o-header--h2;
         color: $interface-black;
         margin-bottom: 3rem;
+
+        @include media-down(mobile) {
+            margin-bottom: 2rem;
+        }
     }
 
     .health-concern-card {
-        padding: 2rem 8rem 2rem 0;
+        padding: 2rem 0 2rem 0;
         width: 100%;
         position: relative;
         display: flex;
@@ -23,6 +27,10 @@
 
         @include media-down(tablet) {
             padding: 0rem 6rem 2rem 0;
+        }
+
+        @include media-down(mobile) {
+            padding:0 0 1rem 0;
         }
     }
 
@@ -38,10 +46,18 @@
             right: 2rem;
             width: 5rem;
         }
+
+        @include media-down(mobile) {
+            display: none;
+        }
     }
 
     @include media-down(tablet) {
         padding: 5rem 1.5rem 3rem 1.5rem;
+    }
+
+    @include media-down(mobile) {
+        padding: 3rem 0 3rem 0;
     }
 }
 
@@ -80,6 +96,12 @@
         width: 21%;
         height: 20rem;
     }
+
+    @include media-down(mobile) {
+        width: 43%;
+        height: 19rem;
+        padding: 1.5rem 0.8rem;
+    }
 }
 
 .view-btn {
@@ -93,5 +115,10 @@
 
     @include media-down(tablet-large) {
         margin-right: 2rem;
+    }
+
+    @include media-down(mobile) {
+        margin-right: 0;
+        padding: 0.5rem 1.5rem;
     }
 }

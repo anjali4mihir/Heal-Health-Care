@@ -6,6 +6,10 @@
     .container {
         display: flex;
         align-items: center;
+
+        @include media-down(mobile) {
+            flex-wrap: wrap;
+        }
     }
 
     .register-form-left {
@@ -84,10 +88,20 @@
              
             
         }
+
+        @include media-down(mobile) {
+            width: 100%;
+            padding: 2rem 2rem;
+            margin-bottom: 3rem;
+        }
     }
 
     .register-form-right {
         width: 50%;
+
+        @include media-down(mobile) {
+            width: 100%;
+        }
     }
 }
 .card {

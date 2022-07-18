@@ -28,6 +28,10 @@ footer {
             color: $interface-white;
             font-weight: weight(bold);
             padding-bottom: 1.5rem;
+
+            @include media-down(mobile) {
+                padding-bottom: 1rem;
+            }
         }
 
         ul {
@@ -56,6 +60,10 @@ footer {
                             width: 100%;
                         }
                     }
+
+                    @include media-down(mobile) {
+                        padding: 0.1rem 0;
+                    }
                 }
             }
         }
@@ -67,6 +75,16 @@ footer {
         @include media-down(tablet) {
             width: 35%;
         }
+
+        @include media-down(mobile) {
+            width: 100%;
+            margin-top: 2.5rem;
+            padding: 0;
+        }
+    }
+
+    @include media-down(mobile) {
+        padding: 3rem 0;
     }
 }
 .social-media {
@@ -84,6 +102,10 @@ footer {
 
                 img {
                     width: 3.5rem;
+
+                    @include media-down(mobile) {
+                        width: 3rem;
+                    }
                 }
             }
         }
@@ -91,5 +113,9 @@ footer {
 
     @include media-down(tablet-large) {
         width: 22%;
+    }
+
+    @include media-down(mobile) {
+        padding-top: 2rem;
     }
 }

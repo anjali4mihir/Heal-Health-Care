@@ -1524,6 +1524,11 @@
   color: #ffffff;
   padding: 1.5rem 2rem;
 }
+@media (max-width: 767.98px) {
+  .o-button {
+    padding: 1rem 1.5rem;
+  }
+}
 
 html {
   box-sizing: border-box;
@@ -1544,6 +1549,7 @@ body {
   font-size: 1.6rem;
   line-height: 2rem;
   overflow-x: hidden;
+  text-transform: capitalize !important;
 }
 
 .container {
@@ -1561,6 +1567,13 @@ body {
   .container {
     width: 75rem !important;
     max-width: 75rem !important;
+    margin: auto;
+  }
+}
+@media (max-width: 375px) {
+  .container {
+    width: 36rem !important;
+    max-width: 36rem !important;
     margin: auto;
   }
 }
@@ -1642,45 +1655,53 @@ ul {
   }
 }
 
-.consultant-section.nurse-consultant-section h2, .doctor-detail.nurse-detail h2, .doctor-detail.diagnostics-detail h2, .contact-section .contact-form h2, .mission-vision h2, .testimonial-slider h2, .how-work h2, .consultant-section p, .consultant-section h2, .specialities-section h2, .health-concern-section h2, .register-member-section p, .member-section .member-right h2,
+.consultant-section.nurse-consultant-section h2, .doctor-detail.nurse-detail h2, .doctor-detail.diagnostics-detail h2, .contact-section .contact-form h2, .mission-vision h2, .testimonial-slider h2, .how-work h2, .consultant-section p, .consultant-section h2, .healthcare-section .healthcare-left h2, .specialities-section h2, .health-concern-section h2, .register-member-section p, .member-section .member-right h2,
 .o-header--h2 {
   font-size: 4rem;
   line-height: 5rem;
 }
 @media (max-width: 1359.98px) {
-  .consultant-section.nurse-consultant-section h2, .doctor-detail.nurse-detail h2, .doctor-detail.diagnostics-detail h2, .contact-section .contact-form h2, .mission-vision h2, .testimonial-slider h2, .how-work h2, .consultant-section p, .consultant-section h2, .specialities-section h2, .health-concern-section h2, .register-member-section p, .member-section .member-right h2,
+  .consultant-section.nurse-consultant-section h2, .doctor-detail.nurse-detail h2, .doctor-detail.diagnostics-detail h2, .contact-section .contact-form h2, .mission-vision h2, .testimonial-slider h2, .how-work h2, .consultant-section p, .consultant-section h2, .healthcare-section .healthcare-left h2, .specialities-section h2, .health-concern-section h2, .register-member-section p, .member-section .member-right h2,
 .o-header--h2 {
     font-size: 3rem;
     line-height: 4rem;
   }
 }
-.registration-form .register-form-left h2, .register-video-section .register-video-section-left .sign-title, .offering-section h2, .healthcare-section .healthcare-left h2,
+@media (max-width: 767.98px) {
+  .consultant-section.nurse-consultant-section h2, .doctor-detail.nurse-detail h2, .doctor-detail.diagnostics-detail h2, .contact-section .contact-form h2, .mission-vision h2, .testimonial-slider h2, .how-work h2, .consultant-section p, .consultant-section h2, .healthcare-section .healthcare-left h2, .specialities-section h2, .health-concern-section h2, .register-member-section p, .member-section .member-right h2,
+.o-header--h2 {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+}
+
+.registration-form .register-form-left h2, .register-video-section .register-video-section-left .sign-title, .offering-section h2,
 .o-header--h3 {
   font-size: 2.4rem;
-  line-height: 2.8rem;
+  line-height: 3rem;
 }
 @media (max-width: 1359.98px) {
-  .registration-form .register-form-left h2, .register-video-section .register-video-section-left .sign-title, .offering-section h2, .healthcare-section .healthcare-left h2,
+  .registration-form .register-form-left h2, .register-video-section .register-video-section-left .sign-title, .offering-section h2,
 .o-header--h3 {
     font-size: 2.2rem;
     line-height: 4.2rem;
   }
 }
 
-.signup-profile .register-btm a, .health-section h5, footer .footer-link h4, .home-banner .banner-left p,
+.signup-profile .register-btm a, .health-section h5, footer .footer-link h4, .book-service .service-card h5, .book-section .container ul li, .home-banner .banner-left p,
 .o-header--h4 {
   font-size: 2rem;
-  line-height: 2.4rem;
+  line-height: 2.8rem;
 }
 @media (max-width: 1359.98px) {
-  .signup-profile .register-btm a, .health-section h5, footer .footer-link h4, .home-banner .banner-left p,
+  .signup-profile .register-btm a, .health-section h5, footer .footer-link h4, .book-service .service-card h5, .book-section .container ul li, .home-banner .banner-left p,
 .o-header--h4 {
     font-size: 1.6rem;
     line-height: 2.4rem;
   }
 }
 
-.contact-section .contact-section-left p, .mission-vision p, .service-card.service-card-text .compare-text ul li, .health-section p, .step-text .step-block h4, .book-section .container ul li, .healthcare-section .healthcare-left p, .specialities-section .speci-count, .view-btn, .service-card.service-card-text ul li,
+.contact-section .contact-section-left p, .mission-vision p, .service-card.service-card-text .compare-text ul li, .health-section p, .step-text .step-block h4, .healthcare-section .healthcare-left p, .specialities-section .speci-count, .view-btn, .service-card.service-card-text ul li,
 .o-paragraph-large {
   font-size: 1.6rem;
   line-height: 2.4rem;
@@ -1692,7 +1713,7 @@ ul {
   line-height: 2.2rem;
 }
 
-.step-text .step-block ul li, .book-service .service-card h5, .concern-card p, .service-card p, nav ul li a,
+.step-text .step-block ul li, .concern-card p, .service-card p, nav ul li a,
 .o-paragraph-small {
   font-size: 1.4rem;
   line-height: 2.2rem;
@@ -1837,7 +1858,7 @@ nav ul li {
 }
 nav ul li a {
   display: block;
-  padding: 1.4rem 1.2rem;
+  padding: 1.4rem 1rem;
   color: #000000;
   text-decoration: none;
   transition: all 0.5s ease;
@@ -1856,6 +1877,11 @@ nav ul li a:hover {
 }
 nav ul li a:hover::after {
   width: 100%;
+}
+@media (max-width: 1359.98px) {
+  nav ul li a {
+    padding: 0.5rem 1rem;
+  }
 }
 @media (max-width: 1279.98px) {
   nav ul li a {
@@ -1887,13 +1913,23 @@ nav ul li:last-child {
     top: 9rem;
   }
 }
+@media (max-width: 767.98px) {
+  nav ul {
+    width: 94%;
+    right: 2rem;
+    padding: 1rem 1rem;
+    z-index: 2;
+    top: 9rem;
+    left: 1rem;
+  }
+}
 
 #logo {
   display: block;
   float: left;
   font-size: 20px;
   line-height: 60px;
-  padding-right: 1.5rem;
+  padding-right: 0;
 }
 #logo a {
   display: flex;
@@ -1933,6 +1969,14 @@ header {
   padding: 2rem 0;
   position: relative;
 }
+header .container {
+  padding: 0;
+}
+@media (max-width: 1279.98px) {
+  header .container {
+    padding: 0 1.5rem;
+  }
+}
 header.fixed {
   width: 100%;
   position: fixed;
@@ -1968,8 +2012,13 @@ header.fixed #logo img {
 .mobile-menu img {
   width: 45%;
 }
+@media (max-width: 767.98px) {
+  .mobile-menu {
+    margin-right: -3.5rem;
+  }
+}
 
-@media (min-width: 1025px) {
+@media (min-width: 1280px) {
   .mobile-menu {
     display: none;
   }
@@ -1983,6 +2032,27 @@ header.fixed #logo img {
     animation-name: fadeRight;
     animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
+  }
+}
+
+.dropdown a {
+  display: flex;
+  flex-wrap: wrap;
+}
+.dropdown img {
+  width: 46%;
+  margin-top: 2px;
+  margin-left: 7px;
+}
+
+@media (max-width: 1359.98px) {
+  .sub-menu {
+    display: none;
+  }
+  .sub-menu.show-menu {
+    display: block;
+    left: 1.5rem;
+    top: 4rem;
   }
 }
 
@@ -2018,6 +2088,11 @@ header.fixed #logo img {
     width: 45%;
   }
 }
+@media (max-width: 767.98px) {
+  .home-banner .banner-left {
+    width: 100%;
+  }
+}
 .home-banner .banner-right {
   width: 50%;
   background-color: #f2f1f6;
@@ -2034,6 +2109,16 @@ header.fixed #logo img {
 @media (max-width: 1023.98px) {
   .home-banner .banner-right {
     width: 55%;
+  }
+}
+@media (max-width: 767.98px) {
+  .home-banner .banner-right {
+    width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .home-banner {
+    flex-wrap: wrap;
   }
 }
 
@@ -2153,7 +2238,7 @@ header.fixed #logo img {
 }
 @media (max-width: 1023.98px) {
   .top-services-section {
-    padding: 4rem 0;
+    padding: 4rem 0 3rem 0;
   }
 }
 
@@ -2174,8 +2259,26 @@ header.fixed #logo img {
     font-size: 6rem;
   }
 }
+@media (max-width: 767.98px) {
+  .services-block .services-left .service-card p {
+    font-size: 2rem;
+    line-height: 3rem;
+    padding: 1rem 0;
+    bottom: 0.5rem;
+  }
+}
 .services-block .services-left .service-card img {
   height: 61rem;
+}
+@media (max-width: 767.98px) {
+  .services-block .services-left .service-card img {
+    height: 38rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .services-block .services-left {
+    width: 100%;
+  }
 }
 .services-block .services-right {
   width: 65%;
@@ -2198,6 +2301,13 @@ header.fixed #logo img {
     line-height: 3rem;
   }
 }
+@media (max-width: 767.98px) {
+  .services-block .services-right h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    padding: 2.5rem 0 0 0;
+  }
+}
 .services-block .services-right .service-card {
   width: 25%;
   padding: 1.5rem;
@@ -2205,9 +2315,31 @@ header.fixed #logo img {
 .services-block .services-right .service-card p {
   bottom: 2rem;
 }
+@media (max-width: 767.98px) {
+  .services-block .services-right .service-card p {
+    bottom: 1.3rem;
+  }
+}
 @media (max-width: 1023.98px) {
   .services-block .services-right .service-card {
     width: 33.33%;
+  }
+}
+@media (max-width: 767.98px) {
+  .services-block .services-right .service-card {
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .services-block .services-right {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .services-block {
+    flex-wrap: wrap;
   }
 }
 
@@ -2221,6 +2353,16 @@ header.fixed #logo img {
   object-fit: cover;
   height: 21rem;
   object-position: center center;
+}
+@media (max-width: 1279.98px) {
+  .service-card img, .service-card.service-card-text {
+    height: 25rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .service-card img, .service-card.service-card-text {
+    height: 22rem;
+  }
 }
 .service-card p {
   background-color: rgba(227, 30, 36, 0.8);
@@ -2239,6 +2381,14 @@ header.fixed #logo img {
 @media (max-width: 1023.98px) {
   .service-card p {
     width: 81%;
+  }
+}
+@media (max-width: 767.98px) {
+  .service-card p {
+    width: 91%;
+    text-align: center;
+    bottom: 0.5rem;
+    padding: 1rem 1.5rem;
   }
 }
 .service-card.service-card-text ul {
@@ -2284,13 +2434,23 @@ header.fixed #logo img {
     width: 68%;
   }
 }
+@media (max-width: 767.98px) {
+  .member-section .member-left {
+    display: none;
+  }
+}
 .member-section .member-right {
   margin-right: 10rem;
 }
 .member-section .member-right h2 {
   color: #000000;
   text-align: right;
-  font-weight: 400;
+  font-weight: 700;
+}
+@media (max-width: 767.98px) {
+  .member-section .member-right h2 {
+    text-align: center;
+  }
 }
 .member-section .member-right p {
   color: #e31e24;
@@ -2301,6 +2461,22 @@ header.fixed #logo img {
 @media (max-width: 1023.98px) {
   .member-section .member-right p {
     padding-top: 0.8rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .member-section .member-right p {
+    text-align: center;
+  }
+}
+@media (max-width: 767.98px) {
+  .member-section .member-right {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .member-section {
+    padding: 2rem 0;
   }
 }
 
@@ -2331,6 +2507,11 @@ header.fixed #logo img {
   color: #e31e24;
   padding-bottom: 2rem;
 }
+@media (max-width: 767.98px) {
+  .register-member-section h1 {
+    padding-bottom: 1rem;
+  }
+}
 .register-member-section p {
   text-transform: capitalize;
   color: #000000;
@@ -2346,9 +2527,25 @@ header.fixed #logo img {
     width: 64%;
   }
 }
+@media (max-width: 767.98px) {
+  .register-member-section .member-block-img img {
+    width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .register-member-section .member-block-img {
+    padding-bottom: 0;
+    padding-top: 3rem;
+  }
+}
 @media (max-width: 1023.98px) {
   .register-member-section {
     padding: 5rem 1.5rem 4rem 1.5rem;
+  }
+}
+@media (max-width: 1023.98px) {
+  .register-member-section {
+    padding: 2.5rem 0 4rem 0;
   }
 }
 
@@ -2366,6 +2563,11 @@ header.fixed #logo img {
     right: 5rem;
   }
 }
+@media (max-width: 767.98px) {
+  .member-btm-section {
+    display: none;
+  }
+}
 
 .sign-up-button {
   display: flex;
@@ -2379,6 +2581,12 @@ header.fixed #logo img {
   display: inline-flex;
   align-items: center;
   text-align: center;
+}
+@media (max-width: 767.98px) {
+  .sign-up-button {
+    width: 100%;
+    margin-top: 2rem;
+  }
 }
 
 .health-concern-section {
@@ -2394,8 +2602,13 @@ header.fixed #logo img {
   color: #000000;
   margin-bottom: 3rem;
 }
+@media (max-width: 767.98px) {
+  .health-concern-section h2 {
+    margin-bottom: 2rem;
+  }
+}
 .health-concern-section .health-concern-card {
-  padding: 2rem 8rem 2rem 0;
+  padding: 2rem 0 2rem 0;
   width: 100%;
   position: relative;
   display: flex;
@@ -2404,6 +2617,11 @@ header.fixed #logo img {
 @media (max-width: 1023.98px) {
   .health-concern-section .health-concern-card {
     padding: 0rem 6rem 2rem 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .health-concern-section .health-concern-card {
+    padding: 0 0 1rem 0;
   }
 }
 .health-concern-section .right-arrow {
@@ -2420,9 +2638,19 @@ header.fixed #logo img {
     width: 5rem;
   }
 }
+@media (max-width: 767.98px) {
+  .health-concern-section .right-arrow {
+    display: none;
+  }
+}
 @media (max-width: 1023.98px) {
   .health-concern-section {
     padding: 5rem 1.5rem 3rem 1.5rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .health-concern-section {
+    padding: 3rem 0 3rem 0;
   }
 }
 
@@ -2462,6 +2690,13 @@ header.fixed #logo img {
     height: 20rem;
   }
 }
+@media (max-width: 767.98px) {
+  .concern-card {
+    width: 43%;
+    height: 19rem;
+    padding: 1.5rem 0.8rem;
+  }
+}
 
 .view-btn {
   color: #ffffff;
@@ -2475,6 +2710,12 @@ header.fixed #logo img {
     margin-right: 2rem;
   }
 }
+@media (max-width: 767.98px) {
+  .view-btn {
+    margin-right: 0;
+    padding: 0.5rem 1.5rem;
+  }
+}
 
 .specialities-section {
   padding: 4rem 0;
@@ -2482,6 +2723,11 @@ header.fixed #logo img {
 .specialities-section h2 {
   color: #000000;
   padding-bottom: 2rem;
+}
+@media (max-width: 767.98px) {
+  .specialities-section h2 {
+    padding-bottom: 1rem;
+  }
 }
 .specialities-section .speci-count {
   color: #ffffff;
@@ -2492,6 +2738,11 @@ header.fixed #logo img {
 @media (max-width: 1023.98px) {
   .specialities-section {
     padding: 4rem 0 0 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .specialities-section {
+    padding: 3rem 0 0 0;
   }
 }
 
@@ -2512,6 +2763,16 @@ header.fixed #logo img {
 .specialities-option ul li img {
   width: 1.8rem;
   margin-right: 1rem;
+}
+@media (max-width: 767.98px) {
+  .specialities-option ul {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 767.98px) {
+  .specialities-option {
+    flex-wrap: wrap;
+  }
 }
 
 .specialities-section .specialities-services {
@@ -2539,9 +2800,21 @@ header.fixed #logo img {
     width: 83%;
   }
 }
+@media (max-width: 767.98px) {
+  .specialities-section .specialities-services .service-card p {
+    width: 90%;
+    bottom: 1.3rem;
+  }
+}
 @media (max-width: 1023.98px) {
   .specialities-section .specialities-services .service-card {
     width: 25%;
+  }
+}
+@media (max-width: 767.98px) {
+  .specialities-section .specialities-services .service-card {
+    width: 50%;
+    padding: 0.8rem 0.8rem;
   }
 }
 
@@ -2567,6 +2840,11 @@ header.fixed #logo img {
   padding-bottom: 3rem;
   text-align: center;
 }
+@media (max-width: 767.98px) {
+  .healthcare-section .healthcare-left h2 {
+    padding-bottom: 1rem;
+  }
+}
 .healthcare-section .healthcare-left p {
   color: #004e47;
   font-weight: 700;
@@ -2587,8 +2865,18 @@ header.fixed #logo img {
 .healthcare-section .healthcare-left .download-option {
   margin-top: 5rem;
 }
+@media (max-width: 767.98px) {
+  .healthcare-section .healthcare-left .download-option {
+    margin-top: 3rem;
+  }
+}
 .healthcare-section .healthcare-left .app-icons {
   padding-top: 2rem;
+}
+@media (max-width: 767.98px) {
+  .healthcare-section .healthcare-left .app-icons {
+    padding-top: 0;
+  }
 }
 @media (max-width: 1023.98px) {
   .healthcare-section .healthcare-left {
@@ -2615,6 +2903,12 @@ header.fixed #logo img {
     padding: 4rem 2rem;
   }
 }
+@media (max-width: 767.98px) {
+  .healthcare-section {
+    padding: 2rem 0;
+    margin-top: 2rem;
+  }
+}
 
 .consultant-section {
   padding: 5rem 0;
@@ -2638,6 +2932,11 @@ header.fixed #logo img {
 .veterians-img {
   width: 100%;
   margin: 4rem 0;
+}
+@media (max-width: 767.98px) {
+  .veterians-img {
+    margin: 2rem 0;
+  }
 }
 
 .app-icons {
@@ -2663,6 +2962,11 @@ header.fixed #logo img {
   font-weight: 700;
   padding: 0 0.8rem;
 }
+@media (max-width: 767.98px) {
+  .book-section {
+    padding: 3rem 0;
+  }
+}
 
 .book-service {
   width: 100%;
@@ -2682,12 +2986,18 @@ header.fixed #logo img {
 .book-service .service-card p {
   background-color: rgba(0, 78, 71, 0.8);
   width: 92%;
-  bottom: 4rem;
+  bottom: 7.5rem;
   border-radius: 0 0 3rem 3rem;
 }
 @media (max-width: 1023.98px) {
   .book-service .service-card p {
     width: 88%;
+    bottom: 6rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .book-service .service-card p {
+    width: 100%;
     bottom: 6rem;
   }
 }
@@ -2700,6 +3010,18 @@ header.fixed #logo img {
     margin-top: 1.5rem;
   }
 }
+@media (max-width: 767.98px) {
+  .book-service .service-card h5 {
+    margin-top: 0;
+    margin-bottom: 3rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .book-service .service-card {
+    width: 100%;
+    padding: 0;
+  }
+}
 
 .book-btm {
   margin-top: 7rem;
@@ -2708,6 +3030,11 @@ header.fixed #logo img {
 @media (max-width: 1023.98px) {
   .book-btm {
     margin-top: 5rem;
+  }
+}
+@media (max-width: 1023.98px) {
+  .book-btm {
+    margin-top: 2rem;
   }
 }
 
@@ -2730,7 +3057,17 @@ header.fixed #logo img {
   margin-top: 3rem;
 }
 .work-step img {
-  width: 100%;
+  width: 90%;
+}
+@media (max-width: 767.98px) {
+  .work-step img {
+    display: none;
+  }
+}
+@media (max-width: 767.98px) {
+  .work-step {
+    padding: 1rem 0;
+  }
 }
 
 .step-text {
@@ -2765,10 +3102,57 @@ header.fixed #logo img {
   bottom: 0;
   margin: auto;
 }
+@media (max-width: 767.98px) {
+  .step-text .step-block ul {
+    padding-top: 0;
+  }
+}
 @media (max-width: 1023.98px) {
   .step-text .step-block {
     margin-top: 1rem;
     padding-right: 1rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .step-text .step-block {
+    margin-top: 1.5rem;
+    padding-right: 1rem;
+    width: 50% !important;
+  }
+}
+.step-text .step-block:first-child {
+  width: 16.6%;
+  padding-right: 0;
+}
+.step-text .step-block:nth-child(2) {
+  width: 17.6%;
+  padding-right: 0;
+}
+.step-text .step-block:nth-child(3) {
+  width: 18.6%;
+  padding-right: 0;
+}
+.step-text .step-block:nth-child(4) {
+  width: 17.6%;
+  padding-right: 0;
+}
+.step-text .step-block:nth-child(5) {
+  width: 13.6%;
+  padding-right: 0;
+}
+.step-text .step-block:last-child {
+  width: 15.6%;
+  padding-right: 0;
+  padding-left: 4.5rem;
+}
+@media (max-width: 767.98px) {
+  .step-text .step-block:last-child {
+    padding-left: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .step-text {
+    flex-wrap: wrap;
   }
 }
 
@@ -2776,12 +3160,17 @@ header.fixed #logo img {
   padding-right: 0;
 }
 .health-concern-section.health-feed-section .health-concern-card .concern-card {
-  width: 18.3%;
+  width: 18%;
   box-shadow: none;
 }
 .health-concern-section.health-feed-section .health-concern-card .concern-card .concern-card-inner {
   box-shadow: 0px 0px 12px 1px rgba(0, 0, 0, 0.3);
   height: 20rem;
+}
+@media (max-width: 767.98px) {
+  .health-concern-section.health-feed-section .health-concern-card .concern-card .concern-card-inner {
+    height: 16rem;
+  }
 }
 .health-concern-section.health-feed-section .health-concern-card .concern-card p {
   padding-top: 1rem;
@@ -2790,6 +3179,13 @@ header.fixed #logo img {
   .health-concern-section.health-feed-section .health-concern-card .concern-card {
     margin: 3rem 0;
     width: 25%;
+  }
+}
+@media (max-width: 767.98px) {
+  .health-concern-section.health-feed-section .health-concern-card .concern-card {
+    margin: 3rem 0;
+    width: 50%;
+    height: 16rem;
   }
 }
 
@@ -2811,6 +3207,72 @@ header.fixed #logo img {
     padding-top: 5rem;
     padding-bottom: 15rem;
   }
+}
+@media (max-width: 1023.98px) {
+  .testimonial-slider {
+    padding-top: 3rem;
+    padding-bottom: 13rem;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  padding-top: 20px;
+  text-align: center;
+}
+.wrapper .carousel {
+  width: 100%;
+  margin: 0px auto;
+  padding: 0 3.2rem;
+}
+.wrapper .slick-slide {
+  margin: 10px;
+}
+.wrapper .slick-slide img {
+  width: 100%;
+  border: 2px solid #fff;
+}
+.wrapper .slick-arrow {
+  position: absolute;
+}
+.wrapper .slick-arrow.slick-prev::before {
+  content: none;
+}
+.wrapper .slick-arrow.slick-next .wrapper .slick-arrow::before {
+  content: none;
+}
+
+.show-all {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  display: none;
+  transition: all 0.5s ease;
+}
+.show-all.visible {
+  display: inline-flex;
+  transition: all 0.5s ease;
+}
+
+.carousel .slick-arrow.slick-prev {
+  left: -1rem;
+}
+.carousel .slick-arrow.slick-prev::before {
+  content: none;
+}
+.carousel .slick-arrow.slick-next {
+  right: -1rem;
+}
+.carousel .slick-arrow.slick-next::before {
+  content: none;
+}
+
+.testimonial-slider .slick-prev {
+  left: auto;
+}
+.testimonial-slider .slick-prev, .testimonial-slider .slick-next {
+  bottom: 0;
+  top: initial;
 }
 
 /* slider styles */
@@ -2877,10 +3339,10 @@ button.slick-prev.slick-arrow {
   border: none;
   outline: none;
   cursor: pointer;
-  height: 15px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
   padding: 0;
-  background-image: url(https://farsighttechnologies.com/wp-content/uploads/2021/03/left-icon.png);
+  background-image: url(../images/left-arrow.png);
   background-size: 100% 100%;
 }
 
@@ -2894,9 +3356,9 @@ button.slick-next.slick-arrow {
   padding: 0;
   cursor: pointer;
   outline: none;
-  height: 18px;
-  width: 40px;
-  background-image: url(https://farsighttechnologies.com/wp-content/uploads/2021/03/right-icon.png);
+  height: 35px;
+  width: 35px;
+  background-image: url(../images/right-arrow.png);
   background-size: 100% 100%;
 }
 
@@ -3032,6 +3494,11 @@ footer .footer-link h4 {
   font-weight: 700;
   padding-bottom: 1.5rem;
 }
+@media (max-width: 767.98px) {
+  footer .footer-link h4 {
+    padding-bottom: 1rem;
+  }
+}
 footer .footer-link ul li {
   list-style-type: none;
 }
@@ -3052,6 +3519,11 @@ footer .footer-link ul li a:after {
 footer .footer-link ul li a:hover::after {
   width: 100%;
 }
+@media (max-width: 767.98px) {
+  footer .footer-link ul li a {
+    padding: 0.1rem 0;
+  }
+}
 @media (max-width: 1279.98px) {
   footer .footer-link {
     width: 18%;
@@ -3060,6 +3532,18 @@ footer .footer-link ul li a:hover::after {
 @media (max-width: 1023.98px) {
   footer .footer-link {
     width: 35%;
+  }
+}
+@media (max-width: 767.98px) {
+  footer .footer-link {
+    width: 100%;
+    margin-top: 2.5rem;
+    padding: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  footer {
+    padding: 3rem 0;
   }
 }
 
@@ -3078,9 +3562,19 @@ footer .footer-link ul li a:hover::after {
 .social-media ul li a img {
   width: 3.5rem;
 }
+@media (max-width: 767.98px) {
+  .social-media ul li a img {
+    width: 3rem;
+  }
+}
 @media (max-width: 1279.98px) {
   .social-media {
     width: 22%;
+  }
+}
+@media (max-width: 767.98px) {
+  .social-media {
+    padding-top: 2rem;
   }
 }
 
@@ -3131,6 +3625,11 @@ footer .footer-link ul li a:hover::after {
   padding-top: 2rem;
   text-align: center;
 }
+@media (max-width: 767.98px) {
+  .health-section h5 {
+    padding-top: 0.8rem;
+  }
+}
 .health-section p {
   color: #000000;
   padding-top: 1.5rem;
@@ -3139,6 +3638,21 @@ footer .footer-link ul li a:hover::after {
   display: flex;
   justify-content: center;
   margin: auto;
+}
+@media (max-width: 767.98px) {
+  .health-section p {
+    padding-top: 0.8rem;
+  }
+}
+@media (max-width: 1279.98px) {
+  .health-section {
+    padding-top: 5rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .health-section {
+    padding-top: 2rem;
+  }
 }
 
 .offering-section {
@@ -3167,6 +3681,27 @@ footer .footer-link ul li a:hover::after {
   width: 100%;
   text-align: center;
 }
+@media (max-width: 1279.98px) {
+  .offering-section .offering-btm .offering-left .service-card {
+    width: 22%;
+  }
+}
+@media (max-width: 1023.98px) {
+  .offering-section .offering-btm .offering-left .service-card {
+    width: 22.5%;
+    margin: 0.6rem 0.8rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .offering-section .offering-btm .offering-left .service-card {
+    width: 100%;
+  }
+}
+@media (max-width: 1279.98px) {
+  .offering-section .offering-btm .offering-left {
+    width: 100%;
+  }
+}
 .offering-section .offering-btm .offering-right {
   width: 50%;
   padding-left: 3rem;
@@ -3186,6 +3721,34 @@ footer .footer-link ul li a:hover::after {
 }
 .offering-section .offering-btm .offering-right.offering-right-btm .service-card p {
   bottom: 0;
+}
+@media (max-width: 767.98px) {
+  .offering-section .offering-btm .offering-right.offering-right-btm .service-card {
+    width: 100%;
+  }
+}
+@media (max-width: 1279.98px) {
+  .offering-section .offering-btm .offering-right {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+@media (max-width: 1279.98px) {
+  .offering-section .offering-btm {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 767.98px) {
+  .offering-section .offering-btm {
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .offering-section {
+    margin-top: 0.5rem;
+    padding-bottom: 0;
+  }
 }
 
 .offering-right.offering-right-btm .service-card.service-card-text.service-card-text-btm {
@@ -3223,6 +3786,22 @@ footer .footer-link ul li a:hover::after {
   border: 1px solid #dddddd;
   background-color: #ffffff;
 }
+@media (max-width: 1279.98px) {
+  .mission-vision p {
+    margin-top: 1rem;
+    padding: 2rem 2rem;
+  }
+}
+@media (max-width: 1279.98px) {
+  .mission-vision {
+    margin-top: 5rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .mission-vision {
+    margin-top: 3rem;
+  }
+}
 
 .service-card-text-btm ul:last-child {
   padding-top: 0;
@@ -3230,6 +3809,11 @@ footer .footer-link ul li a:hover::after {
 
 .home-banner .container {
   display: flex;
+}
+@media (max-width: 767.98px) {
+  .home-banner .container {
+    flex-wrap: wrap;
+  }
 }
 .home-banner.about-download {
   background-color: #f5f5f2;
@@ -3253,6 +3837,16 @@ footer .footer-link ul li a:hover::after {
   height: 55rem;
   object-fit: contain;
 }
+@media (max-width: 1279.98px) {
+  .home-banner.about-download .banner-right img {
+    height: 45rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .home-banner.about-download {
+    padding-bottom: 3rem;
+  }
+}
 
 .page-banner {
   width: 100%;
@@ -3274,6 +3868,18 @@ footer .footer-link ul li a:hover::after {
   font-weight: 700;
   text-transform: uppercase;
 }
+@media (max-width: 1279.98px) {
+  .page-banner h1 {
+    left: calc((100vw - 92rem) / 2);
+    bottom: 6rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-banner h1 {
+    left: 25px;
+    bottom: 3rem;
+  }
+}
 .page-banner:after {
   position: absolute;
   left: 0;
@@ -3285,6 +3891,21 @@ footer .footer-link ul li a:hover::after {
   background: linear-gradient(118.99deg, #060C10 48.25%, rgba(24, 22, 27, 0) 88.16%);
   mix-blend-mode: hard-light;
   opacity: 0.4;
+}
+@media (max-width: 1279.98px) {
+  .page-banner {
+    height: 40rem;
+  }
+}
+@media (max-width: 1023.98px) {
+  .page-banner {
+    height: 30rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .page-banner {
+    height: 20rem;
+  }
 }
 
 .contact-section {
@@ -3332,6 +3953,12 @@ footer .footer-link ul li a:hover::after {
 .contact-section .contact-section-right h5.work-hr {
   padding-top: 6rem;
 }
+@media (max-width: 767.98px) {
+  .contact-section .contact-section-right h5.work-hr {
+    padding-top: 3rem;
+    padding-bottom: 0.8rem;
+  }
+}
 .contact-section .contact-section-right p {
   color: #000000;
 }
@@ -3375,6 +4002,12 @@ footer .footer-link ul li a:hover::after {
 .contact-section .contact-form .contact-form-btm .form-group.text-area {
   width: 100%;
 }
+@media (max-width: 767.98px) {
+  .contact-section .contact-form .contact-form-btm .form-group {
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
 .contact-section .contact-form .contact-form-btm .submit-btn {
   width: 100%;
   margin-bottom: 1.5rem;
@@ -3384,6 +4017,18 @@ footer .footer-link ul li a:hover::after {
   text-transform: uppercase;
   display: flex;
   margin: auto;
+}
+@media (max-width: 767.98px) {
+  .contact-section .contact-form .contact-form-btm {
+    padding: 2rem 2rem;
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .contact-section .contact-form {
+    margin-top: 3rem;
+    padding: 3rem 0 3rem 0;
+  }
 }
 
 .doctor-banner {
@@ -3403,6 +4048,16 @@ footer .footer-link ul li a:hover::after {
 }
 .doctor-banner .download-option {
   padding-bottom: 4rem;
+}
+@media (max-width: 1023.98px) {
+  .doctor-banner {
+    height: 40rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .doctor-banner {
+    height: 30rem;
+  }
 }
 
 .doctor-detail {
@@ -3428,9 +4083,19 @@ footer .footer-link ul li a:hover::after {
   color: #004e47;
   padding: 1.2rem 0 0 40rem;
 }
+@media (max-width: 767.98px) {
+  .doctor-detail .container h2 span {
+    padding: 1.2rem 0 3rem 0;
+  }
+}
 .doctor-detail .container img {
   width: 90%;
   margin-top: -9rem;
+}
+@media (max-width: 767.98px) {
+  .doctor-detail {
+    padding: 3rem 0 3rem 0;
+  }
 }
 
 .consultant-section {
@@ -3440,12 +4105,27 @@ footer .footer-link ul li a:hover::after {
 .consultant-section img {
   width: 100%;
 }
+@media (max-width: 767.98px) {
+  .consultant-section {
+    padding: 1rem 0 3rem 0;
+  }
+}
 
 .video-section {
   padding: 8rem 0 8rem 0;
 }
 .video-section iframe {
   width: 100%;
+}
+@media (max-width: 767.98px) {
+  .video-section iframe {
+    height: 30rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .video-section {
+    padding: 4rem 0 5rem 0;
+  }
 }
 
 .doctor-detail.diagnostics-detail h2 {
@@ -3466,6 +4146,11 @@ footer .footer-link ul li a:hover::after {
 .doctor-detail.nurse-detail img {
   margin-top: -4rem;
 }
+@media (max-width: 767.98px) {
+  .doctor-detail.nurse-detail img {
+    margin-top: -1rem;
+  }
+}
 
 .consultant-section.nurse-consultant-section h2 {
   color: #000000;
@@ -3475,6 +4160,11 @@ footer .footer-link ul li a:hover::after {
   width: 55%;
   margin: auto;
   display: flex;
+}
+@media (max-width: 767.98px) {
+  .consultant-section.nurse-consultant-section img {
+    width: 100%;
+  }
 }
 
 .consultant-section.store-consultant img {
@@ -3497,11 +4187,28 @@ footer .footer-link ul li a:hover::after {
   font-size: 3rem;
   line-height: 4rem;
 }
+@media (max-width: 767.98px) {
+  .registration-section h3 {
+    padding-top: 1.5rem;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
 .registration-section .registratin-btn {
   display: flex;
   width: 100%;
   justify-content: center;
   padding-top: 3rem;
+}
+@media (max-width: 767.98px) {
+  .registration-section .registratin-btn {
+    padding-top: 2rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .registration-section {
+    padding: 3rem 0;
+  }
 }
 
 .register-video-section {
@@ -3512,6 +4219,11 @@ footer .footer-link ul li a:hover::after {
 .register-video-section .container {
   display: flex;
 }
+@media (max-width: 767.98px) {
+  .register-video-section .container {
+    flex-wrap: wrap;
+  }
+}
 .register-video-section .register-video-section-left {
   width: 50%;
 }
@@ -3521,6 +4233,11 @@ footer .footer-link ul li a:hover::after {
   font-weight: 700;
   text-align: center;
   padding-bottom: 1.5rem;
+}
+@media (max-width: 767.98px) {
+  .register-video-section .register-video-section-left .sign-title {
+    padding-bottom: 0.5rem;
+  }
 }
 .register-video-section .register-video-section-left .sign-services {
   display: flex;
@@ -3537,8 +4254,40 @@ footer .footer-link ul li a:hover::after {
   background-color: rgba(0, 78, 71, 0.8);
   width: 91%;
 }
+@media (max-width: 767.98px) {
+  .register-video-section .register-video-section-left .sign-services .service-card p {
+    width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .register-video-section .register-video-section-left .sign-services .service-card {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .register-video-section .register-video-section-left .sign-services {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 767.98px) {
+  .register-video-section .register-video-section-left {
+    width: 100%;
+  }
+}
 .register-video-section .register-video-section-right {
   width: 50%;
+}
+@media (max-width: 767.98px) {
+  .register-video-section .register-video-section-right {
+    width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .register-video-section {
+    padding: 3rem 0;
+  }
 }
 
 .signup-profile {
@@ -3553,13 +4302,28 @@ footer .footer-link ul li a:hover::after {
   margin: auto;
   display: flex;
 }
+@media (max-width: 767.98px) {
+  .signup-profile img {
+    width: 100%;
+  }
+}
 .signup-profile .register-btm {
   display: flex;
   justify-content: center;
   margin-top: 7rem;
 }
+@media (max-width: 767.98px) {
+  .signup-profile .register-btm {
+    margin-top: 3rem;
+  }
+}
 .signup-profile.inventory-profile .register-btm {
   margin-top: 3rem;
+}
+@media (max-width: 767.98px) {
+  .signup-profile {
+    padding: 4rem 0;
+  }
 }
 
 .register-video-section.register-video-section-btm .register-video-section-left .sign-services {
@@ -3574,6 +4338,17 @@ footer .footer-link ul li a:hover::after {
 }
 .register-video-section.register-video-section-btm .register-video-section-left .sign-services .service-card p {
   width: 96.2%;
+}
+@media (max-width: 767.98px) {
+  .register-video-section.register-video-section-btm .register-video-section-left .sign-services .service-card p {
+    width: 95%;
+  }
+}
+@media (max-width: 767.98px) {
+  .register-video-section.register-video-section-btm .register-video-section-left .sign-services .service-card {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }
 
 .modal-trigger {
@@ -3645,6 +4420,11 @@ footer .footer-link ul li a:hover::after {
 .video-section-right a.radiological-video {
   width: 100%;
 }
+@media (max-width: 767.98px) {
+  .video-section-right a {
+    width: 100%;
+  }
+}
 
 .registration-form {
   display: flex;
@@ -3654,6 +4434,11 @@ footer .footer-link ul li a:hover::after {
 .registration-form .container {
   display: flex;
   align-items: center;
+}
+@media (max-width: 767.98px) {
+  .registration-form .container {
+    flex-wrap: wrap;
+  }
 }
 .registration-form .register-form-left {
   width: 50%;
@@ -3716,8 +4501,20 @@ footer .footer-link ul li a:hover::after {
   color: #000000;
   margin-bottom: 1.5rem;
 }
+@media (max-width: 767.98px) {
+  .registration-form .register-form-left {
+    width: 100%;
+    padding: 2rem 2rem;
+    margin-bottom: 3rem;
+  }
+}
 .registration-form .register-form-right {
   width: 50%;
+}
+@media (max-width: 767.98px) {
+  .registration-form .register-form-right {
+    width: 100%;
+  }
 }
 
 .card {
