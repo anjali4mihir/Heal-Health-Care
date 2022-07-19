@@ -3466,6 +3466,10 @@ button.slick-next.slick-arrow {
   background-color: #a0a0a5;
 }
 
+.slick-prev:before, .slick-next:before {
+  content: none;
+}
+
 footer {
   background-color: #004e47;
   padding: 8rem 0;

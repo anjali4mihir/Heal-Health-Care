@@ -178,3 +178,7 @@ button.slick-next.slick-arrow {
 .sd_scroll::-webkit-scrollbar-thumb:hover {
     background-color:#a0a0a5;
 }
+
+.slick-prev:before, .slick-next:before {
+    content: none;
+}
