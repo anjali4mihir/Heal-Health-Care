@@ -11,12 +11,26 @@
         text-align: center;
         font-size: 3rem;
         line-height: 4rem;
+
+        @include media-down(mobile) {
+            padding-top: 1.5rem;
+            font-size: 2rem;
+            line-height: 3rem;  
+        }
     }
     .registratin-btn {
         display: flex;
         width: 100%;
         justify-content: center;
         padding-top: 3rem;
+
+        @include media-down(mobile) {
+            padding-top: 2rem;
+        }
+    }
+
+    @include media-down(mobile) {
+        padding: 3rem 0;
     }
 }
 .register-video-section {
@@ -26,6 +40,10 @@
 
     .container {
         display: flex;
+
+        @include media-down(mobile) {
+            flex-wrap: wrap;
+        }
     }
 
     .register-video-section-left {
@@ -38,6 +56,10 @@
             font-weight: weight(bold);
             text-align: center;
             padding-bottom: 1.5rem;
+
+            @include media-down(mobile) {
+                padding-bottom: 0.5rem;
+            }
         }
 
         .sign-services {
@@ -55,15 +77,40 @@
                     text-align: center;
                     background-color: rgba(0, 78, 71, 0.8);
                     width: 91%;
+
+                    @include media-down(mobile) {
+                        width: 100%;
+                    }
+                }
+
+                @include media-down(mobile) {
+                    width: 100%;
+                    margin-bottom: 1rem;
+                    padding: 0;
                 }
             }
+
+            @include media-down(mobile) {
+                flex-wrap: wrap;
+            }
+        }
+
+        @include media-down(mobile) {
+            width: 100%;
         }
     }
 
     .register-video-section-right {
         width: 50%;
+
+        @include media-down(mobile) {
+            width: 100%;
+        }
     }
-  
+    
+    @include media-down(mobile) {
+        padding: 3rem 0;
+    }
 }
 
 .signup-profile {
@@ -77,6 +124,10 @@
         width: 70%;
         margin: auto;
         display: flex;    
+
+        @include media-down(mobile) {
+            width: 100%;
+        }
     }
 
     .register-btm {
@@ -87,12 +138,20 @@
         a {
             @extend %o-header--h4;
         }
+
+        @include media-down(mobile) {
+            margin-top: 3rem;
+        }
     }
     
     &.inventory-profile {
         .register-btm {
             margin-top: 3rem;
         }
+    }
+
+    @include media-down(mobile) {
+        padding: 4rem 0;
     }
 }
 .register-video-section.register-video-section-btm {
@@ -109,6 +168,15 @@
             
             p{
                 width: 96.2%;
+
+                @include media-down(mobile) {
+                    width: 95%;
+                }
+            }
+
+            @include media-down(mobile) {
+                width: 100%;
+                margin-bottom: 1rem;
             }
         }
     }
@@ -186,6 +254,10 @@
         }
 
         &.radiological-video {
+            width: 100%;
+        }
+
+        @include media-down(mobile) {
             width: 100%;
         }
     }

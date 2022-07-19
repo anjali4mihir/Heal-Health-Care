@@ -30,6 +30,14 @@ $( document ).ready(function() {
     $(".menu").toggleClass("show-menu");
   });
 
+  $('#view-specialities').click( function() {
+    $(".show-all").toggleClass("visible");
+  });
+
+  $('.dropdown').click( function() {
+    $(this).find('.sub-menu').toggleClass('show-menu');
+  });
+
 });
 
     

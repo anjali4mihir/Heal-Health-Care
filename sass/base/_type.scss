@@ -17,6 +17,7 @@ body {
   font-size: 1.6rem;
   line-height: 2rem;
   overflow-x: hidden;
+  text-transform: capitalize !important;
 }
 .container {
   width: 120rem;
@@ -30,6 +31,12 @@ body {
   @media (max-width: 768px) {
     width: 75rem !important;
     max-width: 75rem !important;
+    margin: auto;
+  }
+
+  @media (max-width: 375px) {
+    width: 36rem !important;
+    max-width: 36rem !important;
     margin: auto;
   }
 }
@@ -113,8 +120,8 @@ ul {
   }
 
   @include media-down(mobile) {
-    font-size: size(subtitle, large);
-    line-height: lineheight(subtitle, large);
+    font-size: size(title, h4);
+    line-height: lineheight(title, h4);
   }
 }
 

@@ -17,6 +17,14 @@
     .download-option {
         padding-bottom: 4rem;
     }
+
+    @include media-down(tablet) {
+        height: 40rem;
+    }
+
+    @include media-down(mobile) {
+        height: 30rem;
+    }
 }
 .doctor-detail {
     padding: 6rem 0 6rem 0;
@@ -41,6 +49,10 @@
                 width: 100%;
                 color: $brand-primary;
                 padding: 1.2rem 0 0 40rem;
+
+                @include media-down(mobile) {
+                    padding: 1.2rem 0 3rem 0;
+                }
             }
         }
         img {
@@ -49,6 +61,9 @@
         }
     }
     
+    @include media-down(mobile) {
+        padding: 3rem 0 3rem 0;
+    }
 }
 .consultant-section {
     background-color: #f2f2f2;
@@ -57,11 +72,23 @@
     img {
         width: 100%;
     }
+
+    @include media-down(mobile) {
+        padding: 1rem 0 3rem 0;
+    }
 }
 .video-section {
     padding: 8rem 0 8rem 0;
 
     iframe {
         width: 100%;
+
+        @include media-down(mobile) {
+            height: 30rem;
+        }
+    }
+
+    @include media-down(mobile) {
+        padding: 4rem 0 5rem 0;
     }
 }

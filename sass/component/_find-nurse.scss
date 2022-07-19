@@ -6,6 +6,10 @@
     
         img {
             margin-top: -4rem;
+
+            @include media-down(mobile) {
+                margin-top: -1rem;
+            }
         }
     }
 }
@@ -21,6 +25,10 @@
             width: 55%;
             margin: auto;
             display: flex;
+
+            @include media-down(mobile) {
+                width: 100%;
+            }
         }
     }
 }

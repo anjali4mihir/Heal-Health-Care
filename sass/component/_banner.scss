@@ -32,6 +32,10 @@
             padding: 2rem 3rem;
             width: 45%;
         }
+
+        @include media-down(mobile) {
+            width: 100%;
+        }
     }
     .banner-right {
         width: 50%;
@@ -49,6 +53,13 @@
         @include media-down(tablet) {
             width: 55%;
         }
+        @include media-down(mobile) {
+            width: 100%;
+        }
+    }
+
+    @include media-down(mobile) {
+        flex-wrap: wrap;
     }
 }
 .download-option {

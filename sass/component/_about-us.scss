@@ -13,6 +13,10 @@
         padding-top: 2rem;
         @extend %o-header--h4;
         text-align: center;
+
+        @include media-down(mobile) {
+            padding-top: 0.8rem;
+        }
     }
 
     p {
@@ -24,6 +28,18 @@
         display: flex;
         justify-content: center;
         margin: auto;
+
+        @include media-down(mobile) {
+            padding-top: 0.8rem;
+        }
+    }
+
+    @include media-down(tablet-large) {
+        padding-top: 5rem;
+    }
+
+    @include media-down(mobile) {
+        padding-top: 2rem;
     }
 }
 .offering-section {
@@ -54,6 +70,23 @@
                     width: 100%;
                     text-align: center;
                 }
+
+                @include media-down(tablet-large) {
+                    width: 22%;
+                }
+
+                @include media-down(tablet) {
+                    width: 22.5%;
+                    margin: 0.6rem 0.8rem;
+                }
+
+                @include media-down(mobile) {
+                    width: 100%;
+                }
+            }
+
+            @include media-down(tablet-large) {
+                width: 100%;
             }
         }
 
@@ -82,12 +115,34 @@
                         bottom: 0;
                     }
 
+                    @include media-down(mobile) {
+                        width: 100%;
+                    }
+
                 }
                 
             }
+
+            @include media-down(tablet-large) {
+                width: 100%;
+                padding-left: 0;
+            }
+        }
+
+        @include media-down(tablet-large) {
+            flex-wrap: wrap;
+        }
+
+        @include media-down(mobile) {
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
         }
     }
     
+    @include media-down(mobile) {
+        margin-top: 0.5rem;
+        padding-bottom: 0;
+    }
 }
 .offering-right.offering-right-btm .service-card {
     &.service-card-text.service-card-text-btm {
@@ -131,7 +186,21 @@
         margin-top: 2rem;
         border: 1px solid #dddddd;
         background-color: $interface-white;
+
+        @include media-down(tablet-large) {
+            margin-top: 1rem;
+            padding: 2rem 2rem;
+        }
     }
+
+    @include media-down(tablet-large) {
+        margin-top: 5rem;
+    }
+
+    @include media-down(mobile) {
+        margin-top: 3rem;
+    }
+
 }
 .service-card-text-btm ul:last-child {
     padding-top: 0;
@@ -139,6 +208,10 @@
 .home-banner {
     .container {
         display: flex;
+
+        @include media-down(mobile) {
+            flex-wrap: wrap;
+        }
     }
     &.about-download {
         background-color: #f5f5f2;
@@ -163,7 +236,15 @@
                 width: auto;
                 height: 55rem;
                 object-fit: contain;
+
+                @include media-down(tablet-large) {
+                    height: 45rem;
+                }
             }
+        }
+
+        @include media-down(mobile) {
+            padding-bottom: 3rem;
         }
     }
 }

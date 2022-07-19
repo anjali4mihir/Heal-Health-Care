@@ -22,6 +22,10 @@
     @include media-down(tablet) {
         width: 68%;
     }
+
+    @include media-down(mobile) {
+        display: none;
+    }
    }
 
    .member-right {
@@ -31,7 +35,11 @@
             @extend %o-header--h2;
             color: $interface-black;
             text-align: right;
-            font-weight: weight(regular);
+            font-weight: weight(bold);
+
+            @include media-down(mobile) {
+                text-align: center;
+            }
         }
         p {
             @extend %o-header--h1;
@@ -44,7 +52,20 @@
             @include media-down(tablet) {
                 padding-top: 0.8rem;
             }
+
+            @include media-down(mobile) {
+                text-align: center;
+            }
         }
+
+        @include media-down(mobile) {
+            width: 100%;
+            margin-right: 0;
+        }
+   }
+
+   @include media-down(mobile) {
+        padding: 2rem 0;
    }
 }
 .member-download {

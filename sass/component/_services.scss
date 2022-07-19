@@ -86,7 +86,7 @@
     }
 
     @include media-down(tablet) {
-        padding: 4rem 0;
+        padding: 4rem 0 3rem 0;
     }
 }
 .services-block {
@@ -105,11 +105,26 @@
                 @include media-down(tablet-large) {
                     font-size: 6rem;
                 }
+
+                @include media-down(mobile) {
+                    font-size: 2rem;
+                    line-height: 3rem;
+                    padding: 1rem 0;
+                    bottom: 0.5rem;
+                }
             }
 
             img {
                 height: 61rem;
+
+                @include media-down(mobile) {
+                    height: 38rem;
+                }
             }
+        }
+
+        @include media-down(mobile) {
+            width: 100%;
         }
     }
 
@@ -131,6 +146,12 @@
                 font-size: 4rem;
                 line-height: 3rem;
             }
+
+            @include media-down(mobile) {
+                font-size: 2.5rem;
+                line-height: 3rem;
+                padding: 2.5rem 0 0 0;
+            }
         }
 
         .service-card {
@@ -139,12 +160,30 @@
 
             p {
                 bottom: 2rem;
+
+                @include media-down(mobile) {
+                    bottom: 1.3rem;
+                }
             }
 
             @include media-down(tablet) {
                 width: 33.33%;
             }
+
+            @include media-down(mobile) {
+                width: 100%;
+                padding: 0.8rem 1.5rem;
+            }
         }
+
+        @include media-down(mobile) {
+            width: 100%;
+            padding-left: 0;
+        }
+    }
+
+    @include media-down(mobile) {
+        flex-wrap: wrap;
     }
 }
 .service-card {
@@ -157,6 +196,15 @@
         object-fit: cover;
         height: 21rem;
         object-position: center center;
+
+        @include media-down(tablet-large) {
+            height: 25rem;
+        }
+
+        @include media-down(mobile) {
+            height: 22rem;
+        }
+
     }
     p {
         @extend %o-paragraph-small;
@@ -174,6 +222,13 @@
 
         @include media-down(tablet) {
             width: 81%;
+        }
+
+        @include media-down(mobile) {
+            width: 91%;
+            text-align: center;
+            bottom: 0.5rem;
+            padding: 1rem 1.5rem;
         }
     }
 
