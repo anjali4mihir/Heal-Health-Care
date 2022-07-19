@@ -407,32 +407,36 @@ class Healto extends CI_Controller
 
     public function services_deatils($slug)
     {
-        $language_id = 1;
-        $id = $this->db->get_where('tbl_services', ['slug' => $slug])->row()->id;
-        // print_r($id);die;
-        $this->load->model('services_model');
-        $this->load->model('social_media_model');
-        $this->load->model('admin_model');
-        $this->load->model('testimonials_model');
-        $this->load->model('speciality_model');
-        $data['testimonials'] = $this->testimonials_model->get_testimonials_active_list($language_id);
+		$language_id = 1;
+		$id = $this->db->get_where('tbl_services', ['slug' => $slug])->row()->id;
+		// print_r($id);die;
+		$this->load->model('services_model');
+		$this->load->model('social_media_model');
+		$this->load->model('admin_model');
+		$this->load->model('testimonials_model');
+		$this->load->model('speciality_model');
+		$data['testimonials'] = $this->testimonials_model->get_testimonials_active_list($language_id);
 
-        $data['social_media'] = $this->social_media_model->get_active_social_list();
+		$data['social_media'] = $this->social_media_model->get_active_social_list();
 
-        $data['services_deatils'] = $this->services_model->get_service_list_by_id($slug);
+		$data['services_deatils'] = $this->services_model->get_service_list_by_id($slug);
 
-        $data['servicesImage'] = $this->services_model->get_services_image_by_id($id);
-        $data['speciality'] = $this->speciality_model->get_speciality_active_list($language_id);
-        $data['services'] = $this->services_model->get_services_active_list($language_id);
-        // print_r($data['services_deatils']->subcount);die;
-        $data['site_details'] = $this->admin_model->get_sitesetting(1);
-        if ($data['services_deatils']->subcount > 0) {
-            $data['services_list'] = $this->services_model->get_sub_service_list($id);
-            $this->load->view('front/services', $data);
-        } else {
-            $data['service_list'] = $this->services_model->get_all_services($language_id);
-            $this->load->view('front/services_deatils', $data);
-        }
+		$data['servicesImage'] = $this->services_model->get_services_image_by_id($id);
+		$data['speciality'] = $this->speciality_model->get_speciality_active_list($language_id);
+		$data['services'] = $this->services_model->get_services_active_list($language_id);
+		// print_r($data['services_deatils']->subcount);die;
+		$data['site_details'] = $this->admin_model->get_sitesetting(1);
+		
+		if($slug == 'find-store' || $slug == 'find-lab' || $slug == 'find-diagnostics' || $slug == 'doctors' || $slug == 'nurses' || $slug == 'physiotherapist' || $slug == 'animal-doctors'){
+			$this->load->view('front/'.$slug, $data);
+		}
+		elseif ($data['services_deatils']->subcount > 0) {
+			$data['services_list'] = $this->services_model->get_sub_service_list($id);
+			$this->load->view('front/services', $data);
+		} else {
+			$data['service_list'] = $this->services_model->get_all_services($language_id);
+			$this->load->view('front/services_deatils', $data);
+		}
     }
     public function about_us()
     {
