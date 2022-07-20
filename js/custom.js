@@ -32,10 +32,25 @@ $( document ).ready(function() {
 
   $('#view-specialities').click( function() {
     $(".show-all").toggleClass("visible");
+	
+	if($(".show-all").hasClass("visible")){
+		$(this).text('View Less');
+	}
+	else{
+		$(this).text('View All');
+	}
   });
 
   $('.dropdown').click( function() {
     $(this).find('.sub-menu').toggleClass('show-menu');
+  });
+  
+  $('.service-card').click( function() {
+    $("#exampleModalCenter").show();
+  });
+  
+  $('.close').click( function() {
+    $("#exampleModalCenter").hide();
   });
 
 });
