@@ -264,6 +264,10 @@
                     padding-top: 1rem;
                 }
 
+                @include media-down(tablet-large) {
+                    margin: 0;
+                }
+
                 @include media-down(tablet) {
                     margin: 3rem 0;
                     width: 25%;
