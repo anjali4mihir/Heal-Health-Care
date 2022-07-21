@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title> Heal Health & Medical </title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-<?php $this->load->view('front/common_css'); ?>
+	<title> Heal Health & Medical </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+	<?php $this->load->view('front/common_css'); ?>
 </head>
 <body>
     <?php $this->load->view('front/common_header'); ?>
@@ -35,8 +35,10 @@
             <div class="services-block">
                 <div class="services-left animation-element fadeUp animation-element-fast">
                     <div class="service-card">
-                        <img src="<?= base_url(); ?>assets/img/doctor-img.jpg" alt="Doctors"> 
-                        <p> Doctors </p> 
+						<a href="<?= base_url() . 'services/doctors'?>"> 
+							<img src="<?= base_url(); ?>assets/img/doctor-img.jpg" alt="Doctors"> 
+							<p> Doctors </p> 
+						</a>
                     </div>
                 </div>
 
@@ -571,7 +573,8 @@
             
         </div>
     </div>
-
+	
+	<?php if(count($testimonials) > 0){ ?>
     <div class="testimonial-slider">
         <div class="container">
             <h2 class="animation-element fadeUp animation-element-slow"> Testimonials From Our Users</h2>
@@ -598,48 +601,113 @@
                         </div>
                     </div>
 					<?php } ?>
-                    
-                    <div class="content"> <!-- slide 2 -->
-                        <div class="thumbnail">
-                            <img src="<?= base_url(); ?>assets/img/avtar.jpg"> 
-                        </div>
-                        <div class="btnNtxt"> 
-                            <div class="sdAllContent"> 
-                                
-                                <div class="sd_scroll">
-                                <h1 class="sdCustomSliderHeadig">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h1> 
-                                </div>
-                                <p class="SdClientName">Lorem Ipsum</p>
-                                <p class="SdClientDesc">Dolar Amet</p>
-                            </div>
-                        </div>
-                    </div>
-					
-					<div class="content"> <!-- slide 2 -->
-                        <div class="thumbnail">
-                            <img src="<?= base_url(); ?>assets/img/avtar.jpg"> 
-                        </div>
-                        <div class="btnNtxt"> 
-                            <div class="sdAllContent"> 
-                                
-                                <div class="sd_scroll">
-                                <h1 class="sdCustomSliderHeadig">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</h1> 
-                                </div>
-                                <p class="SdClientName">Lorem Ipsum</p>
-                                <p class="SdClientDesc">Dolar Amet</p>
-                            </div>
-                        </div>
-                    </div>
                                  
                 </div>
             </div>	
         </div>
     </div>
+	<?php } ?>
 	
 	<?php $this->load->view('front/common_footer'); ?>
+	<div class="offcanvas-overlay"></div>
+        <div id="offcanvas-mobile-menu" class="offcanvas offcanvas-mobile-menu">
+            <div class="inner">
+                <div class="border-bottom mb-3 pb-3 text-end"><button class="offcanvas-close">×</button></div>
+                <div class="offcanvas-head mb-3">
+                    <div class="header-top-offcanvas">
+                        <p><i class="icofont-google-map"></i><span>ADDRESS:</span> 568 Elizaberth Str, London, UK</p>
+                    </div>
+                </div>
+                <nav class="offcanvas-menu">
+                    <ul>
+                        <li><a href="#"><span class="menu-text">Home</span></a></li>
+                        <li><a href="#"><span class="menu-text">Services</span></a>
+                            <ul class="offcanvas-submenu">
+                                <li><a href="services.html">Service</a></li>
+                                <li><a href="service-details.html">service details</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <div class="offcanvas-social my-4">
+                    <ul>
+                        <li><a href="#"><i class="icofont-twitter"></i></a></li>
+                        <li><a href="#"><i class="icofont-facebook"></i></a></li>
+                        <li><a href="#"><i class="icofont-instagram"></i></a></li>
+                        <li><a href="#"><i class="icofont-rss-feed"></i></a></li>
+                        <li><a href="#"><i class="icofont-play-alt-1"></i></a></li>
+                    </ul>
+                </div>
+                <ul class="media-wrap">
+                    <li class="media media-list"><a href="login.html" class="book-now-btn">Login</a></li>
+                    <li class="media media-list"><a href="register.html" class="book-now-btn">join with Us</a></li>
+                </ul>
+            </div>
+        </div>
 	
 	<script src="<?=base_url()?>assets/js/slick.min.js"></script>
 	<script src="<?=base_url()?>assets/js/slick-animation.js"></script>
+	
+	<!-- Meta Pixel Code -->
+<script>
+	! function(f, b, e, v, n, t, s) {
+		if (f.fbq) return;
+		n = f.fbq = function() {
+			n.callMethod ?
+				n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+		};
+		if (!f._fbq) f._fbq = n;
+		n.push = n;
+		n.loaded = !0;
+		n.version = '2.0';
+		n.queue = [];
+		t = b.createElement(e);
+		t.async = !0;
+		t.src = v;
+		s = b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t, s)
+	}(window, document, 'script',
+		'https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '449985093366925');
+	fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=449985093366925&ev=PageView&noscript=1" /></noscript>
+<!-- End Meta Pixel Code -->
+<script>
+	var element = "";
+	var iframeSrc = "";
+	$('.videoLink1, .videoLink2, .videoLink3')
+		.magnificPopup({
+			type: 'inline',
+			midClick: true,
+			callbacks: {
+				open: function() {
+					element = "#" + $(this).attr("id");
+					iframeSrc = $(element).find("iframe").eq(0).clone();
+					$(element).find("iframe").eq(0).attr('src', $(element).find("iframe").eq(0).attr(
+						'local-src'));
+					console.log(element);
+				},
+				close: function() {
+					$(element).find("iframe").remove();
+					$(element).append(iframeSrc);
+				}
+			}
+		});
+</script>
+<script>
+	$('.app-step').each(function() { // the containers for all your galleries
+		$(this).magnificPopup({
+			delegate: 'a', // the selector for gallery item
+			type: 'image',
+			gallery: {
+				enabled: true
+			}
+		});
+	});
+</script>
     
 	<script>
 	$(document).ready(function(){ 

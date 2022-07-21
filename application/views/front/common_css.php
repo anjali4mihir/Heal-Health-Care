@@ -11,5 +11,5 @@
 <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/css/slick.css"> 
 <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/css/style.css"> 
 <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/css/slick-theme.css"> 
-<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/css/style-new.css">
 <?php $this->load->view('front/gtag');?>

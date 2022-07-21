@@ -49,12 +49,8 @@
 
 		<div class="social-media animation-element fadeUp animation-element-exslow">
 			<ul>
-				<li> <a href="#"> <img src="<?= base_url(); ?>assets/img/facebook.png"> </a></li>
-				<li> <a href="#"> <img src="<?= base_url(); ?>assets/img/whatsapp.png"> </a></li>
-				<li> <a href="#"> <img src="<?= base_url(); ?>assets/img/instagram.png"> </a></li>
-				<li> <a href="#"> <img src="<?= base_url(); ?>assets/img/linkedin.png"> </a></li>
-				<li> <a href="#"> <img src="<?= base_url(); ?>assets/img/twitter.png"> </a></li>
-				<li> <a href="#"> <img src="<?= base_url(); ?>assets/img/youtube.png"> </a></li>
+				<?php foreach ($social_media as $key => $value) { ?>
+				<li> <a href="<?= $value->link ?>"> <img src="<?= base_url().'assets/img/'.strtolower($value->name).'.png';?>"> </a></li><?php } ?>
 			</ul>
 		</div>
 	</div>
@@ -63,65 +59,6 @@
 <a href="javascript:void(0);" id="scroll" style="display: none;"><span></span></a>
 
 <?php $this->load->view('front/common_js'); ?>
-
-<!-- Meta Pixel Code -->
-<script>
-	! function(f, b, e, v, n, t, s) {
-		if (f.fbq) return;
-		n = f.fbq = function() {
-			n.callMethod ?
-				n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-		};
-		if (!f._fbq) f._fbq = n;
-		n.push = n;
-		n.loaded = !0;
-		n.version = '2.0';
-		n.queue = [];
-		t = b.createElement(e);
-		t.async = !0;
-		t.src = v;
-		s = b.getElementsByTagName(e)[0];
-		s.parentNode.insertBefore(t, s)
-	}(window, document, 'script',
-		'https://connect.facebook.net/en_US/fbevents.js');
-	fbq('init', '449985093366925');
-	fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=449985093366925&ev=PageView&noscript=1" /></noscript>
-<!-- End Meta Pixel Code -->
-<script>
-	var element = "";
-	var iframeSrc = "";
-	$('.videoLink1, .videoLink2, .videoLink3')
-		.magnificPopup({
-			type: 'inline',
-			midClick: true,
-			callbacks: {
-				open: function() {
-					element = "#" + $(this).attr("id");
-					iframeSrc = $(element).find("iframe").eq(0).clone();
-					$(element).find("iframe").eq(0).attr('src', $(element).find("iframe").eq(0).attr(
-						'local-src'));
-					console.log(element);
-				},
-				close: function() {
-					$(element).find("iframe").remove();
-					$(element).append(iframeSrc);
-				}
-			}
-		});
-</script>
-<script>
-	$('.app-step').each(function() { // the containers for all your galleries
-		$(this).magnificPopup({
-			delegate: 'a', // the selector for gallery item
-			type: 'image',
-			gallery: {
-				enabled: true
-			}
-		});
-	});
-</script>
 
 <script>
 
