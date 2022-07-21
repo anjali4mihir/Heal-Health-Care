@@ -484,7 +484,7 @@ class Healto extends CI_Controller
                 $this->common_model->data_insert("tbl_feedback", $ddata, true);
                 $email = $ddata['email'];
                 $from_email = strtolower($email);
-                $to_email = "info@atheal.in";
+                $to_email = "trivedipurvi593@gmail.com";
                 $email_message = "Hello NEw Email Recieve";
 
                 $header = "From:$from_email\r\n";
