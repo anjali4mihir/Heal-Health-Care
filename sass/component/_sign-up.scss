@@ -201,7 +201,7 @@
 .modal {
     display: none; 
     position: fixed; 
-    z-index: zindex(nav);
+    z-index: 999999;
     padding-top: 100px; 
     left: 0;
     top: 0;
@@ -209,7 +209,7 @@
     height: 100%; 
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;

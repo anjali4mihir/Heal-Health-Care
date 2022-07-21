@@ -11,6 +11,10 @@
 
         img {
             width: 40%;
+
+            @include media-down(mobile) {
+                width: 100%;
+            }
         }
 
         p {
@@ -23,6 +27,11 @@
             @extend %o-paragraph-medium;
             color: $brand-primary;
             padding-top: 3rem;
+
+            @include media-down(mobile) {
+                font-size: 1.8rem;
+                line-height: 2.4rem;
+            }
         }
 
         a {
@@ -45,6 +54,10 @@
             color: $brand-primary;
             text-transform: uppercase;
             padding-bottom: 1.5rem;
+
+            @include media-down(mobile) {
+                padding-bottom: 1rem;
+            }
         }
 
         a {
@@ -67,6 +80,10 @@
         p {
             @extend %o-paragraph-medium;
             color: $interface-black;
+        }
+
+        @include media-down(mobile) {
+            margin-top: 3.5rem;
         }
     }
     .contact-form {
@@ -143,5 +160,9 @@
             margin-top: 3rem;
             padding: 3rem 0 3rem 0;
         }
+    }
+
+    @include media-down(mobile) {
+        padding-top: 2.5rem;
     }
 }
