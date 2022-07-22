@@ -1,6 +1,6 @@
 .member-section {
    background-color: #f2f2f2; 
-   padding: 5rem 1.5rem 0 1.5rem;
+   padding: 7rem 1.5rem 0 1.5rem;
 
    .container {
     display: flex;
@@ -12,7 +12,7 @@
 
     img {
         width: 100%;
-        margin-left: 8rem;
+        margin-left: 14rem;
 
         @include media-down(tablet) {
             margin-left: 4rem;
@@ -30,6 +30,7 @@
 
    .member-right {
     margin-right: 10rem;
+    margin-top: -12.5rem;
     
         h2 {
             @extend %o-header--h2;
@@ -45,8 +46,8 @@
             @extend %o-header--h1;
             color: $interface-red;
             text-align: right;
-            font-weight: weight(medium);
-            max-width: 70rem;
+            font-weight: weight(bold);
+            max-width: 75rem;
             padding-top: 2rem;
 
             @include media-down(tablet) {

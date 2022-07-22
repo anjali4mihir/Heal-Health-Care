@@ -1849,6 +1849,7 @@ nav ul {
   margin: 0;
   list-style: none;
   position: relative;
+  padding-left: 2.5rem;
 }
 nav ul li {
   margin: 0px;
@@ -1868,7 +1869,7 @@ nav ul li a:after {
   display: block;
   width: 0;
   height: 1px;
-  background: #004e47;
+  background: #e31e24;
   transition: width 0.5s;
   margin-top: 0.3rem;
 }
@@ -1887,6 +1888,11 @@ nav ul li a:hover::after {
   nav ul li a {
     padding: 0.5rem 1.2rem;
   }
+}
+nav ul li a:hover {
+  color: #e31e24;
+  text-shadow: 0px 0px 1px #e31e24;
+  transition: all 0.5s ease;
 }
 nav ul li:last-child {
   padding-right: 0;
@@ -1935,11 +1941,11 @@ nav ul li:last-child {
   display: flex;
 }
 #logo a img {
-  width: 10rem;
+  width: 6rem;
 }
 @media (max-width: 1279.98px) {
   #logo a img {
-    width: 7rem;
+    width: 5rem;
   }
 }
 #logo a:hover {
@@ -1966,7 +1972,7 @@ nav ul li:last-child {
 
 header {
   transition: height 0.5s ease-in;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   position: relative;
 }
 header .container {
@@ -1985,14 +1991,11 @@ header.fixed {
   display: inline-table;
   box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.3);
   z-index: 99999;
-  padding-top: 0;
-}
-header.fixed nav ul {
-  padding-top: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 header.fixed #logo img {
   width: 5rem;
-  padding-top: 2rem;
 }
 @media (max-width: 1279.98px) {
   header .menu {
@@ -2418,7 +2421,7 @@ header.fixed #logo img {
 
 .member-section {
   background-color: #f2f2f2;
-  padding: 5rem 1.5rem 0 1.5rem;
+  padding: 7rem 1.5rem 0 1.5rem;
 }
 .member-section .container {
   display: flex;
@@ -2429,7 +2432,7 @@ header.fixed #logo img {
 }
 .member-section .member-left img {
   width: 100%;
-  margin-left: 8rem;
+  margin-left: 14rem;
 }
 @media (max-width: 1023.98px) {
   .member-section .member-left img {
@@ -2448,6 +2451,7 @@ header.fixed #logo img {
 }
 .member-section .member-right {
   margin-right: 10rem;
+  margin-top: -12.5rem;
 }
 .member-section .member-right h2 {
   color: #000000;
@@ -2462,7 +2466,8 @@ header.fixed #logo img {
 .member-section .member-right p {
   color: #e31e24;
   text-align: right;
-  max-width: 70rem;
+  font-weight: 700;
+  max-width: 75rem;
   padding-top: 2rem;
 }
 @media (max-width: 1023.98px) {
@@ -4573,65 +4578,3 @@ footer .footer-link ul li a:hover::after {
 }
 
 /*# sourceMappingURL=style.css.map */
-
-.modalpopup {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modalpopup-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  width: 80%;
-  height: 30%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s
-}
-
-/* Add Animation */
-@-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0} 
-  to {top:0; opacity:1}
-}
-
-@keyframes animatetop {
-  from {top:-300px; opacity:0}
-  to {top:0; opacity:1}
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.modal-header {
-  padding: 20px 16px;
-}
-
-.modal-body {padding: 2px 16px;}
