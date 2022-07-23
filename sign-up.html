@@ -34,7 +34,7 @@
                             <a href="#"> For Professionals <span> <img src="images/down-arrow.png"></span> </a>
                             <ul class="sub-menu">
                                 <li><a href="#">Login</a></li>
-                                <li><a href="sign-up.html">Sign In</a></li>
+                                <li><a class="active" href="sign-up.html">Sign In</a></li>
                             </ul> 
         
                         </li>
@@ -209,11 +209,11 @@
                     <img src="images/video-thumbnail.jpg" alt="Video">
                 </a>
 
-                <a id="myBtn" class="modal-trigger no-select"> 
+                <a id="myBtn2" class="modal-trigger no-select"> 
                     <img src="images/video-thumbnail.jpg" alt="Video">
                 </a>
 
-                <a id="myBtn" class="modal-trigger no-select radiological-video"> 
+                <a id="myBtn3" class="modal-trigger no-select radiological-video"> 
                     <img src="images/video-thumbnail.jpg" alt="Video">
                 </a>
             </div>
@@ -350,6 +350,22 @@
         </div>
     </div>
 
+    <div id="myModal2" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+        <span id="modalClose2" class="close no-select">&times;</span>
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/yAoLSRbwxL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        </div>
+    </div>
+
+    <div id="myModal3" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+        <span id="modalClose3" class="close no-select">&times;</span>
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/yAoLSRbwxL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        </div>
+    </div>
+
     <a href="#" id="scroll" style="display: none;"><span></span></a>
 
     <script src="js/jquery-3.6.0.min.js"></script>
@@ -400,6 +416,22 @@
 	$('#modalClose').click(function(){
 		hideModal();
 	});
+
+    $('#myBtn2').click(function(event){
+		showModal();
+		event.stopPropagation(); 
+	});
+	$('#modalClose2').click(function(){
+		hideModal();
+	});
+
+    $('#myBtn3').click(function(event){
+		showModal();
+		event.stopPropagation(); 
+	});
+	$('#modalClose3').click(function(){
+		hideModal();
+	});
 	
 	// Do nothing when clicking on the modal content
 	$('.modal-content').click(function(event){
@@ -409,16 +441,16 @@
 
 function showModal(){
 	$('#myModal').fadeIn('slow');
-		(function fun(){
-			$('.modal-content').css({'transform':'translateY(-50px)'});
-		})();
+		// (function fun(){
+		// 	$('.modal-content').css({'transform':'translateY(-50px)'});
+		// })();
 }
 
 function hideModal(){
 	$('#myModal').fadeOut('fast');
-		(function fun2(){
-			$('.modal-content').css({ 'transform':'translateY(0px)' });
-		})();
+		// (function fun2(){
+		// 	$('.modal-content').css({ 'transform':'translateY(0px)' });
+		// })();
 }
 
 
