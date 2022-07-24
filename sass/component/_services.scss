@@ -166,6 +166,11 @@
                 }
             }
 
+            @include media-down(tablet-large) {
+                width: 25%;
+                padding: 0.8rem 0.8rem;
+            }
+
             @include media-down(tablet) {
                 width: 33.33%;
             }
@@ -217,7 +222,8 @@
         border-radius: 0 0 2rem 2rem;
 
         @include media-down(tablet-large) {
-            width: 82%;
+            width: 90%;
+            bottom: 1.2rem; 
         }
 
         @include media-down(tablet) {

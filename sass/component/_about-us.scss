@@ -224,6 +224,10 @@
             .logo {
                 width: 10rem;
                 margin: auto;
+
+                @include media-down(mobile) {
+                    padding-bottom: 2rem;
+                }
             }
         }
 

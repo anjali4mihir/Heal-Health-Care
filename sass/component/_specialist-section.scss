@@ -96,6 +96,32 @@
                 width: 50%;
                 padding: 0.8rem 0.8rem;
             }
+
+            .modal-trigger {
+                padding: initial;
+                font-variant: initial;
+                letter-spacing: initial;
+            }
+
         }
+    }
+}
+
+.modal.modal-new .modal-content {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 3rem 3rem;
+
+    h1 {
+        padding-bottom: 3rem;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .close:hover,  .close:focus {
+        color: #000000;
     }
 }
