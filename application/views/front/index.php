@@ -128,7 +128,7 @@
 
     <div class="register-member-section">
         <div class="container">
-            <h1 class="animation-element fadeLeft animation-element-exfast"> Register as a @Heal Member</h1>
+            <h1 class="animation-element fadeLeft animation-element-exfast"> Register as a @Heal</h1>
             <p class="animation-element fadeLeft animation-element-fast"> List to your service to your customer </p>
             <div class="member-block-img animation-element fadeLeft animation-element-slow">
                 <img src="<?= base_url(); ?>assets/img/member-block-img.png" alt="Member">
@@ -261,115 +261,169 @@
                 <a class="view-btn" id="view-specialities" href="javascript:void(0)"> View All</a>
             </div>
             <div class="specialities-services animation-element fadeUp animation-element-exslow">
-                <div class="service-card">
-                    <img src="<?= base_url(); ?>assets/img/physician.jpg" alt="Doctors"> 
-                    <p> Physician </p> 
+                <div class="service-card" >
+                    <a id="myBtn1" class="modal-trigger no-select viewDesc" data-url="general-physician">
+                        <img src="<?= base_url(); ?>assets/img/physician.jpg" alt="Doctors"> 
+                        <p> Physician </p>
+                    </a> 
                 </div>
                 <div class="service-card">
-                    <img src="<?= base_url(); ?>assets/img/paediatrician.jpg" alt="Doctors"> 
-                    <p> Paediatrician </p> 
+                    <a id="myBtn2" class="modal-trigger no-select viewDesc" data-url="paediatrics">
+                        <img src="<?= base_url(); ?>assets/img/paediatrician.jpg" alt="Doctors"> 
+                        <p> Paediatrician </p> 
+                    </a>
                 </div>
                 <div class="service-card">
-                    <img src="<?= base_url(); ?>assets/img/surgon-new.jpg" alt="Doctors"> 
-                    <p> General Surgeon </p> 
+                    <a id="myBtn3" class="modal-trigger no-select viewDesc" data-url="general-surgeon">
+                        <img src="<?= base_url(); ?>assets/img/surgon-new.jpg" alt="Doctors"> 
+                        <p> General Surgeon </p>
+                    </a> 
                 </div>
                 <div class="service-card">
-                    <img src="<?= base_url(); ?>assets/img/dermalogist.jpg" alt="Doctors"> 
-                    <p> Dermatologist </p> 
+                    <a id="myBtn4" class="modal-trigger no-select viewDesc" data-url="dermatologist">
+                        <img src="<?= base_url(); ?>assets/img/dermalogist.jpg" alt="Doctors"> 
+                        <p> Dermatologist </p> 
+                    </a>
                 </div>
                 <div class="service-card">
-                    <img src="<?= base_url(); ?>assets/img/obstetrician.jpg" alt="Doctors"> 
-                    <p> Gynaecologist Obstetrician </p> 
+                    <a id="myBtn5" class="modal-trigger no-select viewDesc" data-url="obstetrician-gynaecologist">
+                        <img src="<?= base_url(); ?>assets/img/obstetrician.jpg" alt="Doctors"> 
+                        <p> Gynaecologist Obstetrician </p> 
+                    </a>
                 </div>
 
                 <div class="show-all animation-element fadeUp animation-element-exfast">
                     <div class="service-card">
-                        <img src="<?= base_url(); ?>assets/img/sexologist.jpg" alt="Doctors"> 
-                        <p> Sexologist </p> 
+                        <a id="myBtn6" class="modal-trigger no-select viewDesc" data-url="general-physician">
+                            <img src="<?= base_url(); ?>assets/img/sexologist.jpg" alt="Doctors"> 
+                            <p> Sexologist </p> 
+                        </a>
                     </div>
                     <div class="service-card">
-                        <img src="<?= base_url(); ?>assets/img/dietician.jpg" alt="Doctors"> 
-                        <p> Dieticion & Nutritionist </p> 
+                        <a id="myBtn7" class="modal-trigger no-select viewDesc" data-url="dietician">
+                            <img src="<?= base_url(); ?>assets/img/dietician.jpg" alt="Doctors"> 
+                            <p> Dieticion & Nutritionist </p> 
+                        </a>
                     </div>
                     <div class="service-card">
-                        <img src="<?= base_url(); ?>assets/img/ayurvedic.jpg" alt="Doctors"> 
-                        <p> Ayurvedic Consultant </p> 
+                        <a id="myBtn8" class="modal-trigger no-select viewDesc" data-url="ayurvedic">
+                            <img src="<?= base_url(); ?>assets/img/ayurvedic.jpg" alt="Doctors"> 
+                            <p> Ayurvedic Consultant </p> 
+                        </a>
                     </div>
                     <div class="service-card">
-                        <img src="<?= base_url(); ?>assets/img/homeopathy.jpg" alt="Doctors"> 
-                        <p> Homeopathic Consultant </p> 
+                        <a id="myBtn9" class="modal-trigger no-select viewDesc" data-url="homeopathy">
+                            <img src="<?= base_url(); ?>assets/img/homeopathy.jpg" alt="Doctors"> 
+                            <p> Homeopathic Consultant </p> 
+                        </a>
                     </div>
                     <div class="service-card">
-                        <img src="<?= base_url(); ?>assets/img/naturopathy.jpg" alt="Doctors"> 
-                        <p> Naturopathy Consultant </p> 
+                        <a id="myBtn10" class="modal-trigger no-select viewDesc" data-url="naturopathy">
+                            <img src="<?= base_url(); ?>assets/img/naturopathy.jpg" alt="Doctors"> 
+                            <p> Naturopathy Consultant </p> 
+                        </a>
                     </div>
                     <div class="service-card">
-                        <img src="<?= base_url(); ?>assets/img/general.jpg" alt="Doctors"> 
-                        <p> General Practitioner  </p> 
+                        <a id="myBtn11" class="modal-trigger no-select viewDesc" data-url="general-practitioner-mbbs">
+                            <img src="<?= base_url(); ?>assets/img/general.jpg" alt="Doctors"> 
+                            <p> General Practitioner  </p> 
+                        </a>
                     </div>
                     <div class="service-card">
-                        <img src="<?= base_url(); ?>assets/img/dentist.jpg" alt="Doctors"> 
-                        <p> Dentist </p> 
+                        <a id="myBtn12" class="modal-trigger no-select viewDesc" data-url="dentist">
+                            <img src="<?= base_url(); ?>assets/img/dentist.jpg" alt="Doctors"> 
+                            <p> Dentist </p> 
+                        </a>
                     </div>
                     <div class="service-card">
-                        <img src="<?= base_url(); ?>assets/img/enderologist.jpg" alt="Doctors"> 
-                        <p> Endocrinologist </p> 
+                        <a id="myBtn13" class="modal-trigger no-select viewDesc" data-url="endocrinologist">
+                            <img src="<?= base_url(); ?>assets/img/enderologist.jpg" alt="Doctors"> 
+                            <p> Endocrinologist </p> 
+                        </a>
                     </div>
                     <div class="service-card">
-                        <img src="<?= base_url(); ?>assets/img/orthopedics.jpg" alt="Doctors"> 
-                        <p> Orthopedics </p> 
+                        <a id="myBtn14" class="modal-trigger no-select viewDesc" data-url="orthopaedics">
+                            <img src="<?= base_url(); ?>assets/img/orthopedics.jpg" alt="Doctors"> 
+                            <p> Orthopedics </p> 
+                        </a>
                     </div>
                     <div class="service-card">
-                        <img src="<?= base_url(); ?>assets/img/cardiologist.jpg" alt="Doctors"> 
-                        <p> Cardiologist </p> 
+                        <a id="myBtn15" class="modal-trigger no-select viewDesc" data-url="cardiologist">
+                            <img src="<?= base_url(); ?>assets/img/cardiologist.jpg" alt="Doctors"> 
+                            <p> Cardiologist </p> 
+                        </a>
                     </div>
                     <div class="service-card">
-                        <img src="<?= base_url(); ?>assets/img/gastrologist.jpg" alt="Doctors"> 
-                        <p> Gastroenterologist </p> 
+                        <a id="myBtn16" class="modal-trigger no-select viewDesc" data-url="gastroenterologist">
+                            <img src="<?= base_url(); ?>assets/img/gastrologist.jpg" alt="Doctors"> 
+                            <p> Gastroenterologist </p> 
+                        </a>
                     </div>
                     <div class="service-card">
-                        <img src="<?= base_url(); ?>assets/img/pulomologist.jpg" alt="Doctors"> 
-                        <p> Pulmonologist </p> 
+                        <a id="myBtn17" class="modal-trigger no-select viewDesc" data-url="pulmonologist">
+                            <img src="<?= base_url(); ?>assets/img/pulomologist.jpg" alt="Doctors"> 
+                            <p> Pulmonologist </p> 
+                        </a>
                     </div>
                     <div class="service-card">
-                        <img src="<?= base_url(); ?>assets/img/cancer-specialist.jpg" alt="Doctors"> 
-                        <p> Cancer Specialist </p> 
+                        <a id="myBtn18" class="modal-trigger no-select viewDesc" data-url="cancer-specialist">
+                            <img src="<?= base_url(); ?>assets/img/cancer-specialist.jpg" alt="Doctors"> 
+                            <p> Cancer Specialist </p> 
+                        </a>
                     </div>
                     <div class="service-card">
-                        <img src="<?= base_url(); ?>assets/img/surgon.jpg" alt="Doctors"> 
-                        <p> Specialist Surgeons </p> 
+                        <a id="myBtn19" class="modal-trigger no-select viewDesc" data-url="specialist-surgeon">
+                            <img src="<?= base_url(); ?>assets/img/surgon.jpg" alt="Doctors"> 
+                            <p> Specialist Surgeons </p> 
+                        </a>
                     </div>
                     <div class="service-card">
-                        <img src="<?= base_url(); ?>assets/img/neourologist.jpg" alt="Doctors"> 
-                        <p> Neurologist </p> 
+                        <a id="myBtn20" class="modal-trigger no-select viewDesc" data-url="neurologist">
+                            <img src="<?= base_url(); ?>assets/img/neourologist.jpg" alt="Doctors"> 
+                            <p> Neurologist </p> 
+                        </a>
                     </div>
                     <div class="service-card">
-                        <img src="<?= base_url(); ?>assets/img/urologist.jpg" alt="Doctors"> 
-                        <p> Urologist </p> 
+                        <a id="myBtn21" class="modal-trigger no-select viewDesc" data-url="urologist">
+                            <img src="<?= base_url(); ?>assets/img/urologist.jpg" alt="Doctors"> 
+                            <p> Urologist </p> 
+                        </a>
                     </div>
                     <div class="service-card">
-                        <img src="<?= base_url(); ?>assets/img/nephrologist.jpg" alt="Doctors"> 
-                        <p> Nephrologist </p> 
+                        <a id="myBtn22" class="modal-trigger no-select viewDesc" data-url="nephrologist">
+                            <img src="<?= base_url(); ?>assets/img/nephrologist.jpg" alt="Doctors"> 
+                            <p> Nephrologist </p> 
+                        </a>
                     </div>
                     <div class="service-card">
-                        <img src="<?= base_url(); ?>assets/img/rheumologist.jpg" alt="Doctors"> 
-                        <p> Rheumatologist </p> 
+                        <a id="myBtn23" class="modal-trigger no-select viewDesc" data-url="rheumatologist">
+                            <img src="<?= base_url(); ?>assets/img/rheumologist.jpg" alt="Doctors"> 
+                            <p> Rheumatologist </p>
+                        </a> 
                     </div>
                     <div class="service-card">
-                        <img src="<?= base_url(); ?>assets/img/diabitilogist.jpg" alt="Doctors"> 
-                        <p> Diabetologist </p> 
+                        <a id="myBtn24" class="modal-trigger no-select viewDesc" data-url="general-physician">
+                            <img src="<?= base_url(); ?>assets/img/diabitilogist.jpg" alt="Doctors"> 
+                            <p> Diabetologist </p> 
+                        </a>
                     </div>
                     <div class="service-card">
-                        <img src="<?= base_url(); ?>assets/img/psychiatrist.jpg" alt="Doctors"> 
-                        <p> Psychiatrist </p> 
+                        <a id="myBtn25" class="modal-trigger no-select viewDesc" data-url="psychiatrist">
+                            <img src="<?= base_url(); ?>assets/img/psychiatrist.jpg" alt="Doctors"> 
+                            <p> Psychiatrist </p> 
+                        </a>
                     </div>
                     <div class="service-card">
-                        <img src="<?= base_url(); ?>assets/img/ophthalmologist.jpg" alt="Doctors"> 
-                        <p> Ophthalmologist </p> 
+                        <a id="myBtn26" class="modal-trigger no-select viewDesc" data-url="opthalmologist">
+                            <img src="<?= base_url(); ?>assets/img/ophthalmologist.jpg" alt="Doctors"> 
+                            <p> Ophthalmologist </p> 
+                        </a>
                     </div>
                     <div class="service-card">
-                        <img src="<?= base_url(); ?>assets/img/ent-specialist.jpg" alt="Doctors"> 
-                        <p> Ent Specialist </p> 
+                        <a id="myBtn27" class="modal-trigger no-select viewDesc" data-url="general-physician">
+                            <img src="<?= base_url(); ?>assets/img/ent-specialist.jpg" alt="Doctors"> 
+                            <p> Ent Specialist </p> 
+                        </a>
                     </div>
                 </div>
 
@@ -444,7 +498,7 @@
 
             <div class="book-btm">
                 <div class="download-option animation-element fadeUp animation-element-slow">
-                    <a class="o-button" href="#"> Book Now</a>
+                    <a class="o-button" href="<?= base_url() . 'register' ?>"> Book Now</a>
                 </div>
                 <div class="app-icons animation-element fadeUp animation-element-exslow">
                     <a href="https://play.google.com/store/apps/details?id=com.atheal" target="_blank"> <img src="<?= base_url(); ?>assets/img/google-play-img.png" alt="Google Play"> </a>
@@ -528,7 +582,7 @@
         </div>
     </div>
 
-    <div class="health-concern-section health-feed-section animation-element fadeUp animation-element-fast">
+    <div class="d-none health-concern-section health-feed-section animation-element fadeUp animation-element-fast">
         <div class="container">
             <h2> Common Health Concerns </h2>
             <a class="view-btn" href="#"> View All</a>
@@ -575,7 +629,7 @@
     </div>
 	
 	<?php if(count($testimonials) > 0){ ?>
-    <div class="testimonial-slider">
+    <div class="testimonial-slider d-none">
         <div class="container">
             <h2 class="animation-element fadeUp animation-element-slow"> Testimonials From Our Users</h2>
 
@@ -609,105 +663,9 @@
 	<?php } ?>
 	
 	<?php $this->load->view('front/common_footer'); ?>
-	<div class="offcanvas-overlay"></div>
-        <div id="offcanvas-mobile-menu" class="offcanvas offcanvas-mobile-menu">
-            <div class="inner">
-                <div class="border-bottom mb-3 pb-3 text-end"><button class="offcanvas-close">×</button></div>
-                <div class="offcanvas-head mb-3">
-                    <div class="header-top-offcanvas">
-                        <p><i class="icofont-google-map"></i><span>ADDRESS:</span> 568 Elizaberth Str, London, UK</p>
-                    </div>
-                </div>
-                <nav class="offcanvas-menu">
-                    <ul>
-                        <li><a href="#"><span class="menu-text">Home</span></a></li>
-                        <li><a href="#"><span class="menu-text">Services</span></a>
-                            <ul class="offcanvas-submenu">
-                                <li><a href="services.html">Service</a></li>
-                                <li><a href="service-details.html">service details</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="about.html">about</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </nav>
-                <div class="offcanvas-social my-4">
-                    <ul>
-                        <li><a href="#"><i class="icofont-twitter"></i></a></li>
-                        <li><a href="#"><i class="icofont-facebook"></i></a></li>
-                        <li><a href="#"><i class="icofont-instagram"></i></a></li>
-                        <li><a href="#"><i class="icofont-rss-feed"></i></a></li>
-                        <li><a href="#"><i class="icofont-play-alt-1"></i></a></li>
-                    </ul>
-                </div>
-                <ul class="media-wrap">
-                    <li class="media media-list"><a href="login.html" class="book-now-btn">Login</a></li>
-                    <li class="media media-list"><a href="register.html" class="book-now-btn">join with Us</a></li>
-                </ul>
-            </div>
-        </div>
 	
 	<script src="<?=base_url()?>assets/js/slick.min.js"></script>
 	<script src="<?=base_url()?>assets/js/slick-animation.js"></script>
-	
-	<!-- Meta Pixel Code -->
-<script>
-	! function(f, b, e, v, n, t, s) {
-		if (f.fbq) return;
-		n = f.fbq = function() {
-			n.callMethod ?
-				n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-		};
-		if (!f._fbq) f._fbq = n;
-		n.push = n;
-		n.loaded = !0;
-		n.version = '2.0';
-		n.queue = [];
-		t = b.createElement(e);
-		t.async = !0;
-		t.src = v;
-		s = b.getElementsByTagName(e)[0];
-		s.parentNode.insertBefore(t, s)
-	}(window, document, 'script',
-		'https://connect.facebook.net/en_US/fbevents.js');
-	fbq('init', '449985093366925');
-	fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=449985093366925&ev=PageView&noscript=1" /></noscript>
-<!-- End Meta Pixel Code -->
-<script>
-	var element = "";
-	var iframeSrc = "";
-	$('.videoLink1, .videoLink2, .videoLink3')
-		.magnificPopup({
-			type: 'inline',
-			midClick: true,
-			callbacks: {
-				open: function() {
-					element = "#" + $(this).attr("id");
-					iframeSrc = $(element).find("iframe").eq(0).clone();
-					$(element).find("iframe").eq(0).attr('src', $(element).find("iframe").eq(0).attr(
-						'local-src'));
-					console.log(element);
-				},
-				close: function() {
-					$(element).find("iframe").remove();
-					$(element).append(iframeSrc);
-				}
-			}
-		});
-</script>
-<script>
-	$('.app-step').each(function() { // the containers for all your galleries
-		$(this).magnificPopup({
-			delegate: 'a', // the selector for gallery item
-			type: 'image',
-			gallery: {
-				enabled: true
-			}
-		});
-	});
-</script>
     
 	<script>
 	$(document).ready(function(){ 
@@ -751,8 +709,44 @@
 				// instead of a settings object
 			]
 		});
+		
+		$('.viewDesc').click(function(event){
+			var dataUrl = $(this).attr('data-url');
+			$('#myModal').find('h1').html('');
+			$('#myModal').find('p').html('');
+			$.ajax({
+				url: base_url+"services_details/"+dataUrl, 
+				success: function(result) {
+					var obj = jQuery.parseJSON(result);
+					$('#myModal').find('h1').html(obj.title);
+					$('#myModal').find('p').html(obj.description);
+				}
+			});
+            showModal();
+            event.stopPropagation(); 
+        });
+        $('#modalClose1').click(function(){
+            hideModal();
+        });
 	});
+	
+	function showModal(){
+		$('#myModal').fadeIn('slow');
+	}
+
+	function hideModal(){
+		$('#myModal').fadeOut('fast');
+	}
 	</script>
+	
+	<div id="myModal" class="modal modal-new">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span id="modalClose1" class="close no-select">&times;</span>
+            <h1></h1>
+            <p></p>
+        </div>
+    </div>
 </body>
 </html>
 

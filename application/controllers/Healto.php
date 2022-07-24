@@ -615,4 +615,19 @@ class Healto extends CI_Controller
 
         $this->load->view('front/patient_view', $data);
     }
+	
+	public function services_description($slug)
+    {
+		$descArry = array();
+		$language_id = 1;
+		$id = $this->db->get_where('tbl_services', ['slug' => $slug])->row()->id;
+		// print_r($id);die;
+		$this->load->model('services_model');
+
+		$data['services_deatils'] = $this->services_model->get_service_list_by_id($slug);
+		$descArry['title'] = $data['services_deatils']->title;
+		$descArry['description'] = strip_tags($data['services_deatils']->description);
+		
+		echo json_encode($descArry);exit;
+    }
 }

@@ -84,6 +84,7 @@ $route['admin/login'] = 'admin';
 $route['vendors/profile-edit'] = 'vendors/edit';
 $route['otp-check'] = 'healto/otp_check';
 $route['services/(:any)'] = "Healto/services_deatils/$1";
+$route['services_details/(:any)'] = "Healto/services_description/$1";
 $route['orders/pending-order'] = "orders/order/1";
 $route['orders/approved-order'] = "orders/order/2";
 $route['orders/dispatch-order'] = "orders/order/3";

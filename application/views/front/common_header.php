@@ -6,7 +6,7 @@ $returnpath = $this->config->item('site_images_uploaded_path');
 <header>
 	<div class="container">
 		<nav>
-			<div id="logo"> <a href="<?= base_url() ?>"> <img src="<?= $returnpath . $site_details->header_logo ?>" alt="Heal Health & Medical"> </a></div>
+			<div id="logo"> <a href="<?= base_url() ?>"> <img src="<?= base_url(); ?>assets/img/heal-logo.png" alt="Heal Health & Medical"> </a></div>
 			<div class="mobile-menu">
 				<img src="<?= base_url(); ?>assets/img/menu.png">
 			</div>    

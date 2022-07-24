@@ -22,7 +22,7 @@
 			<h4> For Providers </h4>
 
 			<ul>
-				<li> <a href="<?= base_url() . 'partners/login'; ?>"> Login / Sign In </a></li>
+				<li> <a href="<?= base_url() . 'partners/register'; ?>"> Login / Sign Up </a></li>
 				<li> <a href="<?= base_url() . 'services/doctors'?>"> Doctors </a></li>
 				<li> <a href="<?= base_url() . 'services/doctors'?>"> Dentist </a></li>
 				<li> <a href="<?= base_url() . 'services/doctors'?>"> Dietician </a></li>
@@ -42,15 +42,19 @@
 				<li> <a href="<?= base_url() . 'about-us'; ?>"> About Us </a></li>
 				<li> <a href="#"> Blogs </a></li>
 				<li> <a href="<?= base_url() . 'contact-us'; ?>"> Contact Us </a></li>
-				<li> <a href="<?= base_url() . 'privacy-policy'; ?>"> Privacy Policy </a></li>
-				<li> <a href="<?= base_url() . 'term-condition'; ?>"> Terms & Condition </a></li>
+				<li> <a href="<?= base_url() . 'assets/document/privacy_policy.pdf'; ?>" target="_blank"> Privacy Policy </a></li>
+				<li> <a href="<?= base_url() . 'assets/document/terms_and_conditions.pdf'; ?>" target="_blank"> Terms & Condition </a></li>
 			</ul>
 		</div>
 
 		<div class="social-media animation-element fadeUp animation-element-exslow">
 			<ul>
-				<?php foreach ($social_media as $key => $value) { ?>
-				<li> <a href="<?= $value->link ?>"> <img src="<?= base_url().'assets/img/'.strtolower($value->name).'.png';?>"> </a></li><?php } ?>
+				<li> <a href="https://www.facebook.com/athealmedical" target="_blank"> <img src="<?= base_url(); ?>assets/img/facebook.png"> </a></li>
+				<li> <a href="https://wa.me/917227059146" target="_blank"> <img src="<?= base_url(); ?>assets/img/whatsapp.png"> </a></li>
+				<li> <a href="https://www.instagram.com/invites/contact/?i=1rwrph4v5tm4n&utm_content=lt7zhe5" target="_blank"> <img src="<?= base_url(); ?>assets/img/instagram.png"> </a></li>
+				<li> <a href="https://www.linkedin.com/in/atheal-medical-552231211" target="_blank"> <img src="<?= base_url(); ?>assets/img/linkedin.png"> </a></li>
+				<li> <a href="https://twitter.com/AthealM" target="_blank"> <img src="<?= base_url(); ?>assets/img/twitter.png"> </a></li>
+				<li> <a href="https://youtube.com/channel/UC5NEpPR2fEi7iHxm2moqa6Q" target="_blank"> <img src="<?= base_url(); ?>assets/img/youtube.png"> </a></li>
 			</ul>
 		</div>
 	</div>
@@ -63,22 +67,25 @@
 <script>
 
 $(document).ready(function(){ 
-	$(window).scroll(function(){ 
-		if ($(this).scrollTop() > 100) { 
-			$('#scroll').fadeIn(); 
-		} else { 
-			$('#scroll').fadeOut(); 
-		} 
-		
+
+	$(window).scroll(function(){
 		if ($(this).scrollTop() > 120) {
 			$('header').addClass('fixed');
 		} else {
 			$('header').removeClass('fixed');
 		}
-	}); 
-	$('#scroll').click(function(){ 
-		$("html, body").animate({ scrollTop: 0 }, 600); 
-		return false; 
-	}); 
+	});
+    
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 100) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    }); 
 });
 </script>

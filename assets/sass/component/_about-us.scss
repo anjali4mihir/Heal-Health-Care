@@ -1,0 +1,254 @@
+.health-section {
+    padding-top: 8rem;
+
+    h2 {
+        color: $brand-primary;
+        @extend %o-header--h1;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    h5 {
+        color: $interface-red;
+        padding-top: 2rem;
+        @extend %o-header--h4;
+        text-align: center;
+
+        @include media-down(mobile) {
+            padding-top: 0.8rem;
+        }
+    }
+
+    p {
+        color: $interface-black;
+        padding-top: 1.5rem;
+        @extend %o-paragraph-large;
+        text-align: center;
+        max-width: 51.5rem;      
+        display: flex;
+        justify-content: center;
+        margin: auto;
+
+        @include media-down(mobile) {
+            padding-top: 0.8rem;
+        }
+    }
+
+    @include media-down(tablet-large) {
+        padding-top: 5rem;
+    }
+
+    @include media-down(mobile) {
+        padding-top: 2rem;
+    }
+}
+.offering-section {
+    background-color: $interface-grey;
+    padding: 5rem 0;
+    margin-top: 5rem;
+
+    h2 {
+        color: $interface-black;
+        text-align: center;
+        @extend %o-header--h3;
+    }
+
+    .offering-btm {
+        display: flex;
+        margin-top: 2.5rem;
+
+        .offering-left {
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+
+            .service-card {
+                width: 45%;
+                margin: 0.6rem 1.2rem;
+
+                p {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                @include media-down(tablet-large) {
+                    width: 22%;
+                }
+
+                @include media-down(tablet) {
+                    width: 22.5%;
+                    margin: 0.6rem 0.8rem;
+                }
+
+                @include media-down(mobile) {
+                    width: 100%;
+                }
+            }
+
+            @include media-down(tablet-large) {
+                width: 100%;
+            }
+        }
+
+        .offering-right {
+            width: 50%;
+            padding-left: 3rem;
+
+            .service-card {
+                width: 100%;
+                margin: 0.6rem 1.2rem;
+
+                p {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+
+            &.offering-right-btm {
+
+                .service-card {
+                    display: inline-flex;
+                    width: 28%;
+                    flex-wrap: wrap;
+
+                    p {
+                        bottom: 0;
+                    }
+
+                    @include media-down(mobile) {
+                        width: 100%;
+                    }
+
+                }
+                
+            }
+
+            @include media-down(tablet-large) {
+                width: 100%;
+                padding-left: 0;
+            }
+        }
+
+        @include media-down(tablet-large) {
+            flex-wrap: wrap;
+        }
+
+        @include media-down(mobile) {
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+        }
+    }
+    
+    @include media-down(mobile) {
+        margin-top: 0.5rem;
+        padding-bottom: 0;
+    }
+}
+.offering-right.offering-right-btm .service-card {
+    &.service-card-text.service-card-text-btm {
+        width: 95%;
+    }
+    
+}
+.service-card.service-card-text .compare-text {
+    width: 100%;
+    
+
+    ul {
+        display: inline-flex;
+        padding: 1rem 0 0 1rem;
+
+        li {
+            color: $interface-black;
+            @extend %o-paragraph-large;
+        }
+    }
+}
+.service-card.service-card-text ul {
+    &:first-child {
+        padding-top: 0;
+    }
+}
+.mission-vision {
+    margin-top: 8rem;
+
+    h2 {
+        color: $interface-black;
+        @extend %o-header--h2;
+    }
+    p {
+        color: $interface-black;
+        @extend %o-paragraph-large;
+        box-shadow: 0px 18px 52.8537px rgb(215 228 249 / 90%);
+        padding: 2rem 4rem;
+        max-width: 71rem;
+        margin: auto;
+        margin-top: 2rem;
+        border: 1px solid #dddddd;
+        background-color: $interface-white;
+
+        @include media-down(tablet-large) {
+            margin-top: 1rem;
+            padding: 2rem 2rem;
+        }
+    }
+
+    @include media-down(tablet-large) {
+        margin-top: 5rem;
+    }
+
+    @include media-down(mobile) {
+        margin-top: 3rem;
+    }
+
+}
+.service-card-text-btm ul:last-child {
+    padding-top: 0;
+}
+.home-banner {
+    .container {
+        display: flex;
+
+        @include media-down(mobile) {
+            flex-wrap: wrap;
+        }
+    }
+    &.about-download {
+        background-color: #f5f5f2;
+        padding-top: 4rem;
+        padding-bottom: 9rem;
+
+        .banner-left {
+            background-color: transparent;
+
+            .logo {
+                width: 10rem;
+                margin: auto;
+
+                @include media-down(mobile) {
+                    padding-bottom: 2rem;
+                }
+            }
+        }
+
+        .banner-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: auto;
+                height: 55rem;
+                object-fit: contain;
+
+                @include media-down(tablet-large) {
+                    height: 45rem;
+                }
+            }
+        }
+
+        @include media-down(mobile) {
+            padding-bottom: 3rem;
+        }
+    }
+}

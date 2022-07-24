@@ -1,0 +1,86 @@
+.member-section {
+   background-color: #f2f2f2; 
+   padding: 7rem 1.5rem 0 1.5rem;
+
+   .container {
+    display: flex;
+    align-items: center;
+   }
+
+   .member-left {
+    width: 55%;
+
+    img {
+        width: 100%;
+        margin-left: 13rem;
+
+        @include media-down(tablet) {
+            margin-left: 4rem;
+        }
+    }
+
+    @include media-down(tablet) {
+        width: 68%;
+    }
+
+    @include media-down(mobile) {
+        display: none;
+    }
+   }
+
+   .member-right {
+    margin-right: 10rem;
+    margin-top: -12.5rem;
+    padding-top: 10rem;
+    
+        h2 {
+            @extend %o-header--h2;
+            color: $interface-black;
+            text-align: right;
+            font-weight: weight(bold);
+
+            @include media-down(mobile) {
+                text-align: center;
+            }
+        }
+        p {
+            @extend %o-header--h1;
+            color: $interface-red;
+            text-align: right;
+            font-weight: weight(bold);
+            max-width: 75rem;
+            padding-top: 2rem;
+            font-size: 4.3rem;
+
+            @include media-down(tablet) {
+                padding-top: 0.8rem;
+            }
+
+            @include media-down(mobile) {
+                text-align: center;
+            }
+        }
+
+        @include media-down(mobile) {
+            width: 100%;
+            margin-right: 0;
+        }
+   }
+
+   @include media-down(mobile) {
+        padding: 2rem 0;
+   }
+}
+.member-download {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 5rem;
+
+    .app-icons {
+        margin: initial;
+    }
+
+    @include media-down(tablet) {
+        padding-top: 2rem;
+    }
+}
