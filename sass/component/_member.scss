@@ -12,7 +12,7 @@
 
     img {
         width: 100%;
-        margin-left: 18rem;
+        margin-left: 13rem;
 
         @include media-down(tablet) {
             margin-left: 4rem;
@@ -31,6 +31,7 @@
    .member-right {
     margin-right: 10rem;
     margin-top: -12.5rem;
+    padding-top: 10rem;
     
         h2 {
             @extend %o-header--h2;

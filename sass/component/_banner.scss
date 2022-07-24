@@ -3,7 +3,7 @@
 
     .banner-left {
         width: 50%;
-        background-color: $interface-grey;
+        // background-color: $interface-grey;
         display: flex;
         align-items: center;    
         flex-wrap: wrap;
@@ -12,20 +12,21 @@
         h1 {
             @extend %o-header--h1;
             padding-bottom: 2rem;
-            color: $interface-black;
+            color:$brand-primary;
             width: 100%;
             text-align: center;
         }
 
         p {
-            @extend %o-header--h4;
-            color: $interface-lightgrey;
-            background-color: $interface-white;
-            padding: 1.5rem 2rem;          
+            color: #000000;
+            background-color: #ffffff;
+            padding: 10px 34px;
             margin: auto;
             margin-bottom: 4rem;
             display: inline-flex;
-            border-radius: 2rem;
+            border-radius: 15px;
+            background-color: #dddddd;
+            font-size: 20px;
         }
 
         @include media-down(tablet) {
