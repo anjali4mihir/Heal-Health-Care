@@ -446,7 +446,7 @@
             </div>
 
             <div class="healthcare-right animation-element fadeRight animation-element-exslow">
-                <img src="<?= base_url(); ?>assets/img/patient-video.jpg">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/hvwQtrGrZJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </div>

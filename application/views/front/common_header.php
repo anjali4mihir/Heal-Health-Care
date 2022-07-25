@@ -11,13 +11,13 @@ $returnpath = $this->config->item('site_images_uploaded_path');
 				<img src="<?= base_url(); ?>assets/img/menu.png">
 			</div>    
 			<ul class="menu">
-				<li><a href="<?= base_url() . 'services/doctors'?>">Doctors</a></li>
-				<li><a href="<?= base_url() . 'services/nurses'?>">Nurse</a></li>
-				<li><a href="<?= base_url() . 'services/physiotherapist'?>">Physiotherapist</a></li>
-				<li><a href="<?= base_url() . 'services/animal-doctors'?>">Animal Doctors</a></li>
-				<li><a href="<?= base_url() . 'services/find-store'?>">Find stores</a></li>
-				<li><a href="<?= base_url() . 'services/find-lab'?>">Find Labs</a></li>
-				<li><a href="<?= base_url() . 'services/find-diagnostics'?>">Find Radiodiagnostics</a></li>
+				<li><a class="headerMenu" href="<?= base_url() . 'services/doctors'?>">Doctors</a></li>
+				<li><a class="headerMenu" href="<?= base_url() . 'services/nurses'?>">Nurse</a></li>
+				<li><a class="headerMenu" href="<?= base_url() . 'services/physiotherapist'?>">Physiotherapist</a></li>
+				<li><a class="headerMenu" href="<?= base_url() . 'services/animal-doctors'?>">Animal Doctors</a></li>
+				<li><a class="headerMenu" href="<?= base_url() . 'services/find-store'?>">Find stores</a></li>
+				<li><a class="headerMenu" href="<?= base_url() . 'services/find-lab'?>">Find Labs</a></li>
+				<li><a class="headerMenu" href="<?= base_url() . 'services/find-diagnostics'?>">Find Radiodiagnostics</a></li>
 				<li class="dropdown">
 					<a href="javascript:void(0);"> For Professionals <span> <img src="<?= base_url(); ?>assets/img/down-arrow.png"></span> </a>
 					<ul class="sub-menu">

@@ -22,7 +22,8 @@
 			<h4> For Providers </h4>
 
 			<ul>
-				<li> <a href="<?= base_url() . 'partners/register'; ?>"> Login / Sign Up </a></li>
+				<li> <a href="<?= base_url() . 'partners/login'; ?>"> Login </a></li>
+				<li> <a href="<?= base_url() . 'partners/register'; ?>"> Sign Up </a></li>
 				<li> <a href="<?= base_url() . 'services/doctors'?>"> Doctors </a></li>
 				<li> <a href="<?= base_url() . 'services/doctors'?>"> Dentist </a></li>
 				<li> <a href="<?= base_url() . 'services/doctors'?>"> Dietician </a></li>
@@ -87,5 +88,12 @@ $(document).ready(function(){
         $("html, body").animate({ scrollTop: 0 }, 600); 
         return false; 
     }); 
+	
+	var url = window.location.href;
+	$('.headerMenu').each(function(){
+		var menuUrl = $(this).attr('href');
+		if(url == menuUrl)
+			$(this).addClass('active');
+	});
 });
 </script>
