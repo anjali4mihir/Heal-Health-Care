@@ -128,7 +128,7 @@
 
     <div class="register-member-section">
         <div class="container">
-            <h1 class="animation-element fadeLeft animation-element-exfast"> Register as a @Heal</h1>
+            <h1 class="animation-element fadeLeft animation-element-exfast"> Register as a @Heal Associate</h1>
             <p class="animation-element fadeLeft animation-element-fast"> List to your service to your customer </p>
             <div class="member-block-img animation-element fadeLeft animation-element-slow">
                 <img src="<?= base_url(); ?>assets/img/member-block-img.png" alt="Member">

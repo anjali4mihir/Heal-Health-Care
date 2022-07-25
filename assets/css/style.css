@@ -5529,4 +5529,8 @@ footer .footer-link ul li a:hover::after {
   width: 60%;
 }
 
+.error{
+	color:red !important;text-transform:capitalize;
+}
+
 /*# sourceMappingURL=style.css.map */

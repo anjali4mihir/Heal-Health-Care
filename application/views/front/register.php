@@ -193,34 +193,48 @@
                 <div class="card">
                     <div class="card_title">
                         <h2>Create Account</h2>
-                        <span>Already have an account? <a href="login">Sign In</a></span>
+                        <span>Already have an account? <a href="<?= base_url() . 'partners/login' ?>">Sign In</a></span>
                     </div>
                     <div class="register-form">
-                        <form action="/register" method="post">
+                        <form class="form" method="post" id="form" name="form" action="" accept-charset="utf-8"
+            enctype="multipart/form-data">
+							<div class="form-group">
+                                <input type="text" class="form-control" placeholder="Enter Full Name" name="name" id="name">
+                            </div>
                             <div class="selectdiv">
                                 <label>
-                                    <select>
-                                        <option selected> Select Box </option>
-                                        <option>Option 1</option>
-                                        <option>Option 2</option>
-                                        <option>Last long option</option>
+                                    <select name="type_category" id="type_category">
+                                        <option value=""> Selecy Your Category </option>
+										<?php foreach($parent_services as $row){ ?>
+										<option value="<?php echo $row->id;?>">
+											<?php echo $row->name;?></option>
+										<?php  } ?>
                                     </select>
                                 </label>
                             </div>
-
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Email ID">
+                                <input type="email" class="form-control" placeholder="Enter Email Id" name="email" id="email">
+                            </div>
+							<div class="form-group">
+                                <input type="tel" class="form-control" placeholder="Enter Mobile Number" name="number" id="number" maxlength="10" minlength="10">
+								<input type="hidden" name="country_code" id="country_code" value="+91">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Password">
+                                <input type="password" class="form-control" placeholder="Enter Password" name="pwd" id="pwd">
+								<span toggle="#pwd" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
                             </div>
+							<div class="form-group">
+                                <input type="password" name="confirmpwd" id="confirmpwd" class="form-control" placeholder="Enter Confirm Password">
+								<span toggle="#confirmpwd" class="fa fa-fw fa-eye-slash field-icon toggle-password1"></span>
+                            </div>
+							<div class="card_terms form-group">
+								<input type="checkbox" name="accept" id="accept" value="1" class="form-control"> <span>I have read and agree to the <a href="<?= base_url() . 'assets/document/terms_and_conditions.pdf'; ?>" target="_blank">Terms of Service</a> & <a href="<?= base_url() . 'assets/document/privacy_policy.pdf'; ?>" target="_blank">privacy policy </a></span>
+							</div>
+							<div class="submit-btn">
+								<button type="submit" class="btn o-button"> Sign In </button>
+							</div>
                         </form>
                     </div>
-                    <div class="card_terms">
-                        <input type="checkbox" name="" id="terms"> <span>I have read and agree to the <a href="">Terms of Service</a></span>
-                    </div>
-
-                    <a class="o-button" href="#"> Sign In </a>
                 </div>
             </div>
 
@@ -268,6 +282,128 @@
 			// Do nothing when clicking on the modal content
 			$('.modal-content').click(function(event){
 			   event.stopPropagation(); 
+			});
+			
+			$(".toggle-password").on('click', function() {
+				$(this).toggleClass("fa-eye fa-eye-slash");
+				var input = $("#pwd");
+				if (input.attr("type") === "password") {
+					input.attr("type", "text");
+				} else {
+					input.attr("type", "password");
+				}
+			});
+
+			$(".toggle-password1").on('click', function() {
+				$(this).toggleClass("fa-eye fa-eye-slash");
+				var input = $("#confirmpwd");
+				if (input.attr("type") === "password") {
+					input.attr("type", "text");
+				} else {
+					input.attr("type", "password");
+				}
+			});
+			
+			$("#name").bind('keyup', function(e) {
+				if (e.which >= 97 && e.which <= 122) {
+					var newKey = e.which - 32;
+					// I have tried setting those
+					e.keyCode = newKey;
+					e.charCode = newKey;
+				}
+
+				$('#name').val(function() {
+					return this.value.toUpperCase();
+				})
+			});
+			
+			var category = $('#type_category').val();
+			$("#form").validate({
+				rules: {
+					type_category: {
+						required: true,
+					},
+					name: {
+						required: true,
+					},
+					email: {
+						required: true,
+						email: true,
+						remote: {
+
+							url: "<?php echo site_url("check_become_partners_email_exist_or_not"); ?>",
+
+							type: "POST",
+
+							data: {
+
+								category: function() {
+									return $('#type_category').val();
+								},
+								//category:category
+							}
+						}
+
+					},
+					number: {
+						required: true,
+						minlength: 10,
+						maxlength: 10,
+						number: true,
+						remote: {
+							url: "<?php echo site_url("check_become_partners_mobile_exist_or_not"); ?>",
+							type: "POST",
+							data: {
+
+								category: function() {
+									return $('#type_category').val();
+								},
+						  }
+						}
+					},
+					pwd: {
+						required: true,
+					},
+					confirmpwd: {
+						required: true,
+						equalTo: "#pwd"
+					},
+					accept: {
+						required: true,
+					},
+				},
+				messages: {
+					type_category: {
+						required: "Please Select Category",
+					},
+					name: {
+						required: "Please Enter Name",
+					},
+					email: {
+						required: "Please Enter Email Id",
+						email: "Please Enter Valid Email Id",
+						remote: "This Email Id Is Already Exist!",
+
+					},
+					number: {
+						required: "Please Enter Mobile Number",
+						number: "Please Your Number Only",
+						remote: "This Mobile Number Is Already Exist!",
+					},
+					pwd: {
+						required: "Please Enter Password",
+					},
+					confirmpwd: {
+						required: "Please Enter Confirm-Password",
+					},
+					accept: {
+						required: "Please Accept terms & conditions",
+					},
+				},
+				submitHandler: function(form) {
+
+					form.submit();
+				}
 			});
 		});
 
