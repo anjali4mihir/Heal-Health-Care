@@ -253,6 +253,30 @@
 
     <?php $this->load->view('front/common_footer'); ?>
 	
+	<div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+        <span id="modalClose" class="close no-select">&times;</span>
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/yAoLSRbwxL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        </div>
+    </div>
+
+    <div id="myModal2" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+        <span id="modalClose2" class="close no-select">&times;</span>
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/yAoLSRbwxL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        </div>
+    </div>
+
+    <div id="myModal3" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+        <span id="modalClose3" class="close no-select">&times;</span>
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/yAoLSRbwxL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        </div>
+    </div>
+	
 	<script>
         $(document).ready(function(){
 			$('#myBtn').click(function(event){
