@@ -24,7 +24,7 @@
         padding-top: 1.5rem;
         @extend %o-paragraph-large;
         text-align: center;
-        max-width: 51.5rem;      
+        max-width: 64rem;      
         display: flex;
         justify-content: center;
         margin: auto;
@@ -101,6 +101,10 @@
                 p {
                     width: 100%;
                     text-align: center;
+                }
+
+                @include media-down(mobile) {
+                    margin: 1.5rem 0;
                 }
             }
 
