@@ -229,6 +229,9 @@
         transition: all 0.3s ease;
         // transform: scaleY(0.01) scaleX(0);
         
+        @include media-down(mobile) {
+            width: 95%;
+        }
     }
 
     @keyframes unfoldIn {

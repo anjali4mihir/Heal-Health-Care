@@ -144,6 +144,18 @@ nav {
 			display: block;
 		}
 	}
+
+	@include media-down(tablet-large) {
+		&:hover {
+			.sub-menu {
+				display: none;
+
+				&.show-menu {
+					display: block;
+				}
+			}
+		}
+	}
 }
 header {
 	transition: height 0.5s ease-in;

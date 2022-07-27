@@ -104,6 +104,16 @@
             }
 
         }
+
+        .show-all {
+            .service-card {
+                &:first-child {
+                    @include media-down(mobile) {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -114,6 +124,12 @@
 
     h1 {
         padding-bottom: 3rem;
+
+        @include media-down(tablet) {
+            padding-bottom: 1.5rem;
+            font-size: 20px;
+            line-height: 26px;
+        }
     }
 
     p {
@@ -123,5 +139,9 @@
 
     .close:hover,  .close:focus {
         color: #000000;
+    }
+
+    @include media-down(tablet) {
+        padding: 3rem 1.5rem;
     }
 }

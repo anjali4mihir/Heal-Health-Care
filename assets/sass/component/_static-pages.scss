@@ -171,6 +171,7 @@
                 margin: 0.3rem 0;
                 position: relative;
                 padding-left: 1rem;
+                font-weight: weight(regular);
 
                 &::before {
                     content: '';
@@ -200,7 +201,9 @@
         @include media-down(mobile) {
             margin-top: 1.5rem;
             padding-right: 1rem;
-            width: 50% !important;
+            width: 100% !important;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #dddddd;
         }
 
         &:first-child {
@@ -237,6 +240,7 @@
                 padding-left: 0;
             }
         }
+        
     }
 
     @include media-down(mobile) {
@@ -931,4 +935,19 @@
 
 .d-none {
   display: none;
+}
+.step-text-column {
+  display: none;
+
+  @include media-down(mobile) {
+    display: block;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color: $interface-white;
+    background-color: $brand-primary;
+    display: inline-block;
+    padding: 1px 15px;
+    border-radius: 10px 0;
+    margin-bottom: 10px;
+  }
 }

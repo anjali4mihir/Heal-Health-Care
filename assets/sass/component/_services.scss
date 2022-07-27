@@ -83,6 +83,10 @@
         color: $interface-black;
         padding-bottom: 3rem;
         text-align: center;
+
+        @include media-down(tablet) {
+            line-height: 2.8rem;
+        }
     }
 
     @include media-down(tablet) {
@@ -200,7 +204,7 @@
         width: 100%;
         object-fit: cover;
         height: 21rem;
-        object-position: center center;
+        object-position: top;
 
         @include media-down(tablet-large) {
             height: 25rem;
@@ -260,5 +264,12 @@
             }
         }
         
+    }
+}
+.mobile-none {
+    display: none; 
+
+    @include media-down(mobile) {
+        display: block;
     }
 }
