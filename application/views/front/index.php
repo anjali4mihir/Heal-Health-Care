@@ -10,20 +10,22 @@
     <?php $this->load->view('front/common_header'); ?>
 
     <div class="home-banner">
-        <div class="banner-left animation-element fadeLeft">
-            <h1>Key for health</h1>
-            <p> 1L + Professionals </p>
-            <div class="download-option">
-                <a class="o-button"> Download @Heal App</a>
+        <div class="container">
+            <div class="banner-left animation-element fadeLeft">
+                <h1>Key for health</h1>
+                <p> 1L + Professionals </p>
+                <div class="download-option">
+                    <a class="o-button"> Download @Heal App</a>
+                </div>
+                <div class="app-icons">
+                    <a href="https://play.google.com/store/apps/details?id=com.atheal" target="_blank"> <img src="<?= base_url(); ?>assets/img/google-play-img.png" alt="Google Play"> </a>
+                    <a href="https://apps.apple.com/us/app/heal/id1582761953" target="_blank">  <img src="<?= base_url(); ?>assets/img/app-store.png" alt="Google Play"> </a>
+                </div>
             </div>
-            <div class="app-icons">
-                <a href="https://play.google.com/store/apps/details?id=com.atheal" target="_blank"> <img src="<?= base_url(); ?>assets/img/google-play-img.png" alt="Google Play"> </a>
-                <a href="https://apps.apple.com/us/app/heal/id1582761953" target="_blank">  <img src="<?= base_url(); ?>assets/img/app-store.png" alt="Google Play"> </a>
-            </div>
-        </div>
-        <div class="banner-right animation-element fadeRight">
-            <img src="<?= base_url(); ?>assets/img/banner-left-img.jpg" alt="Heal Banner">
-        </div>        
+            <div class="banner-right animation-element fadeRight">
+                <img src="<?= base_url(); ?>assets/img/banner-left-img.jpg" alt="Heal Banner">
+            </div>  
+        </div>      
     </div>
 
     <div class="top-services-section">
@@ -291,6 +293,12 @@
                         <p> Gynaecologist Obstetrician </p> 
                     </a>
                 </div>
+                <div class="service-card mobile-none">
+                    <a id="myBtn6" class="modal-trigger no-select viewDesc" data-url="general-physician">
+                        <img src="<?= base_url(); ?>assets/img/sexologist.jpg" alt="Doctors"> 
+                        <p> Sexologist </p> 
+                    </a>
+                </div>
 
                 <div class="show-all animation-element fadeUp animation-element-exfast">
                     <div class="service-card">
@@ -520,6 +528,7 @@
 
                 <div class="step-text animation-element fadeUp animation-element-exslow">
                     <div class="step-block">
+                        <p class="step-text-column"> Step 1 </p>
                         <h4> Create profile </h4>
                         <ul>
                             <li> Download App </li>
@@ -528,6 +537,7 @@
                     </div>
 
                     <div class="step-block">
+                        <p class="step-text-column"> Step 2 </p>
                         <h4> Choose Services </h4>
                         <ul>
                             <li> Choose Wide </li>
@@ -536,6 +546,7 @@
                     </div>
 
                     <div class="step-block">
+                        <p class="step-text-column"> Step 3 </p>
                         <h4> Select Location </h4>
                         <ul>
                             <li> Choose location </li>
@@ -544,6 +555,7 @@
                     </div>
 
                     <div class="step-block">
+                        <p class="step-text-column"> Step 4 </p>
                         <h4> Find Services </h4>
                         <ul>
                             <li> Find Services Across  </li>
@@ -552,6 +564,7 @@
                     </div>
 
                     <div class="step-block">
+                        <p class="step-text-column"> Step 5 </p>
                         <h4> Compare Services </h4>
                         <ul>
                             <li> Find best options </li>
@@ -560,6 +573,7 @@
                     </div>
 
                     <div class="step-block">
+                        <p class="step-text-column"> Step 6 </p>
                         <h4> Book Services </h4>
                         <ul>
                             <li> Book easily with multiple payment option </li>

@@ -176,7 +176,7 @@
             <div class="banner-left animation-element fadeRight animation-element-exslow">
                 <img class="logo" src="<?= base_url(); ?>assets/img/heal-logo.png" alt="Heal Health">
                 <div class="download-option">
-                    <a class="o-button" href="javascript:void(0);"> Download Now</a>
+                    <a class="o-button"> Download Now</a>
                 </div>
                 <div class="app-icons">
                     <a href="https://play.google.com/store/apps/details?id=com.atheal" target="_blank"> <img src="<?= base_url(); ?>assets/img/google-play-img.png" alt="Google Play"> </a>

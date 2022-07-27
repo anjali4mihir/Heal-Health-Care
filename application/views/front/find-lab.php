@@ -14,7 +14,7 @@
             <div class="">
                 <h1 class="banner-left animation-element fadeUp animation-element-exfast"> @Heal - Key For Health </h1>
                 <div class="download-option animation-element fadeUp animation-element-fast">
-                    <a class="o-button" href="javascript:void(0);"> Download Now</a>
+                    <a class="o-button"> Download Now</a>
                 </div>
                 <div class="app-icons animation-element fadeUp animation-element-slow">
                     <a href="https://play.google.com/store/apps/details?id=com.atheal" target="_blank"> <img src="<?= base_url(); ?>assets/img/google-play-img.png" alt="Google Play"> </a>
