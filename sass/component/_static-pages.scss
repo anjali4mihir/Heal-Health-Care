@@ -951,3 +951,39 @@
     margin-bottom: 10px;
   }
 }
+.consultant-section-mobile {
+  display: none;
+
+  @include media-down(mobile) {
+    display: block;
+
+    .container {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    
+    img {
+      width: 100%;
+      margin: auto;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &.signup-profile-mobile {
+    padding-bottom: 6rem;
+
+    img {
+      margin-bottom: 0;
+    }
+    
+    .register-btm {
+      margin: auto;
+    }
+  }
+}
+.consultant-section-desktop {
+  @include media-down(mobile) {
+    display: none;
+  }
+}

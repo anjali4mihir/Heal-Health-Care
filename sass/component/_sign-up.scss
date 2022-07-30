@@ -152,6 +152,7 @@
 
     @include media-down(mobile) {
         padding: 4rem 0;
+        display: none;
     }
 }
 .register-video-section.register-video-section-btm {

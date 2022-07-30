@@ -99,6 +99,13 @@
     .register-form-right {
         width: 50%;
 
+        img.register-mobile {
+            width: 40%;
+            margin: auto;
+            text-align: center;
+            display: flex;
+        }
+        
         @include media-down(mobile) {
             width: 100%;
         }
