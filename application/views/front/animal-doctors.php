@@ -31,15 +31,23 @@
         </div>
     </div>
 
-    <div class="consultant-section">
+    <div class="consultant-section consultant-section-desktop">
         <div class="container">
             <img class="animation-element fadeLeft animation-element-exslow" src="<?= base_url(); ?>assets/img/consultant-img.png" alt="Doctor Services"> 
         </div>
     </div>
 
+    <div class="consultant-section-mobile">
+        <div class="container">
+            <img class="animation-element fadeUp animation-element-fast" src="images/consultant-img2.jpg" alt="Doctor Services">
+            <img class="animation-element fadeUp animation-element-slow" src="images/consultant-img3.jpg" alt="Doctor Services">
+            <img class="animation-element fadeUp animation-element-exslow" src="images/consultant-img4.jpg" alt="Doctor Services"> 
+        </div>
+    </div>
+
     <div class="video-section animation-element zoom animation-element-exslow">
         <div class="container">
-            <iframe width="560" height="500" src="https://www.youtube.com/embed/jQkdu3dUYWE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="500" src="https://www.youtube.com/embed/hvwQtrGrZJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 	

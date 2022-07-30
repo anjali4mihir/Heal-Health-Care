@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <div class="consultant-section nurse-consultant-section">
+    <div class="consultant-section nurse-consultant-section consultant-section-desktop">
         <div class="container">
             <h2 class="animation-element fadeUp animation-element-fast"> We Care For Your Loved One <br/> 
                 Now get Nursing Service by  <br/>
@@ -40,9 +40,20 @@
         </div>
     </div>
 
+    <div class="consultant-section-mobile">
+        <div class="container">
+            <img class="animation-element fadeUp animation-element-fast" src="images/physiotherapist-consultant2.jpg" alt="Doctor Services">
+            <img class="animation-element fadeUp animation-element-slow" src="images/physiotherapist-consultant3.jpg" alt="Doctor Services">
+        </div>
+    </div>
+
     <div class="video-section animation-element zoom animation-element-exslow">
         <div class="container">
-            <iframe width="560" height="500" src="https://www.youtube.com/embed/lBwM2WScbbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="500" src="https://www.youtube.com/embed/hvwQtrGrZJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+
         </div>
     </div>
 	

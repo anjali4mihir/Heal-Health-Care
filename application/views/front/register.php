@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="register-video-section-right animation-element zoom animation-element-exslow">
-                <iframe width="100%" height="300" src="https://www.youtube.com/embed/yAoLSRbwxL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+            <iframe width="100%" height="300" src="https://www.youtube.com/embed/EwOifk5TE2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </div>
@@ -72,7 +72,7 @@
                 </div>
             </div>
             <div class="register-video-section-right animation-element zoom animation-element-exslow">
-                <iframe width="100%" height="300" src="https://www.youtube.com/embed/yAoLSRbwxL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/jQkdu3dUYWE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </div>
@@ -99,7 +99,7 @@
                 </div>
             </div>
             <div class="register-video-section-right animation-element zoom animation-element-exslow">
-                <iframe width="100%" height="300" src="https://www.youtube.com/embed/yAoLSRbwxL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/89FxmgQK_VQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </div>
@@ -126,7 +126,7 @@
                 </div>
             </div>
             <div class="register-video-section-right animation-element zoom animation-element-exslow">
-                <iframe width="100%" height="300" src="https://www.youtube.com/embed/yAoLSRbwxL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/lBwM2WScbbY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </div>
@@ -168,23 +168,34 @@
                 </a>
 
                 <a id="myBtn2" class="modal-trigger no-select"> 
-                    <img src="<?= base_url(); ?>assets/img/video-thumbnail.jpg" alt="Video">
+                    <img src="<?= base_url(); ?>assets/img/video-thumbnail2.jpg" alt="Video">
                 </a>
 
                 <a id="myBtn3" class="modal-trigger no-select radiological-video"> 
-                    <img src="<?= base_url(); ?>assets/img/video-thumbnail.jpg" alt="Video">
+                    <img src="<?= base_url(); ?>assets/img/video-thumbnail3.jpg" alt="Video">
                 </a>
             </div>
         </div>
     </div>
 
-    <div class="signup-profile inventory-profile animation-element fadeLeft animation-element-slow">
+    <div class="signup-profile inventory-profile animation-element fadeLeft animation-element-slow consultant-section-desktop">
         <div class="container">
             <img src="<?= base_url(); ?>assets/img/inventory-img.png" alt="Sign Up">
             <div class="register-btm">
                 <a href="#register-form" class="o-button"> Register Now </a>
             </div>
         </div>        
+    </div>
+    
+    <div class="consultant-section-mobile signup-profile-mobile">
+        <div class="container">
+            <img class="animation-element fadeUp animation-element-fast" src="images/inventory-img2.jpg" alt="Doctor Services">
+            <img class="animation-element fadeUp animation-element-slow" src="images/inventory-img3.jpg" alt="Doctor Services">
+
+            <div class="register-btm">
+                <a href="#register-form" class="o-button"> Register Now </a>
+            </div>
+        </div>
     </div>
 
     <div id="register-form" class="registration-form animation-element fadeRight animation-element-slow in-view">
@@ -239,6 +250,7 @@
             </div>
 
             <div class="register-form-right banner-left animation-element fadeRight animation-element-exslow in-view">
+                <img class="register-mobile" src="images/heal-mobile-img.png" alt="Heal App">
                 <div class="download-option">
                     <a class="o-button"> Download @Heal App </a>
                 </div>
@@ -257,7 +269,7 @@
         <!-- Modal content -->
         <div class="modal-content">
         <span id="modalClose" class="close no-select">&times;</span>
-        <iframe width="100%" height="500" src="https://www.youtube.com/embed/yAoLSRbwxL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/hpXxsWT5ZTg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 
@@ -265,7 +277,7 @@
         <!-- Modal content -->
         <div class="modal-content">
         <span id="modalClose2" class="close no-select">&times;</span>
-        <iframe width="100%" height="500" src="https://www.youtube.com/embed/yAoLSRbwxL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/yPNCWY8nr_k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 
@@ -273,7 +285,11 @@
         <!-- Modal content -->
         <div class="modal-content">
         <span id="modalClose3" class="close no-select">&times;</span>
-        <iframe width="100%" height="500" src="https://www.youtube.com/embed/yAoLSRbwxL8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        <iframe width="100%" height="500" src="https://www.youtube.com/embed/_w9Q40OYD-Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+
         </div>
     </div>
 	
