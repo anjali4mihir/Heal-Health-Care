@@ -22,17 +22,17 @@
 			<h4> For Providers </h4>
 
 			<ul>
-				<li> <a href="<?= base_url() . 'partners/login'; ?>"> Login </a></li>
-				<li> <a href="<?= base_url() . 'partners/register'; ?>"> Sign Up </a></li>
-				<li> <a href="<?= base_url() . 'services/doctors'?>"> Doctors </a></li>
-				<li> <a href="<?= base_url() . 'services/doctors'?>"> Dentist </a></li>
-				<li> <a href="<?= base_url() . 'services/doctors'?>"> Dietician </a></li>
-				<li> <a href="<?= base_url() . 'services/nurses'?>"> Nurse </a></li>
-				<li> <a href="<?= base_url() . 'services/physiotherapist'?>"> Physiotherapist </a></li>
-				<li> <a href="<?= base_url() . 'services/doctors'?>"> veterinarians </a></li>
-				<li> <a href="<?= base_url() . 'services/find-store'?>"> Owners of Pharmacy </a></li>
-				<li> <a href="<?= base_url() . 'services/find-lab'?>"> Owners of Pathology Lab </a></li>
-				<li> <a href="<?= base_url() . 'services/find-diagnostics'?>"> Owners of Radiodiagnostics</a></li>
+				<li> <a href="https://www.atheal.in/partners/login"> Login </a></li>
+				<li> <a href="<?= base_url() . 'register'; ?>"> Sign Up </a></li>
+				<li> <a href="<?= base_url() . 'register'?>"> Doctors </a></li>
+				<li> <a href="<?= base_url() . 'register'?>"> Dentist </a></li>
+				<li> <a href="<?= base_url() . 'register'?>"> Dietician </a></li>
+				<li> <a href="<?= base_url() . 'register'?>"> Nurse </a></li>
+				<li> <a href="<?= base_url() . 'register'?>"> Physiotherapist </a></li>
+				<li> <a href="<?= base_url() . 'register'?>"> veterinarians </a></li>
+				<li> <a href="<?= base_url() . 'register'?>"> Owners of Pharmacy </a></li>
+				<li> <a href="<?= base_url() . 'register'?>"> Owners of Pathology Lab </a></li>
+				<li> <a href="<?= base_url() . 'register'?>"> Owners of Radiodiagnostics</a></li>
 			</ul>
 		</div>
 

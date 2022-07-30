@@ -26,7 +26,7 @@
 
     <div class="doctor-detail">
         <div class="container">
-            <h2 class="animation-element fadeRight animation-element-slow"> We Care <br/> <span> For You Pet </span></h2>
+            <h2 class="animation-element fadeRight animation-element-slow"> We Care <br/> <span> For Your Pet </span></h2>
             <img class="animation-element fadeLeft animation-element-exslow" src="<?= base_url(); ?>assets/img/pet-care-img.png" alt="Animal Doctor">
         </div>
     </div>

@@ -19,7 +19,7 @@
             <div class="contact-section-left animation-element fadeLeft animation-element-fast">
                 <img src="<?= base_url(); ?>assets/img/kripr-logo-img.jpg" alt="Kripr Tech Med">
                 <p> <?= $site_details->address; ?> </p>
-                <h5> Get Directions </h5>
+                <!-- <h5> Get Directions </h5> -->
                 <a href="mailto:<?= $site_details->contact_email; ?>"> <img src="<?= base_url(); ?>assets/img/mail-icon.png" alt="Mail Icon"> <?= $site_details->contact_email; ?> </a>
             </div>
 

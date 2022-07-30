@@ -25,7 +25,7 @@ $returnpath = $this->config->item('site_images_uploaded_path');
 						<li><a href="<?= base_url() . 'my-dashboard' ?>">My Dashboard</a></li>
 						<li><a href="<?= base_url() . 'partners/logout' ?>">Logout</a></li>
 						<?php } else { ?>
-						<li><a href="<?= base_url() . 'partners/login' ?>">Login</a></li>
+						<li><a href="https://www.atheal.in/partners/login">Login</a></li>
 						<li><a href="<?= base_url() . 'register' ?>">Sign Up</a></li>
 						<?php } ?>
 					</ul> 
