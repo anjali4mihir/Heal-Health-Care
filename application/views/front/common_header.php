@@ -34,7 +34,7 @@ $returnpath = $this->config->item('site_images_uploaded_path');
 				<li class="dropdown">
 					<a href="javascript:void(0);"> Download App <span> <img src="<?= base_url(); ?>assets/img/down-arrow.png"></span> </a>
 					<ul class="sub-menu">
-						<li><a href="https://play.google.com/store/apps/details?id=com.atheal">Play Srore</a></li>
+						<li><a href="https://play.google.com/store/apps/details?id=com.atheal">Play Store</a></li>
 						<li><a href="https://apps.apple.com/us/app/heal/id1582761953">Apple Store</a></li>
 					</ul> 
 				</li>
