@@ -1571,7 +1571,14 @@ body {
     margin: auto;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 480px) {
+  .container {
+    width: 40rem !important;
+    max-width: 40rem !important;
+    margin: auto;
+  }
+}
+@media (max-width: 360px) {
   .container {
     width: 36rem !important;
     max-width: 36rem !important;
@@ -1931,7 +1938,7 @@ nav ul li:last-child {
     right: 2rem;
     padding: 1rem 1rem;
     z-index: 2;
-    top: 9rem;
+    top: 8rem;
     left: 1rem;
   }
 }
@@ -3991,6 +3998,40 @@ header.fixed #logo img {
   }
 }
 
+.consultant-section-mobile {
+  display: none;
+}
+@media (max-width: 767.98px) {
+  .consultant-section-mobile {
+    display: block;
+  }
+  .consultant-section-mobile .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .consultant-section-mobile img {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+}
+.consultant-section-mobile.signup-profile-mobile {
+  padding-bottom: 6rem;
+}
+.consultant-section-mobile.signup-profile-mobile img {
+  margin-bottom: 0;
+}
+.consultant-section-mobile.signup-profile-mobile .register-btm {
+  margin: auto;
+}
+
+@media (max-width: 767.98px) {
+  .consultant-section-desktop {
+    display: none;
+  }
+}
+
 /* slider styles */
 .sd_master_wrapper {
   position: relative;
@@ -4354,7 +4395,7 @@ footer .footer-link ul li a:hover::after {
   color: #000000;
   padding-top: 1.5rem;
   text-align: center;
-  max-width: 64rem;
+  max-width: 74rem;
   display: flex;
   justify-content: center;
   margin: auto;
@@ -4580,7 +4621,7 @@ footer .footer-link ul li a:hover::after {
 
 .page-banner {
   width: 100%;
-  height: 50rem;
+  height: 60rem;
   position: relative;
 }
 .page-banner img {
@@ -5079,6 +5120,7 @@ footer .footer-link ul li a:hover::after {
 @media (max-width: 767.98px) {
   .signup-profile {
     padding: 4rem 0;
+    display: none;
   }
 }
 
@@ -5297,6 +5339,12 @@ footer .footer-link ul li a:hover::after {
 }
 .registration-form .register-form-right {
   width: 50%;
+}
+.registration-form .register-form-right img.register-mobile {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+  display: flex;
 }
 @media (max-width: 767.98px) {
   .registration-form .register-form-right {
