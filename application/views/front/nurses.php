@@ -42,8 +42,8 @@
 
     <div class="consultant-section-mobile">
         <div class="container">
-            <img class="animation-element fadeUp animation-element-fast" src="images/physiotherapist-consultant2.jpg" alt="Doctor Services">
-            <img class="animation-element fadeUp animation-element-slow" src="images/physiotherapist-consultant3.jpg" alt="Doctor Services">
+            <img class="animation-element fadeUp animation-element-fast" src="<?= base_url(); ?>assets/img/physiotherapist-consultant2.jpg" alt="Doctor Services">
+            <img class="animation-element fadeUp animation-element-slow" src="<?= base_url(); ?>assets/img/physiotherapist-consultant3.jpg" alt="Doctor Services">
         </div>
     </div>
 

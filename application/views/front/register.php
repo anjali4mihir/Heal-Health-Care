@@ -189,8 +189,8 @@
     
     <div class="consultant-section-mobile signup-profile-mobile">
         <div class="container">
-            <img class="animation-element fadeUp animation-element-fast" src="images/inventory-img2.jpg" alt="Doctor Services">
-            <img class="animation-element fadeUp animation-element-slow" src="images/inventory-img3.jpg" alt="Doctor Services">
+            <img class="animation-element fadeUp animation-element-fast" src="<?= base_url(); ?>assets/img/inventory-img2.jpg" alt="Doctor Services">
+            <img class="animation-element fadeUp animation-element-slow" src="<?= base_url(); ?>assets/img/inventory-img3.jpg" alt="Doctor Services">
 
             <div class="register-btm">
                 <a href="#register-form" class="o-button"> Register Now </a>
@@ -250,7 +250,7 @@
             </div>
 
             <div class="register-form-right banner-left animation-element fadeRight animation-element-exslow in-view">
-                <img class="register-mobile" src="images/heal-mobile-img.png" alt="Heal App">
+                <img class="register-mobile" src="<?= base_url(); ?>assets/img/heal-mobile-img.png" alt="Heal App">
                 <div class="download-option">
                     <a class="o-button"> Download @Heal App </a>
                 </div>

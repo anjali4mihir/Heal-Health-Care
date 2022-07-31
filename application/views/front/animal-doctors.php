@@ -39,9 +39,9 @@
 
     <div class="consultant-section-mobile">
         <div class="container">
-            <img class="animation-element fadeUp animation-element-fast" src="images/consultant-img2.jpg" alt="Doctor Services">
-            <img class="animation-element fadeUp animation-element-slow" src="images/consultant-img3.jpg" alt="Doctor Services">
-            <img class="animation-element fadeUp animation-element-exslow" src="images/consultant-img4.jpg" alt="Doctor Services"> 
+            <img class="animation-element fadeUp animation-element-fast" src="<?= base_url(); ?>assets/img/consultant-img2.jpg" alt="Doctor Services">
+            <img class="animation-element fadeUp animation-element-slow" src="<?= base_url(); ?>assets/img/consultant-img3.jpg" alt="Doctor Services">
+            <img class="animation-element fadeUp animation-element-exslow" src="<?= base_url(); ?>assets/img/consultant-img4.jpg" alt="Doctor Services"> 
         </div>
     </div>
 
