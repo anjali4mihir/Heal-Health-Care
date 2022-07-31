@@ -9,7 +9,7 @@
 <body>
     <?php $this->load->view('front/common_header'); ?>
     
-    <div class="doctor-banner ">
+    <div class="doctor-banner">
         <div class="container">
             <div class="">
                 <h1 class="banner-left animation-element fadeUp animation-element-exfast"> @Heal - Key For Health </h1>
@@ -33,7 +33,7 @@
 
     <div class="consultant-section consultant-section-desktop">
         <div class="container">
-            <img class="animation-element fadeLeft animation-element-exslow" src="<?= base_url(); ?>assets/img/consultant-img.png" alt="Doctor Services"> 
+            <img class="animation-element fadeLfadeUpeft animation-element-fast" src="<?= base_url(); ?>assets/img/consultant-img.png" alt="Doctor Services"> 
         </div>
     </div>
 

@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <div class="consultant-section nurse-consultant-section">
+    <div class="consultant-section nurse-consultant-section  consultant-section-desktop">
         <div class="container">
             <img class="animation-element fadeLeft animation-element-exslow" src="<?= base_url(); ?>assets/img/physiotherapist-consultant.png" alt="Doctor Services"> 
         </div>
@@ -39,7 +39,7 @@
 
     <div class="video-section animation-element zoom animation-element-exslow">
         <div class="container">
-            <iframe width="560" height="500" src="https://www.youtube.com/embed/89FxmgQK_VQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="500" src="https://www.youtube.com/embed/hvwQtrGrZJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 	
