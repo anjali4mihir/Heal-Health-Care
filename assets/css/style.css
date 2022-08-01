@@ -4341,7 +4341,7 @@ footer .footer-link ul li a:hover::after {
 
 #scroll {
   position: fixed;
-  right: 9rem;
+  right: 6rem;
   bottom: 10px;
   cursor: pointer;
   width: 4rem;
@@ -5657,7 +5657,6 @@ footer .footer-link ul li a:hover::after {
   width: 60%;
 }
 
-.error{color:red !important;}
-label#accept-error{position:absolute;}
+.error{color:red !important;text-transform:capitalize;}
 
 /*# sourceMappingURL=style.css.map */
