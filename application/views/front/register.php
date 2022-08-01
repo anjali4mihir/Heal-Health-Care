@@ -163,15 +163,15 @@
                 </div>
             </div>
             <div class="register-video-section-right video-section-right animation-element fadeRight animation-element-exslow">
-                <a id="myBtn" class="modal-trigger no-select"> 
+                <a id="myBtn" class="modal-trigger no-select youtubePopup" data-url="https://www.youtube.com/embed/hpXxsWT5ZTg"> 
                     <img src="<?= base_url(); ?>assets/img/video-thumbnail.jpg" alt="Video">
                 </a>
 
-                <a id="myBtn2" class="modal-trigger no-select"> 
+                <a id="myBtn2" class="modal-trigger no-select youtubePopup" data-url="https://www.youtube.com/embed/yPNCWY8nr_k"> 
                     <img src="<?= base_url(); ?>assets/img/video-thumbnail2.jpg" alt="Video">
                 </a>
 
-                <a id="myBtn3" class="modal-trigger no-select radiological-video"> 
+                <a id="myBtn3" class="modal-trigger no-select radiological-video youtubePopup" data-url="https://www.youtube.com/embed/_w9Q40OYD-Y"> 
                     <img src="<?= base_url(); ?>assets/img/video-thumbnail3.jpg" alt="Video">
                 </a>
             </div>
@@ -269,53 +269,22 @@
         <!-- Modal content -->
         <div class="modal-content">
         <span id="modalClose" class="close no-select">&times;</span>
-        <iframe width="100%" height="500" src="https://www.youtube.com/embed/hpXxsWT5ZTg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="500" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
-
-    <div id="myModal2" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-        <span id="modalClose2" class="close no-select">&times;</span>
-        <iframe width="100%" height="500" src="https://www.youtube.com/embed/yPNCWY8nr_k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </div>
-
-    <div id="myModal3" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-        <span id="modalClose3" class="close no-select">&times;</span>
-        <iframe width="100%" height="500" src="https://www.youtube.com/embed/_w9Q40OYD-Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </div>
-
 
         </div>
     </div>
 	
 	<script>
         $(document).ready(function(){
-			$('#myBtn').click(function(event){
+			$('.youtubePopup').click(function(event){
 				showModal();
-				event.stopPropagation(); 
+				var dataUrl = $(this).attr('data-url');
+				$('#myModal').find('iframe').attr('src',dataUrl);
+				
 			});
 			$('#modalClose').click(function(){
-				hideModal();
-			});
-
-			$('#myBtn2').click(function(event){
-				showModal();
-				event.stopPropagation(); 
-			});
-			$('#modalClose2').click(function(){
-				hideModal();
-			});
-
-			$('#myBtn3').click(function(event){
-				showModal();
-				event.stopPropagation(); 
-			});
-			$('#modalClose3').click(function(){
 				hideModal();
 			});
 			
