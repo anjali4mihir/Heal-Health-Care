@@ -1,7 +1,0 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Heal – Health & Medical</title><?php $this->load->view('front/common_css'); ?>
-    <style type="text/css">
-    .p-error {
-        color: red;
-    }
-    </style>
-</head><body><div class="wrapper"><?php $this->load->view('front/common_header'); ?><main class="main-content site-wrapper-reveal"><section class="page-title-area bg-img bg-img-top" data-bg-img="<?= base_url()?>assets/img/photos/about-bg1.jpg"><div class="container"><div class="row"><div class="col-lg-7 m-auto"><div class="page-title-content content-style5 text-center"><p><font color="#ed1c24">@</font>Heal App</p><h4 class="title"><?= $page_title?> <span></span></h4></div></div></div></div></section><section class="register_page"><div class="container"><center><p style="color: green;">YOUR PROFILE UNDER VERIFICATION WE WILL BE VERIFY SOON</p><a href="<?= base_url() ?>" class="btn book-now-btn form_btn">OK</a></center></div></section></main><?php $this->load->view('front/common_footer'); ?></div><?php $this->load->view('front/common_js'); ?></body></html>
