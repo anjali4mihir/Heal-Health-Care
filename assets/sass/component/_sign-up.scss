@@ -152,7 +152,13 @@
 
     @include media-down(mobile) {
         padding: 4rem 0;
-        display: none;
+        // display: none;
+    }
+
+    &.consultant-section-desktop {
+        @include media-down(mobile) {
+            display: none;
+        }
     }
 }
 .register-video-section.register-video-section-btm {
@@ -295,4 +301,37 @@
         }
     }
 
+}
+.signup-step {
+    display: flex;
+    flex-wrap: wrap;
+
+    .sign-img {
+        width: 25%;
+        padding: 0 1.5rem;
+
+        img {
+            width: 100%;
+
+            @include media-down(mobile) {
+                width: 85%;
+            }
+        }
+
+        @include media-down(mobile) {
+            width: 100%;
+            padding: 1.5rem 0;
+        }
+    }
+
+    &.physio-step {
+        .sign-img {
+            width: 33.33%;
+
+            @include media-down(mobile) {
+                width: 100%;
+                padding: 1.5rem 0;
+            }
+        }
+    }
 }
