@@ -43,6 +43,17 @@
         mix-blend-mode: hard-light;
         opacity: 0.4;
     }
+    @media (min-width:1701px) and (max-width:1950px) {
+        height: 94rem;
+    }
+
+    @media (min-width:1500px) and (max-width:1700px) {
+        height: 75rem;
+    }
+
+    @media (min-width:1500px) and (max-width:1499px) {
+        height: 70rem;
+    }
 
     @include media-down(tablet-large) {
         height: 40rem;
