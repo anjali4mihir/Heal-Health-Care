@@ -1,0 +1,49 @@
+ ul{margin: 0;padding: 0;list-style: none;}
+  	html body {font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,Sans-serif;background: white;width: 100%;max-width: 710px;min-height: 940px;margin: 20px auto 30px auto;-moz-box-shadow: 0px 0px 20px rgba(80,80,80,0.7);-webkit-box-shadow: 0px 0px 20px rgb(80 80 80 / 70%);box-shadow: 0px 0px 20px rgb(80 80 80 / 70%);position: relative;border:1px solid #000;}
+    .main-width{padding:20px;float:left;display: block;border-bottom:1px solid #000;}
+    .header-left-side{width:25%;display: inline-block;float: right;}
+    .header-left-side img{width:144px;max-width:100%;}
+    .header-right-part{width: 100%;display: inline-block;padding: 0;}
+    .header-right-part h3{margin: 0;padding: 4px 0;font-size: 17px;letter-spacing: normal;font-weight: 700;}
+    .shipping-client-left ul,
+    .header-right-part ul{margin: 0;padding: 0;list-style: none;}
+    .header-right-part ul li{padding:4px 0;font-size: 14px}
+    .note ul li span,
+    .shipping-client-right ul li span,
+    .shipping-client-left ul li span,
+    .header-right-part ul li span{font-weight: 700;}
+    .shipping-client {padding: 20px; float: left; display: block;}
+    .shipping-client-left{width:40%;display: inline-block;float: left;}
+    .shipping-client-right{width:59%;display: inline-block;float: right;}
+    .note ul li,
+    .shipping-client-right ul li,
+    .shipping-client-left ul li{font-size: 14px;margin-bottom:7px;}
+    .shipping-client-right ul li h3{margin:0;}
+    .price-table{padding:0 20px;float: left;}
+    .table {border-collapse: collapse;border:1px solid #000;}
+    .table tr td,
+    .table tr th{border:1px solid #000;font-size: 11px;padding:5px;}
+    #sums {float: right;}
+    #sums td{width:140px;padding-left: 10px;}
+    #sums th {width: 200px;text-align: right;font-weight: bold;}
+    .note {float: left;margin-top: 100px;width: 42%;position: relative;}
+    .thankyou{float: left;text-align: left;width:100%;}
+    .thankyou h5 p {
+      display: inline-block;
+  }
+    .thankyou h5{font-weight: 400;font-size: 15px;margin:0;}
+    .thankyou h5 span{font-weight:700;}
+    .logo{text-align: right;}
+    .note h4{padding-top:10px;border-top:1px solid #000;float: left;width: 100%;}
+    .thankyou h4{display: inline-block;width:100%;margin:0;margin-bottom:10px;}
+    .tankyou-two-logo{width:20%;float: right;display: inline-block;margin-top:20px;}
+    .main-tankyou {padding: 20px;border-top: 1px solid #000;float: left;margin-top: 20px;}
+    .tankyou-two-logo img{text-align: center;margin-top: 10px;display: block;margin-bottom:5px;}
+    .tankyou-two-logo h6 span {display: block;text-align: center;font-size: 18px;}
+    .tankyou-two-logo h6 {margin: 0;text-align: center;margin-bottom:20px;}
+    .stamp {
+      display: inline-block;float:right;
+  }
+  .symbol-sign {
+    display: inline-block;float: left;
+}
