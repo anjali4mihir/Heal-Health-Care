@@ -52,8 +52,30 @@
     </div>
     <div class="signup-profile animation-element fadeUp animation-element-slow">
         <div class="container">
-            <img src="<?= base_url(); ?>assets/img/signup-register.jpg" alt="Sign Up">
+            <!-- <img src="<?= base_url(); ?>assets/img/signup-register.jpg" alt="Sign Up">
             <div class="register-btm">
+                <a href="#register-form" class="o-button"> Register Now </a>
+            </div> -->
+
+            <div class="signup-step">
+                <div class="sign-img animation-element fadeUp animation-element-exfast">
+                    <img src="<?= base_url(); ?>assets/img/sign-step.jpg">
+                </div>
+
+                <div class="sign-img animation-element fadeUp animation-element-fast">
+                    <img src="<?= base_url(); ?>assets/img/sign-step2.jpg">
+                </div>
+
+                <div class="sign-img animation-element fadeUp animation-element-slow">
+                    <img src="<?= base_url(); ?>assets/img/sign-step3.jpg">
+                </div>
+
+                <div class="sign-img animation-element fadeUp animation-element-exslow">
+                    <img src="<?= base_url(); ?>assets/img/sign-step4.jpg">
+                </div>
+            </div>
+
+            <div class="register-btm animation-element fadeUp animation-element-slow">
                 <a href="#register-form" class="o-button"> Register Now </a>
             </div>
         </div>        
@@ -79,8 +101,30 @@
 
     <div class="signup-profile animation-element fadeUp animation-element-fast">
         <div class="container">
-            <img src="<?= base_url(); ?>assets/img/veterian-detail.jpg" alt="Sign Up">
+            <!-- <img src="<?= base_url(); ?>assets/img/veterian-detail.jpg" alt="Sign Up">
             <div class="register-btm">
+                <a href="#register-form" class="o-button"> Register Now </a>
+            </div> -->
+
+            <div class="signup-step">
+                <div class="sign-img animation-element fadeUp animation-element-exfast">
+                    <img src="<?= base_url(); ?>assets/img/veterian1.jpg">
+                </div>
+
+                <div class="sign-img animation-element fadeUp animation-element-fast">
+                    <img src="<?= base_url(); ?>assets/img/veterian2.jpg">
+                </div>
+
+                <div class="sign-img animation-element fadeUp animation-element-slow">
+                    <img src="<?= base_url(); ?>assets/img/veterian3.jpg">
+                </div>
+
+                <div class="sign-img animation-element fadeUp animation-element-exslow">
+                    <img src="<?= base_url(); ?>assets/img/veterian4.jpg">
+                </div>
+            </div>
+
+            <div class="register-btm animation-element fadeUp animation-element-fast">
                 <a href="#register-form" class="o-button"> Register Now </a>
             </div>
         </div>        
@@ -106,8 +150,25 @@
 
     <div class="signup-profile animation-element fadeRight animation-element-fast">
         <div class="container">
-            <img src="<?= base_url(); ?>assets/img/physio-sign.jpg" alt="Sign Up">
+            <!-- <img src="<?= base_url(); ?>assets/img/physio-sign.jpg" alt="Sign Up">
             <div class="register-btm">
+                <a href="#register-form" class="o-button"> Register Now </a>
+            </div> -->
+            <div class="signup-step physio-step">
+                <div class="sign-img animation-element fadeUp animation-element-exfast">
+                    <img src="<?= base_url(); ?>assets/img/physio1.jpg">
+                </div>
+
+                <div class="sign-img animation-element fadeUp animation-element-fast">
+                    <img src="<?= base_url(); ?>assets/img/physio2.jpg">
+                </div>
+
+                <div class="sign-img animation-element fadeUp animation-element-slow">
+                    <img src="<?= base_url(); ?>assets/img/physio3.jpg">
+                </div>
+            </div>
+
+            <div class="register-btm animation-element fadeRight animation-element-fast">
                 <a href="#register-form" class="o-button"> Register Now </a>
             </div>
         </div>        
@@ -133,8 +194,26 @@
 
     <div class="signup-profile animation-element fadeLeft animation-element-slow">
         <div class="container">
-            <img src="<?= base_url(); ?>assets/img/nurse-profile.jpg" alt="Sign Up">
+            <!-- <img src="<?= base_url(); ?>assets/img/nurse-profile.jpg" alt="Sign Up">
             <div class="register-btm">
+                <a href="#register-form" class="o-button"> Register Now </a>
+            </div> -->
+
+            <div class="signup-step physio-step">
+                <div class="sign-img animation-element fadeUp animation-element-exfast">
+                    <img src="<?= base_url(); ?>assets/img/nurse1.jpg">
+                </div>
+
+                <div class="sign-img animation-element fadeUp animation-element-fast">
+                    <img src="<?= base_url(); ?>assets/img/nurse2.jpg">
+                </div>
+
+                <div class="sign-img animation-element fadeUp animation-element-slow">
+                    <img src="<?= base_url(); ?>assets/img/nurse3.jpg">
+                </div>
+            </div>
+
+            <div class="register-btm animation-element fadeLeft animation-element-slow">
                 <a href="#register-form" class="o-button"> Register Now </a>
             </div>
         </div>        

@@ -2081,6 +2081,7 @@ header.fixed #logo img {
 
 .home-banner {
   display: flex;
+  padding: 5rem 0;
 }
 .home-banner .banner-left {
   width: 50%;
@@ -2138,6 +2139,16 @@ header.fixed #logo img {
 @media (max-width: 767.98px) {
   .home-banner .banner-right {
     width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .home-banner .banner-right {
+    padding: 2rem 2rem 0 2rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .home-banner .banner-right:last-child {
+    display: none;
   }
 }
 @media (max-width: 767.98px) {
@@ -2547,7 +2558,7 @@ header.fixed #logo img {
 }
 
 .register-member-section {
-  background-image: url(../img/register-bg-img.png);
+  background-image: url(../images/register-bg-img.png);
   padding: 8rem 1.5rem 4rem 1.5rem;
   background-size: cover;
   background-repeat: repeat;
@@ -4099,7 +4110,7 @@ button.slick-prev.slick-arrow {
   height: 35px;
   width: 35px;
   padding: 0;
-  background-image: url(../img/left-arrow.png);
+  background-image: url(../images/left-arrow.png);
   background-size: 100% 100%;
 }
 
@@ -4115,7 +4126,7 @@ button.slick-next.slick-arrow {
   outline: none;
   height: 35px;
   width: 35px;
-  background-image: url(../img/right-arrow.png);
+  background-image: url(../images/right-arrow.png);
   background-size: 100% 100%;
 }
 
@@ -4663,6 +4674,21 @@ footer .footer-link ul li a:hover::after {
   mix-blend-mode: hard-light;
   opacity: 0.4;
 }
+@media (min-width: 1701px) and (max-width: 1950px) {
+  .page-banner {
+    height: 94rem;
+  }
+}
+@media (min-width: 1500px) and (max-width: 1700px) {
+  .page-banner {
+    height: 75rem;
+  }
+}
+@media (min-width: 1500px) and (max-width: 1499px) {
+  .page-banner {
+    height: 70rem;
+  }
+}
 @media (max-width: 1279.98px) {
   .page-banner {
     height: 40rem;
@@ -4830,7 +4856,7 @@ footer .footer-link ul li a:hover::after {
 
 .doctor-banner {
   display: flex;
-  background-image: url(../img/animal-dr-banner.jpg);
+  background-image: url(../images/animal-dr-banner.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 3rem 1.5rem;
@@ -5120,6 +5146,10 @@ footer .footer-link ul li a:hover::after {
 @media (max-width: 767.98px) {
   .signup-profile {
     padding: 4rem 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .signup-profile.consultant-section-desktop {
     display: none;
   }
 }
@@ -5252,6 +5282,38 @@ footer .footer-link ul li a:hover::after {
 @media (max-width: 767.98px) {
   .video-section-right a {
     width: 100%;
+  }
+}
+
+.signup-step {
+  display: flex;
+  flex-wrap: wrap;
+}
+.signup-step .sign-img {
+  width: 25%;
+  padding: 0 1.5rem;
+}
+.signup-step .sign-img img {
+  width: 100%;
+}
+@media (max-width: 767.98px) {
+  .signup-step .sign-img img {
+    width: 85%;
+  }
+}
+@media (max-width: 767.98px) {
+  .signup-step .sign-img {
+    width: 100%;
+    padding: 1.5rem 0;
+  }
+}
+.signup-step.physio-step .sign-img {
+  width: 33.33%;
+}
+@media (max-width: 767.98px) {
+  .signup-step.physio-step .sign-img {
+    width: 100%;
+    padding: 1.5rem 0;
   }
 }
 
@@ -5557,7 +5619,7 @@ footer .footer-link ul li a:hover::after {
 
 .floating-chat .chat .messages li.self:before {
   left: -45px;
-  background-image: url(../img/chat-img.png);
+  background-image: url(../images/chat-img.png);
 }
 
 .floating-chat .chat .messages li.self:after {
@@ -5656,7 +5718,5 @@ footer .footer-link ul li a:hover::after {
 .fa.fa-comments img {
   width: 60%;
 }
-
-.error{color:red !important;text-transform:capitalize;}
 
 /*# sourceMappingURL=style.css.map */
