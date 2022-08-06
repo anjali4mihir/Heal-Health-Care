@@ -4503,6 +4503,9 @@ footer .footer-link ul li a:hover::after {
   .offering-section .offering-btm .offering-right.offering-right-btm .service-card {
     width: 100%;
   }
+  .offering-section .offering-btm .offering-right.offering-right-btm .service-card a {
+    width: 100%;
+  }
 }
 @media (max-width: 1279.98px) {
   .offering-section .offering-btm .offering-right {
