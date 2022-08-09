@@ -359,6 +359,7 @@
         $(document).ready(function(){
 			$('.youtubePopup').click(function(event){
 				showModal();
+				event.stopPropagation();
 				var dataUrl = $(this).attr('data-url');
 				$('#myModal').find('iframe').attr('src',dataUrl);
 				
