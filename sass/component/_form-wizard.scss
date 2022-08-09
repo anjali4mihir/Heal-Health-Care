@@ -1,0 +1,463 @@
+.form-wizard {
+    padding: 5rem 0;
+
+    .form-column {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+
+        @include media-down(mobile) { 
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+    .full-wdth{
+        width: 100%;
+    }
+    .form-column, .full-wdth {
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-bottom: 20px;
+    }
+    .float-right{
+        float: right;
+    }
+    .float-left{
+        float: left;
+    }
+    label {
+        color: $brand-primary;
+        @extend %o-paragraph-large;
+        display: inline-block;
+        margin-bottom: .3rem;
+        font-weight: weight(bold);
+
+        span {
+            color: $interface-red;
+        }
+    }
+    .form-row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .form-wizard-wrapper {
+        max-width: 767px;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        background-color: #ededed;
+        overflow-y: auto;
+    }
+    .form-wizard-wrapper .form-wizardmove-button {
+        position: absolute;
+        width: 30%;
+        left: 6px;
+        right: 6px;
+        top: 6px;
+        bottom: 6px;
+        border-radius: 4px;
+        background-color: $interface-red;
+        -webkit-transition: all 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
+        -moz-transition: all 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
+        -ms-transition: all 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
+        -o-transition: all 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
+        transition: all 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
+    
+    }
+    .form-wizard-wrapper ul {
+        background-color: $brand-primary;
+        z-index: 1;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+    .form-wizard-wrapper ul li {
+        list-style-type: none;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    .form-wizard-wrapper ul li a {
+        display: block;
+        padding: 1.5rem 1rem;
+        width: 100%;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    .form-wizard-wrapper ul li a:focus{
+        outline: 0;
+    }
+    .form-wizard-wrapper ul li a span {
+        position: relative;
+        z-index: 1;
+    }
+    .form-wizard-wrapper ul li.active a {
+        background-color: #ffffff;
+    }
+    .form-wizard-wrapper .form-wizard-content {
+        background-color: #ededed;
+        padding: 30px 20px;
+        color: #777777;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        transition: all 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
+        transform: translate3d(100%, 0px, 0px);
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+    }
+    .form-wizard-wrapper .form-wizard-content.show {
+        transform: translate3d(0px, 0px, 0px);
+    }
+    .form-wizard-wrapper .form-wizard-content h6 {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0 0 10px;
+    }
+    .form-wizard-wrapper .form-wizard-content .form-wizard-next-btn,
+    .form-wizard-wrapper .form-wizard-content .form-wizard-previous-btn {
+        background-color: $brand-primary;
+        color: #ffffff;
+        display: inline-block;
+        padding: 8px 50px;
+        border-radius: 5px;
+        margin-top: 20px;
+        text-decoration: none;
+
+        @include media-down(mobile) { 
+            padding: 8px 30px;
+        }
+    }
+    .form-wizard-wrapper .form-wizard-content .form-wizard-previous-btn {
+        background-color: #e31e24;
+        color: #ffffff;
+    }
+
+    .form-wizard-content-wrapper {
+        height: 100vh;
+        position: relative;
+        background-color: #fff;
+    }
+    .text-field, textarea {
+        display: block;
+        width: 100%;
+        padding: 0.8rem 1rem;
+        @extend %o-paragraph-small;
+        color: $interface-black;
+        background-color: #e6eaed;
+        background-clip: padding-box;
+        border: 1px solid #dbdbdb;
+        border-radius: 0.3rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+        &.bg-white {
+            background-color: #ffffff;
+        }
+
+        &::placeholder {
+            color: #999999;
+        }
+    }
+
+    h1 {
+        color: $interface-black;
+        font-size: 2.8rem;
+        line-height: 3.4rem;
+        font-weight: weight(CC);
+        text-align: center;
+        padding-bottom: 1.5rem;
+        
+        span {
+            color: $interface-red;
+        }
+
+        @include media-down(mobile) {  
+            font-size: 2.4rem;
+            line-height: 3rem;
+        }
+    }
+
+    .form-wizard-wrapper .form-wizard-content h3 {
+        color: $interface-black;
+        @extend %o-header--h3;
+        text-align: center;
+        font-weight: weight(regular);
+    }
+
+    .step-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            margin-right: 5px;
+        }
+    }
+
+    select {
+        // A reset of styles, including removing the default dropdown arrow
+        appearance: none;
+        background-color: transparent;
+        border: none;
+        padding: 0.8rem 1rem;
+        margin: 0;
+        width: 100%;
+        cursor: inherit;
+        line-height: inherit;
+        @extend %o-paragraph-small;
+      
+        // Stack above custom arrow
+        z-index: 1;
+      
+        // Remove dropdown arrow in IE10 & IE11
+        // @link https://www.filamentgroup.com/lab/select-css.html
+        &::-ms-expand {
+          display: none;
+        }
+      
+        // Remove focus outline, will add on alternate element
+        outline: none;
+      }
+      
+      .select {
+        display: grid;
+        grid-template-areas: "select";
+        align-items: center;
+        position: relative;
+        border: 1px solid #dbdbdb;
+        select,
+        &::after {
+          grid-area: select;
+        }
+    
+        max-width: 100%;
+      
+        border: 1px solid var(--select-border);
+        border-radius: 0.25em;
+        padding: 0.25em 0.5em;
+      
+        font-size: 1.25rem;
+        cursor: pointer;
+        line-height: 1.1;
+      
+        // Optional styles
+        // remove for transparency
+        background-color: #fff;
+      
+        // Custom arrow
+        &:not(.select--multiple)::after {
+          content: "";
+          justify-self: end;
+          width: 0.8em;
+          height: 0.5em;
+          background-color: var(--select-arrow);
+          clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+        }
+      }
+      
+      // Interim solution until :focus-within has better support
+      select:focus + .focus {
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        right: -1px;
+        bottom: -1px;
+        border: 2px solid var(--select-focus);
+        border-radius: inherit;
+      }
+      
+      select[multiple] {
+        padding-right: 0;
+      
+        /*
+         * Safari will not reveal an option
+         * unless the select height has room to 
+         * show all of it
+         * Firefox and Chrome allow showing 
+         * a partial option
+         */
+        height: 6rem;
+      
+        option {
+          white-space: normal;
+      
+          // Only affects Chrome
+          outline-color: var(--select-focus);
+        }
+      
+        /* 
+         * Experimental - styling of selected options
+         * in the multiselect
+         * Not supported crossbrowser
+         */
+        //   &:not(:disabled) option {
+        //     border-radius: 12px;
+        //     transition: 120ms all ease-in;
+      
+        //     &:checked {
+        //       background: linear-gradient(hsl(242, 61%, 76%), hsl(242, 61%, 71%));
+        //       padding-left: 0.5em;
+        //       color: black !important;
+        //     }
+        //   }
+      }
+      
+      .select--disabled {
+        cursor: not-allowed;
+        background-color: #eee;
+        background-image: linear-gradient(to top, #ddd, #eee 33%);
+      }
+      
+      
+      .select + label {
+        margin-top: 2rem;
+      }
+
+      @include media-down(mobile) { 
+        padding: 3rem 0;
+      }
+}
+
+.multi-row {
+    display: flex;
+    margin: 0 -15px;
+
+    .text-field {
+        margin: 0 15px;
+        width: 50%;
+
+        @include media-down(mobile) { 
+            width: 100%;
+            margin: 4px 10px;
+        }
+    }
+
+    @include media-down(mobile) { 
+        flex-wrap: wrap;
+    }
+}
+.two-row .multi-row-btm {
+    display: flex;
+    margin: 0 -15px;
+    padding-top: 20px;
+
+    .text-field {
+        margin: 0 15px;
+
+        &:first-child {
+            width: 56%;
+
+            @include media-down(mobile) { 
+                width: 100%;
+                margin: 4px 10px;
+            }
+        }
+
+        &:nth-child(2) {
+            width: 35%;
+
+            @include media-down(mobile) { 
+                width: 100%;
+                margin: 4px 10px;
+            }
+        }
+
+        &:last-child {
+            width: 15%;
+
+            @include media-down(mobile) { 
+                width: 100%;
+                margin: 4px 10px;
+            }
+        }
+    }
+
+    @include media-down(mobile) { 
+        flex-wrap: wrap;
+    }
+}
+.pt-0 {
+    padding-top: 0 !important;
+}
+.profile-table-top {
+    padding-top: 20px;
+}
+.profile-table {
+    .table {
+        width: 100%;
+
+        th {
+            background-color: #d6dcdc;
+            text-align: left;
+            padding: 6px 10px;
+            @extend %o-paragraph-medium;
+            color: #000000;
+            border-bottom: 1px solid #000000;
+        }
+
+        td {
+            &:last-child {
+                text-align: center;
+            }
+        }
+    }
+    .table-editable {
+        position: relative;
+    }
+    .table-remove:hover {
+    color: #f00;
+    }
+    
+    .table-up,
+    .table-down {
+    color: #007;
+    cursor: pointer;
+    }
+    
+    .table-up:hover,
+    .table-down:hover {
+    color: #00f;
+    }
+    
+    .table-add {
+        background-color: #0672df;
+        @extend %o-paragraph-medium;
+        color: #ffffff;
+        padding: 5px 25px;
+        position: absolute;
+        top: -40px;
+        right: 0;
+        border-radius: 5px;
+    }
+
+    .glyphicon-remove {
+        color: $interface-red;
+        @extend %o-paragraph-medium;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .glyphicon {
+        cursor: pointer;
+    }
+    .table-add:hover {
+        background-color: #e31e24;
+    }
+}

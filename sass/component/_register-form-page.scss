@@ -1,0 +1,203 @@
+.register_form {
+    border: 1px solid #004940;
+
+    h2 {
+        color: #ed1c24;
+        font-size: 3rem;
+        line-height: 4rem;
+
+        span {
+            color: #004940;
+        }
+    }
+
+    @media (min-width: 48em) {
+        .col-md-6 {
+            width: 50%;
+            padding: 0 15px;
+        }
+    }
+
+    .form-group {
+        text-align: left;
+        position: relative;
+        padding-left: 55px;
+        margin-bottom: 0;
+        margin-top: 30px;
+
+        .register_form .form-group i {
+            position: absolute;
+            left: 0;
+            top: 10px;
+            color: #004940;
+            font-size: 45px;
+        }
+
+        .form-control {
+            text-transform: none !important;
+            height: auto;
+            border: 1px solid #ccc;
+            font-size: 15px;
+            font-weight: 500;
+            padding-left: 10px;
+            padding-right: 5px;
+            padding-bottom: 8px;
+            text-transform: lowercase;
+            height: 40px;
+            color: #000 !important;
+            display: block;
+            width: 100%;
+            padding: 0.375rem 0.75rem;
+        }
+    }
+
+    .form-group label {
+        text-transform: capitalize;
+        display: block;
+        color: #004940;
+        margin-bottom: 3px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    p {
+        width: 100%;
+    }
+
+    .note {
+        text-align: left;
+    }
+}
+
+.error {
+    color: red !important;
+    text-transform: capitalize;
+}
+
+.login .login-form, .register_form {
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    padding: 50px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 1px 1px 46px 0px #eee;
+    margin: 10rem auto;
+}
+
+.terms-condition.form-group {
+    padding-left: 0;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.book-now-btn {
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    background: #ed1c24;
+    display: inline-block;
+    border-radius: 5px;
+    min-width: auto;
+    text-align: center;
+    margin: 30px 0 !important;
+    float: none;
+    cursor: pointer;
+}
+@media (min-width: 48em) {
+    .col-md-12 {
+        width: 100%;
+    }
+}
+.icofont-user-male:before {
+    content: "";
+    background-image: url(../images/form-icon.png);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-size: 90%;
+    background-repeat: no-repeat;
+}
+.icofont-diamond:before {
+    content: "";
+    background-image: url(../images/form-icon2.png);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-size: 90%;
+    background-repeat: no-repeat;
+}
+
+.icofont-envelope:before {
+    content: "";
+    background-image: url(../images/form-icon3.png);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-size: 90%;
+    background-repeat: no-repeat;
+}
+
+.icofont-phone:before {
+    content: "";
+    background-image: url(../images/form-icon4.png);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-size: 65%;
+    background-repeat: no-repeat;
+}
+
+.icofont-key:before {
+    content: "";
+    background-image: url(../images/form-icon5.png);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-size: 65%;
+    background-repeat: no-repeat;
+}
+.register_form span.toggle-password, .register_form span.toggle-password1 {
+    position: absolute;
+    bottom: 25px;
+    right: 15px;
+    color: #004940;
+    font-size: 16px;
+    cursor: pointer;
+    top: 58px;
+    z-index: 11;
+}
+.fa-eye-slash:before {
+    content: "";
+    background-image: url(../images/eye-icon.png);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-size: 50%;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    right: -30px;
+}
