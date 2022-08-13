@@ -1,0 +1,147 @@
+.specialities-section {
+    padding: 4rem 0;
+
+    h2 {
+        color: $interface-black;
+        @extend %o-header--h2;
+        padding-bottom: 2rem;
+
+        @include media-down(mobile) {
+            padding-bottom: 1rem;
+        }
+    }
+
+    .speci-count {
+        color: $interface-white;
+        @extend %o-paragraph-large;
+        background-color: #b3b3b3;
+        padding: 1rem 2rem;
+        display: inline-block;
+    }
+    
+    @include media-down(tablet) {
+        padding: 4rem 0 0 0;
+    }
+
+    @include media-down(mobile) {
+        padding: 3rem 0 0 0;
+    }
+}
+.specialities-option {
+    display: flex;
+
+    ul {
+        display: flex;
+        margin-top: 1.5rem;
+
+        li {
+            list-style-type: none;
+            color: $interface-black;
+            @extend %o-paragraph-medium;
+            display: flex;
+            align-items: center;
+            padding-right: 2rem;
+    
+            img {
+                width: 1.8rem;
+                margin-right: 1rem;
+            }
+        }
+
+        @include media-down(mobile) {
+            flex-wrap: wrap;
+        }
+    }
+
+    @include media-down(mobile) {
+        flex-wrap: wrap;
+    }
+    
+}
+.specialities-section {
+    .specialities-services {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 2.5rem;
+
+        .service-card {
+            width: 20%;
+            padding: 1.5rem;
+
+            p {
+                background-color: rgba(0, 78, 71, 0.8);
+                bottom: 2rem;
+                width: 87%;
+                text-align: center;
+
+                @include media-down(tablet-large) {
+                    width: 85%;
+                }
+
+                @include media-down(tablet) {
+                    width: 83%;
+                }
+
+                @include media-down(mobile) {
+                    width: 90%;
+                    bottom: 1.3rem;
+                }
+            }
+
+            @include media-down(tablet) {
+                width: 25%;
+            }
+
+            @include media-down(mobile) {
+                width: 50%;
+                padding: 0.8rem 0.8rem;
+            }
+
+            .modal-trigger {
+                padding: initial;
+                font-variant: initial;
+                letter-spacing: initial;
+            }
+
+        }
+
+        .show-all {
+            .service-card {
+                &:first-child {
+                    @include media-down(mobile) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modal.modal-new .modal-content {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 3rem 3rem;
+
+    h1 {
+        padding-bottom: 3rem;
+
+        @include media-down(tablet) {
+            padding-bottom: 1.5rem;
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .close:hover,  .close:focus {
+        color: #000000;
+    }
+
+    @include media-down(tablet) {
+        padding: 3rem 1.5rem;
+    }
+}
