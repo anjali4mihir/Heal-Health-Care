@@ -1,0 +1,278 @@
+.top-services-section {
+    padding: 7rem 0;
+    
+    .container {
+        position: relative;
+    }
+
+    .before-border {
+        background-color: $interface-darkgrey;
+        width: 26rem;
+        height: 0.2rem;
+        left: 11rem;
+        display: block;
+        position: relative;
+        top: 0.6rem;
+
+        &::after {
+            content: '';
+            background-color: $interface-darkgrey;
+            width: 26rem;
+            height: 0.2rem;
+            left: 0;
+            display: block;
+            position: relative;
+            top: 1.3rem;
+
+            @include media-down(tablet-large) {
+                width: 18rem;
+            }
+
+            @include media-down(tablet) {
+                display: none;
+            }
+        }
+
+        @include media-down(tablet-large) {
+            width: 18rem;
+        }
+
+        @include media-down(tablet) {
+            display: none;
+        }
+    }
+
+    .after-border {
+        background-color: $interface-darkgrey;
+        width: 26rem;
+        height: 0.2rem;
+        right: 13rem;
+        display: block;
+        position: absolute;
+        top: 0.6rem;
+
+        &::after {
+            content: '';
+            background-color: $interface-darkgrey;
+            width: 26rem;
+            height: 0.2rem;
+            right: 0;
+            display: block;
+            position: absolute;
+            top: 1.3rem;
+
+            @include media-down(tablet-large) {
+                width: 18rem;
+            }
+
+            @include media-down(tablet) {
+                display: none;
+            }
+        } 
+
+        @include media-down(tablet-large) {
+            width: 18rem;
+        }
+
+        @include media-down(tablet) {
+            display: none;
+        }
+    }
+
+    h2 {
+        color: $interface-black;
+        padding-bottom: 3rem;
+        text-align: center;
+
+        @include media-down(tablet) {
+            line-height: 2.8rem;
+        }
+    }
+
+    @include media-down(tablet) {
+        padding: 4rem 0 3rem 0;
+    }
+}
+.services-block {
+    display: flex;
+    
+    .services-left {
+        width: 35%;
+
+        .service-card {
+            p { 
+                width: 100%;
+                font-size: 9rem;
+                text-align: center;
+                line-height: 9.4rem;
+
+                @include media-down(tablet-large) {
+                    font-size: 6rem;
+                }
+
+                @include media-down(mobile) {
+                    font-size: 2rem;
+                    line-height: 3rem;
+                    padding: 1rem 0;
+                    bottom: 0.5rem;
+                }
+            }
+
+            img {
+                height: 61rem;
+
+                @include media-down(mobile) {
+                    height: 38rem;
+                }
+            }
+        }
+
+        @include media-down(mobile) {
+            width: 100%;
+        }
+    }
+
+    .services-right {
+        width: 65%;
+        padding-left: 2rem;
+
+        h2 {
+            color: $brand-primary;
+            padding: 1.5rem 2.5rem;
+            font-size: 10rem;
+            line-height: 10.5rem;
+
+            @include media-down(tablet-large) {
+                font-size: 5rem;
+            }
+
+            @include media-down(tablet) {
+                font-size: 4rem;
+                line-height: 3rem;
+            }
+
+            @include media-down(mobile) {
+                font-size: 2.5rem;
+                line-height: 3rem;
+                padding: 2.5rem 0 0 0;
+            }
+        }
+
+        .service-card {
+            width: 25%;
+            padding: 1.5rem;
+
+            p {
+                bottom: 2rem;
+
+                @include media-down(mobile) {
+                    bottom: 1.3rem;
+                }
+            }
+
+            @include media-down(tablet-large) {
+                width: 25%;
+                padding: 0.8rem 0.8rem;
+            }
+
+            @include media-down(tablet) {
+                width: 33.33%;
+            }
+
+            @include media-down(mobile) {
+                width: 100%;
+                padding: 0.8rem 1.5rem;
+            }
+        }
+
+        @include media-down(mobile) {
+            width: 100%;
+            padding-left: 0;
+        }
+    }
+
+    @include media-down(mobile) {
+        flex-wrap: wrap;
+    }
+}
+.service-card {
+    position: relative;
+
+    img, &.service-card-text {
+        border: 1px solid $interface-red;
+        border-radius: 2rem;
+        width: 100%;
+        object-fit: cover;
+        height: 21rem;
+        object-position: top;
+
+        @include media-down(tablet-large) {
+            height: 25rem;
+        }
+
+        @include media-down(mobile) {
+            height: 22rem;
+        }
+
+    }
+    p {
+        @extend %o-paragraph-small;
+        background-color: rgba(227, 30, 36, 0.8);
+        color: $interface-white;
+        position: absolute;
+        bottom: 0.5rem;
+        width: 84%;
+        padding: 1.5rem;
+        border-radius: 0 0 2rem 2rem;
+
+        @include media-down(tablet-large) {
+            width: 90%;
+            bottom: 1.2rem; 
+        }
+
+        @include media-down(tablet) {
+            width: 81%;
+        }
+
+        @include media-down(mobile) {
+            width: 91%;
+            text-align: center;
+            bottom: 0.5rem;
+            padding: 1rem 1.5rem;
+        }
+    }
+
+    &.service-card-text {
+        ul {
+            padding: 1.5rem 1.5rem;
+
+            li {
+                color: $interface-black;
+                @extend %o-paragraph-large;
+                padding: 1rem 0 0 3rem;
+                position: relative;
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 1.8rem;
+                    height: 1.8rem;
+                    border: 0;
+                    position: absolute;
+                    left: 0;
+                }
+            }
+        }
+        
+    }
+}
+.mobile-none {
+    display: none; 
+
+    @include media-down(mobile) {
+        display: block;
+    }
+}
+.service-card img.animal-dr {
+    object-fit: contain;
+}

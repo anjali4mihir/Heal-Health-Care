@@ -15,7 +15,11 @@
 
     <div class="registration-section animation-element fadeUp animation-element-slow">
         <div class="container">
+<<<<<<< Updated upstream
             <h2> List Your Profile And Serve <br/> Bilion of Indians </h2>
+=======
+            <h2> List You Profile And Serve <br/> Bilion of Indians </h2>
+>>>>>>> Stashed changes
             <h3> Become a @Heal Partner <br/> a Maximize Your Growth Across India  </h3>
             <div class="registratin-btn">
                 <a href="#register-form" class="o-button"> Free Registration </a>
@@ -359,7 +363,10 @@
         $(document).ready(function(){
 			$('.youtubePopup').click(function(event){
 				showModal();
+<<<<<<< Updated upstream
 				event.stopPropagation();
+=======
+>>>>>>> Stashed changes
 				var dataUrl = $(this).attr('data-url');
 				$('#myModal').find('iframe').attr('src',dataUrl);
 				

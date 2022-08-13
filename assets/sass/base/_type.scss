@@ -1,0 +1,177 @@
+$image-directory: "../images/";
+html {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-variant-numeric: lining-nums;
+  height: auto;
+  font-size: $font-size-base;
+  margin-top: 0 !important;
+  scroll-behavior:smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  color: $interface-black;
+  font-family: family(primary)!important;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  overflow-x: hidden;
+  text-transform: capitalize !important;
+}
+.container {
+  width: 120rem;
+  margin: auto;
+
+  @media (max-width: 1024px) {
+    width: 100rem !important;
+    max-width: 100rem !important;
+    margin: auto;
+  }
+  @media (max-width: 768px) {
+    width: 75rem !important;
+    max-width: 75rem !important;
+    margin: auto;
+  }
+
+  @media (max-width: 480px) {
+    width: 40rem !important;
+    max-width: 40rem !important;
+    margin: auto;
+  }
+
+  @media (max-width: 360px) {
+    width: 36rem !important;
+    max-width: 36rem !important;
+    margin: auto;
+  }
+}
+*:focus {
+  outline: none !important;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.btn-check:focus + .btn,
+.btn:focus,
+.btn-primary:active:focus {
+  box-shadow: none;
+}
+ul {
+  list-style: none;
+}
+
+blockquote,
+body,
+caption,
+dd,
+dl,
+fieldset,
+figure,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+legend,
+ol,
+p,
+pre,
+table,
+td,
+th,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+%o-header--h1,
+.o-header--h1 {
+  font-size: size(title, h1);
+  line-height: lineheight(title, h1);
+
+  @include media-down(laptop) {
+    font-size: size(title, h1-tablet);
+    line-height: lineheight(title, h1-tablet);
+  }
+
+  @include media-down(mobile) {
+    font-size: size(title, h4);
+    line-height: lineheight(subtitle, large);
+  }
+}
+
+%o-header--h2,
+.o-header--h2 {
+  font-size: size(title, h2);
+  line-height: lineheight(title, h2);
+
+  @include media-down(laptop) {
+    font-size: size(title, h2-tablet);
+    line-height: lineheight(title, h2-tablet);
+  }
+
+  @include media-down(mobile) {
+    font-size: size(title, h4);
+    line-height: lineheight(title, h4);
+  }
+}
+
+%o-header--h3,
+.o-header--h3 {
+  font-size: size(title, h3);
+  line-height: lineheight(title, h3);
+
+  @include media-down(laptop) {
+    font-size: size(title, h3-tablet);
+    line-height: lineheight(title, h3-tablet);
+  }
+}
+
+%o-header--h4,
+.o-header--h4 {
+  font-size: size(title, h4);
+  line-height: lineheight(title, h4);
+
+  @include media-down(laptop) {
+    font-size: size(title, h4-tablet);
+    line-height: lineheight(title, h4-tablet);
+  }
+}
+
+%o-paragraph-large,
+.o-paragraph-large {
+  font-size: size(paragraph, large);
+  line-height: lineheight(paragraph, large);
+}
+
+%o-paragraph-medium,
+.o-paragraph-medium {
+  font-size: size(paragraph, medium);
+  line-height: lineheight(paragraph, medium);
+}
+
+%o-paragraph-small,
+.o-paragraph-small {
+  font-size: size(paragraph, medium);
+  line-height: lineheight(paragraph, medium);
+}
+iframe {
+  box-shadow: 0px 0px 12px 1px rgb(0 0 0 / 30%);
+  border: 1px solid #dddddd;
+}

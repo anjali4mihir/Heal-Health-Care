@@ -1,0 +1,337 @@
+.registration-section {
+    padding: 7rem 0;
+    h2 {
+        color: $interface-black;
+        @extend %o-header--h1;
+        text-align: center;
+    }
+    h3 {
+        color: $brand-primary;
+        padding-top: 3rem;
+        text-align: center;
+        font-size: 3rem;
+        line-height: 4rem;
+
+        @include media-down(mobile) {
+            padding-top: 1.5rem;
+            font-size: 2rem;
+            line-height: 3rem;  
+        }
+    }
+    .registratin-btn {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding-top: 3rem;
+
+        @include media-down(mobile) {
+            padding-top: 2rem;
+        }
+    }
+
+    @include media-down(mobile) {
+        padding: 3rem 0;
+    }
+}
+.register-video-section {
+    display: flex;
+    background-color: #f2f2f2;
+    padding: 5rem 0;
+
+    .container {
+        display: flex;
+
+        @include media-down(mobile) {
+            flex-wrap: wrap;
+        }
+    }
+
+    .register-video-section-left {
+        width: 50%;
+
+        .sign-title {
+            text-transform: uppercase;
+            color: $brand-primary;
+            @extend %o-header--h3;
+            font-weight: weight(bold);
+            text-align: center;
+            padding-bottom: 1.5rem;
+
+            @include media-down(mobile) {
+                padding-bottom: 0.5rem;
+            }
+        }
+
+        .sign-services {
+            display: flex;
+
+            .service-card {
+                width: 30%;
+                padding: 0 0.8rem;
+
+                img {
+                    border: 1px solid $brand-primary;
+                }
+
+                p {
+                    text-align: center;
+                    background-color: rgba(0, 78, 71, 0.8);
+                    width: 91%;
+
+                    @include media-down(mobile) {
+                        width: 100%;
+                    }
+                }
+
+                @include media-down(mobile) {
+                    width: 100%;
+                    margin-bottom: 1rem;
+                    padding: 0;
+                }
+            }
+
+            @include media-down(mobile) {
+                flex-wrap: wrap;
+            }
+        }
+
+        @include media-down(mobile) {
+            width: 100%;
+        }
+    }
+
+    .register-video-section-right {
+        width: 50%;
+
+        @include media-down(mobile) {
+            width: 100%;
+        }
+    }
+    
+    @include media-down(mobile) {
+        padding: 3rem 0;
+    }
+}
+
+.signup-profile {
+    padding: 6rem 0; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-wrap: wrap;
+
+    img {
+        width: 70%;
+        margin: auto;
+        display: flex;    
+
+        @include media-down(mobile) {
+            width: 100%;
+        }
+    }
+
+    .register-btm {
+        display: flex;
+        justify-content: center;
+        margin-top: 7rem;
+
+        a {
+            @extend %o-header--h4;
+        }
+
+        @include media-down(mobile) {
+            margin-top: 3rem;
+        }
+    }
+    
+    &.inventory-profile {
+        .register-btm {
+            margin-top: 3rem;
+        }
+    }
+
+    @include media-down(mobile) {
+        padding: 4rem 0;
+        // display: none;
+    }
+
+    &.consultant-section-desktop {
+        @include media-down(mobile) {
+            display: none;
+        }
+    }
+}
+.register-video-section.register-video-section-btm {
+    .register-video-section-left .sign-services {
+        padding-left: 1rem;
+
+        .service-card {
+            width: 75%;
+            margin: auto;
+
+            img {
+                height: 24rem;
+            }
+            
+            p{
+                width: 96.2%;
+
+                @include media-down(mobile) {
+                    width: 95%;
+                }
+            }
+
+            @include media-down(mobile) {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    
+}
+
+.modal-trigger{
+	font-variant:small-caps;
+	background:#eee;
+	font-size:1.5em;
+	color:#333;
+	padding:.6em 1em;
+	border:0;
+	border-radius:.2em;
+	cursor:pointer;
+	letter-spacing:.1em;
+	outline: 0;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 999999;
+    padding-top: 50px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+    transition: all 0.3s ease;
+    animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+
+    .modal-content {
+        background-color: #333;
+        color:#fff;
+        text-align:left;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        transform: scale(0);
+        animation: zoomIn 0.8s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+        transition: all 0.3s ease;
+        // transform: scaleY(0.01) scaleX(0);
+        
+        @include media-down(mobile) {
+            width: 95%;
+        }
+    }
+
+    @keyframes unfoldIn {
+        0% {
+          transform: scaleY(0.005) scaleX(0);
+        }
+        50% {
+          transform: scaleY(0.005) scaleX(1);
+        }
+        100% {
+          transform: scaleY(1) scaleX(1);
+        }
+      }
+      @keyframes unfoldOut {
+        0% {
+          transform: scaleY(1) scaleX(1);
+        }
+        50% {
+          transform: scaleY(0.005) scaleX(1);
+        }
+        100% {
+          transform: scaleY(0.005) scaleX(0);
+        }
+      }
+
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        position:absolute;
+        right: .5em;
+        top: 0.3em;
+
+        &:hover, &:focus {
+            color: $interface-white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}
+.video-section-right {
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+        display: flex;
+        width: 50%;
+        
+        img {
+            width: 100%;
+        }
+
+        &.radiological-video {
+            width: 100%;
+        }
+
+        @include media-down(mobile) {
+            width: 100%;
+        }
+    }
+
+}
+.signup-step {
+    display: flex;
+    flex-wrap: wrap;
+
+    .sign-img {
+        width: 25%;
+        padding: 0 1.5rem;
+
+        img {
+            width: 100%;
+
+            @include media-down(mobile) {
+                width: 85%;
+            }
+        }
+
+        @include media-down(mobile) {
+            width: 100%;
+            padding: 1.5rem 0;
+        }
+    }
+
+    &.physio-step {
+        .sign-img {
+            width: 33.33%;
+
+            @include media-down(mobile) {
+                width: 100%;
+                padding: 1.5rem 0;
+            }
+        }
+    }
+}

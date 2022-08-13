@@ -2,9 +2,15 @@ RewriteEngine On
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} !^www\. [OR]
 RewriteCond %{HTTP_HOST} ^atheal\.in$ [NC]
+<<<<<<< Updated upstream
 RewriteRule ^ https://localhost/Heal-Health-Care%{REQUEST_URI} [R=301,L,NE]
 RewriteCond %{THE_REQUEST} ^[A-Z]+\ /index\.php(/[^\ ]*)?\ HTTP/ 
 RewriteRule ^index\.php(/(.*))?$ localhost/Heal-Health-Care/$2 [R=301,L]
+=======
+RewriteRule ^ https://www.atheal.in%{REQUEST_URI} [R=301,L,NE]
+RewriteCond %{THE_REQUEST} ^[A-Z]+\ /index\.php(/[^\ ]*)?\ HTTP/ 
+RewriteRule ^index\.php(/(.*))?$ atheal.in/$2 [R=301,L]
+>>>>>>> Stashed changes
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php/$1 [L]
