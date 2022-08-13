@@ -5,12 +5,13 @@
     cursor:pointer;
     width:4rem;
     height:4rem;
-    background-color:$brand-primary;
+    background-color:$interface-red;
     text-indent:-9999px;
     display:none;
     -webkit-border-radius:60px;
     -moz-border-radius:60px;
-    border-radius:60px
+    border-radius:60px;
+    box-shadow: 0px 0px 8px 1px rgb(0 0 0 / 30%);
 }
 #scroll span {
     position:absolute;

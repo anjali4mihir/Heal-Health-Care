@@ -53,7 +53,7 @@
 
     <div class="form-wizard">
         <div class="container">
-            <h1> Doctors <span> Profile </span> </h1>
+            <h1> Pharmacy Store <span> Profile </span> </h1>
             <div class="form-wizard-wrapper">
                 <ul>
                     <li><a class="form-wizard-link active" href="javascript:;" data-attr="info"><span>General Detail</span></a></li>
@@ -67,71 +67,168 @@
                         <form action="#">
                             <div class="form-row">
                                 <div class="full-wdth">
-                                    <label for="">Enter Your Name <span> * </span></label>
-                                    <input type="text" class="text-field" placeholder="Enter Full Name">
-                                </div>
-                                <div class="full-wdth">
-                                    <label for="">Upload Profile Image <span> * </span></label>
-                                    <input type="file" class="text-field" id="myfile" name="myfile">
-                                </div>
-                                <div class="form-column mt-2">
-                                    <label for=""> Select Geneder <span> * </span> </label>
-                                    <div class="select">
-                                        <select id="standard-select">
-                                            <option value="volvo">Choose Geneder</option>
-                                            <option value="volvo">Male</option>
-                                            <option value="saab">Female</option>
-                                            <option value="mercedes">Other</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-column mt-2">
-                                    <label for=""> Birth Date <span> * </span> </label>
-                                    <input type="date" class="text-field">
-                                </div>
-                                <div class="form-column mt-2">
-                                    <label for=""> Mobile Number <span> * </span> </label>
-                                    <input type="text" class="text-field" placeholder="Mobile Number">
+                                    <label for=""> Enter Store Name <span> * </span></label>
+                                    <input type="text" class="text-field" placeholder="Enter Name">
                                 </div>
                                 <div class="form-column mt-2">
                                     <label for=""> Email Address <span> * </span> </label>
-                                    <input type="email" class="text-field" placeholder="Email Address">
+                                    <input type="email" class="text-field" placeholder="Enter Email Address">
                                 </div>
-                                <div class="full-wdth">
-                                    <label for="">Flat/Block No <span> * </span></label>
-                                    <input type="text" class="text-field bg-white" placeholder="Enter Full Name">
+                                <div class="form-column mt-2">
+                                    <label for=""> Appartment Name/Road <span> * </span> </label>
+                                    <input type="email" class="text-field" placeholder="Enter Flat or Block No">
                                 </div>
-                                <div class="full-wdth">
-                                    <label for="">Choose Google Location <span> * </span></label>
-                                    <div class="select">
-                                        <select id="standard-select">
-                                            <option value="volvo">Choose Google Location</option>
-                                            <option value="volvo">Male</option>
-                                            <option value="saab">Female</option>
-                                            <option value="mercedes">Other</option>
-                                        </select>
-                                    </div>
+                                <div class="form-column mt-2">
+                                    <label for=""> Choose Google Location <span> * </span> </label>
+                                    <input type="email" class="text-field" placeholder="Choose Google Location">
+                                </div>
+                                <div class="form-column mt-2">
+                                    <label for=""> Enter Google Map Link <span> * </span> </label>
+                                    <input type="email" class="text-field" placeholder="Enter Google Map Link">
                                 </div>
                                 <div class="form-column mt-2">
                                     <label for=""> Your Country <span> * </span> </label>
                                     <input type="text" class="text-field" placeholder="Country">
                                 </div>
                                 <div class="form-column mt-2">
-                                    <label for=""> Your State <span> * </span> </label>
-                                    <input type="email" class="text-field" placeholder="State">
+                                    <label for=""> Your State  <span> * </span> </label>
+                                    <input type="text" class="text-field" placeholder="State">
                                 </div>
                                 <div class="form-column mt-2">
                                     <label for=""> Your City <span> * </span> </label>
                                     <input type="text" class="text-field" placeholder="City">
                                 </div>
                                 <div class="form-column mt-2">
-                                    <label for=""> Pincode <span> * </span> </label>
-                                    <input type="email" class="text-field" placeholder="Pincode">
+                                    <label for=""> Pincode  <span> * </span> </label>
+                                    <input type="text" class="text-field" placeholder="Pincode">
                                 </div>
-                                <div class="full-wdth">
-                                    <label for="">Speciality <span> * </span></label>
-                                    <input type="text" class="text-field bg-white" placeholder="Choose Your Speciality">
+                                <div class="form-group checkbox">
+                                    <input type="checkbox" id="html">
+                                    <label for="html">Home Sample Collection</label>
                                 </div>
+                                <div class="form-column mt-2">
+                                    <label for=""> Charges  <span> * </span> </label>
+                                    <input type="text" class="text-field" placeholder="Choose Charges">
+                                </div>
+                                <div class="radio-btn">
+                                    <div class="form-column">
+                                        <p>
+                                            <input type="radio" id="option1" name="radio-group">
+                                            <label for="option1">Open 24/7</label>
+                                        </p>
+                                        <p>
+                                            <input type="radio" id="option2" name="radio-group">
+                                            <label for="option2">Add Custom Timing</label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="week-timing">
+                                    <div class="full-wdth">
+                                        <div class="form-group checkbox">
+                                            <input type="checkbox" id="monday">
+                                            <label for="monday">Monday</label>
+                                        </div>
+
+                                        <div class="time-field">
+                                            <input type="time" class="text-field" placeholder="Choose Charges">
+                                        </div>
+
+                                        <div class="time-field">
+                                            <input type="time" class="text-field" placeholder="Choose Charges">
+                                        </div>
+                                    </div>
+
+                                    <div class="full-wdth">
+                                        <div class="form-group checkbox">
+                                            <input type="checkbox" id="monday">
+                                            <label for="monday">Tuesday</label>
+                                        </div>
+
+                                        <div class="time-field">
+                                            <input type="time" class="text-field" placeholder="Choose Charges">
+                                        </div>
+
+                                        <div class="time-field">
+                                            <input type="time" class="text-field" placeholder="Choose Charges">
+                                        </div>
+                                    </div>
+
+                                    <div class="full-wdth">
+                                        <div class="form-group checkbox">
+                                            <input type="checkbox" id="monday">
+                                            <label for="monday">Wednesday</label>
+                                        </div>
+
+                                        <div class="time-field">
+                                            <input type="time" class="text-field" placeholder="Choose Charges">
+                                        </div>
+
+                                        <div class="time-field">
+                                            <input type="time" class="text-field" placeholder="Choose Charges">
+                                        </div>
+                                    </div>
+
+                                    <div class="full-wdth">
+                                        <div class="form-group checkbox">
+                                            <input type="checkbox" id="monday">
+                                            <label for="monday">Thursday</label>
+                                        </div>
+
+                                        <div class="time-field">
+                                            <input type="time" class="text-field" placeholder="Choose Charges">
+                                        </div>
+
+                                        <div class="time-field">
+                                            <input type="time" class="text-field" placeholder="Choose Charges">
+                                        </div>
+                                    </div>
+
+                                    <div class="full-wdth">
+                                        <div class="form-group checkbox">
+                                            <input type="checkbox" id="monday">
+                                            <label for="monday">Friday</label>
+                                        </div>
+
+                                        <div class="time-field">
+                                            <input type="time" class="text-field" placeholder="Choose Charges">
+                                        </div>
+
+                                        <div class="time-field">
+                                            <input type="time" class="text-field" placeholder="Choose Charges">
+                                        </div>
+                                    </div>
+
+                                    <div class="full-wdth">
+                                        <div class="form-group checkbox">
+                                            <input type="checkbox" id="monday">
+                                            <label for="monday">Saturday</label>
+                                        </div>
+
+                                        <div class="time-field">
+                                            <input type="time" class="text-field" placeholder="Choose Charges">
+                                        </div>
+
+                                        <div class="time-field">
+                                            <input type="time" class="text-field" placeholder="Choose Charges">
+                                        </div>
+                                    </div>
+
+                                    <div class="full-wdth">
+                                        <div class="form-group checkbox">
+                                            <input type="checkbox" id="monday">
+                                            <label for="monday">Sunday</label>
+                                        </div>
+
+                                        <div class="time-field">
+                                            <input type="time" class="text-field" placeholder="Choose Charges">
+                                        </div>
+
+                                        <div class="time-field">
+                                            <input type="time" class="text-field" placeholder="Choose Charges">
+                                        </div>
+                                    </div>
+                                </div>
+  
                                 <div class="full-wdth">
                                     <label for="">Promotional Description <span> * </span></label>
                                     <textarea rows="5" class="text-field bg-white" cols="50"></textarea>
@@ -146,56 +243,40 @@
                         <h3> Step 2 </h3>
                         <form action="#">
                             <div class="form-row">
-                                <div class="full-wdth two-row">
-                                    <label for="">Enter Your Name <span> * </span></label>
-                                    <div class="multi-row">
-                                        <input type="text" class="text-field bg-white" placeholder="Name of Course">
-                                        <input type="text" class="text-field bg-white" placeholder="Name of Speciality">
-                                    </div>
+                                <div class="form-column mt-2">
+                                    <label for=""> GSTIN <span> * </span> </label>
+                                    <input type="email" class="text-field" placeholder="Enter GSTIN">
+                                </div>
+                                <div class="form-column mt-2">
+                                    <label for=""> Licence No <span> * </span> </label>
+                                    <input type="email" class="text-field" placeholder="Enter Licence No">
+                                </div>
+                                
+                                <div class="form-column">
+                                    <label for="">Upload Profile Image <span> * </span></label>
+                                    <input type="file" class="text-field" id="myfile" name="myfile">
+                                </div>
 
-                                    <div class="multi-row-btm">
-                                        <input type="text" class="text-field bg-white" placeholder="Name of Collage">
-                                        <input type="text" class="text-field bg-white" placeholder="Name of University">
-                                        <input type="text" class="text-field bg-white" placeholder="Year">
+                                <div class="form-column">
+                                    <label for="">Name Of Owner<span> * </span></label>
+                                    <input type="email" class="text-field" placeholder="Enter Full Name">
+                                </div>
+
+                                <div class="form-column">
+                                    <label for=""> Select Geneder <span> * </span> </label>
+                                    <div class="select">
+                                        <select id="standard-select">
+                                            <option value="volvo">Choose Geneder</option>
+                                            <option value="volvo">Male</option>
+                                            <option value="saab">Female</option>
+                                            <option value="mercedes">Other</option>
+                                        </select>
                                     </div>
                                 </div>
-                                <div class="full-wdth two-row">
-                                    <label for=""> Registration <span> * </span></label>
-                                    <div class="multi-row-btm pt-0">
-                                        <input type="text" class="text-field bg-white" placeholder="Name of MCI">
-                                        <input type="text" class="text-field bg-white" placeholder="Registration No">
-                                        <input type="text" class="text-field bg-white" placeholder="Year">
-                                    </div>
-                                </div>
-                                <div class="full-wdth profile-table-top">
-                                    <label for=""> Work Experience <span> * </span></label>
-                                    <div class="profile-table">
-                                        <div id="table" class="table-editable">
-                                            <span class="table-add glyphicon glyphicon-plus"> Add </span>
-                                            <table class="table">
-                                              <tr>
-                                                <th>Company</th>
-                                                <th>Register</th>
-                                                <th>Exp. Year </th>
-                                                <th data-attr-ignore>#</th>
-                                              </tr>
-                                              <tr>
-                                                <td contenteditable="true" data-attr-key="42"> <input type="text" class="text-field bg-white"> </td>
-                                                <td contenteditable="true" data-attr-value="42"> <input type="text" class="text-field bg-white"> </td>
-                                                <td contenteditable="true" data-attr-key="42"> <input type="text" class="text-field bg-white"> </td>
-                                                <td contenteditable="true" data-attr-key="42"><span class="table-remove glyphicon glyphicon-remove"> X </span></td>
-                                              </tr>
-                                              <tr>
-                                                <td contenteditable="true" data-attr-key="42"> <input type="text" class="text-field bg-white"> </td>
-                                                <td contenteditable="true" data-attr-key="42"> <input type="text" class="text-field bg-white"> </td>
-                                                <td contenteditable="true" data-attr-key="42"> <input type="text" class="text-field bg-white"> </td>
-                                                <td contenteditable="true" data-attr-key="42"><span class="table-remove glyphicon glyphicon-remove"> X </span></td>
-                                              </tr>
-
-                                            </table>
-                                          </div>
-                                        
-                                    </div>
+                                
+                                <div class="form-column">
+                                    <label for="">Qualification<span> * </span></label>
+                                    <input type="email" class="text-field" placeholder="Qualification">
                                 </div>
 
                                 <div class="full-wdth clearfix step-btn">
@@ -208,30 +289,53 @@
                     <div class="form-wizard-content" data-tab-content="placement">
                         <h3> Step 3 </h3>
                         <form action="#">
-                            <div class="form-row">
-                                <div class="full-wdth">
-                                    <label for=""> Choose Id Proof <span> * </span> </label>
-                                    <div class="select">
-                                        <select id="standard-select">
-                                            <option value="volvo">Choose Your ID</option>
-                                            <option value="volvo">Male</option>
-                                            <option value="saab">Female</option>
-                                            <option value="mercedes">Other</option>
-                                        </select>
-                                    </div>
+                                <div class="full-wdth mt-2">
+                                    <label for=""> Pancard Number <span> * </span> </label>
+                                    <input type="email" class="text-field" placeholder="Enter PAN">
                                 </div>
+
                                 <div class="full-wdth">
-                                    <label for="">Upload Pancard ID Document <span> * </span></label>
+                                    <label for="">Upload ID Document(Pancard)<span> * </span></label>
                                     <input type="file" class="text-field" id="myfile" name="myfile">
                                 </div>
 
                                 <div class="full-wdth">
-                                    <label for="">Upload Degree Certificate <span> * </span></label>
+                                    <label for="">Upload GSTIN Certificate</label>
                                     <input type="file" class="text-field" id="myfile" name="myfile">
                                 </div>
 
                                 <div class="full-wdth">
-                                    <label for="">Upload Registration Certificate <span> * </span></label>
+                                    <label for="">Upload Sign-Board<span> * </span></label>
+                                    <input type="file" class="text-field" id="myfile" name="myfile">
+                                </div>
+
+                                <div class="full-wdth">
+                                    <label for="">Upload Images Of Lab(Min 3 - Max 6)(Optional)</label>
+                                    <input type="file" class="text-field" id="myfile" name="myfile">
+                                </div>
+
+                                <div class="full-wdth">
+                                    <label for="">DRUG Licence<span> * </span></label>
+                                    <input type="file" class="text-field" id="myfile" name="myfile">
+                                </div>
+
+                                <div class="full-wdth">
+                                    <label for="">Upload Degree Certificate<span> * </span></label>
+                                    <input type="file" class="text-field" id="myfile" name="myfile">
+                                </div>
+
+                                <div class="full-wdth">
+                                    <label for="">Upload Corporation Registration(Optional)</label>
+                                    <input type="file" class="text-field" id="myfile" name="myfile">
+                                </div>
+
+                                <div class="full-wdth">
+                                    <label for="">Upload Authorized Stamp<span> * </span></label>
+                                    <input type="file" class="text-field" id="myfile" name="myfile">
+                                </div>
+
+                                <div class="full-wdth">
+                                    <label for="">Upload Auhtorized Signature<span> * </span></label>
                                     <input type="file" class="text-field" id="myfile" name="myfile">
                                 </div>
 

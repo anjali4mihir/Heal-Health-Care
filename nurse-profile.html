@@ -53,7 +53,7 @@
 
     <div class="form-wizard">
         <div class="container">
-            <h1> Doctors <span> Profile </span> </h1>
+            <h1> Nurse <span> Profile </span> </h1>
             <div class="form-wizard-wrapper">
                 <ul>
                     <li><a class="form-wizard-link active" href="javascript:;" data-attr="info"><span>General Detail</span></a></li>
@@ -129,8 +129,15 @@
                                     <input type="email" class="text-field" placeholder="Pincode">
                                 </div>
                                 <div class="full-wdth">
-                                    <label for="">Speciality <span> * </span></label>
-                                    <input type="text" class="text-field bg-white" placeholder="Choose Your Speciality">
+                                    <label for="">Home Visit <span> * </span></label>
+                                    <div class="select">
+                                        <select id="standard-select">
+                                            <option value="volvo">Select</option>
+                                            <option value="volvo">Male</option>
+                                            <option value="saab">Female</option>
+                                            <option value="mercedes">Other</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="full-wdth">
                                     <label for="">Promotional Description <span> * </span></label>
@@ -147,11 +154,8 @@
                         <form action="#">
                             <div class="form-row">
                                 <div class="full-wdth two-row">
-                                    <label for="">Enter Your Name <span> * </span></label>
-                                    <div class="multi-row">
+                                    <label for="">Qualification<span> * </span></label>
                                         <input type="text" class="text-field bg-white" placeholder="Name of Course">
-                                        <input type="text" class="text-field bg-white" placeholder="Name of Speciality">
-                                    </div>
 
                                     <div class="multi-row-btm">
                                         <input type="text" class="text-field bg-white" placeholder="Name of Collage">
@@ -229,12 +233,7 @@
                                     <label for="">Upload Degree Certificate <span> * </span></label>
                                     <input type="file" class="text-field" id="myfile" name="myfile">
                                 </div>
-
-                                <div class="full-wdth">
-                                    <label for="">Upload Registration Certificate <span> * </span></label>
-                                    <input type="file" class="text-field" id="myfile" name="myfile">
-                                </div>
-
+                                
                                 <div class="full-wdth clearfix step-btn">
                                     <a href="javascript:;" class="form-wizard-previous-btn">Previous</a>
                                     <a href="javascript:;" class="form-wizard-next-btn">Register</a>
@@ -317,7 +316,7 @@
             </div>
         </div>
     </div>
-
+    
     <!-- The Modal -->
     <div id="myModal" class="modal modal-new">
         <!-- Modal content -->

@@ -119,6 +119,7 @@
 
     @include media-down(tablet) {
         margin-top: 2rem;
+        margin-bottom: 3rem;
     }
 }
 .how-work {
@@ -145,8 +146,15 @@
         @include media-down(mobile) {
             display: none;
         }
+
     }
 
+    .book-btm .app-icons img {
+      @include media-down(mobile) {
+        display: block;
+      }
+    }
+    
     @include media-down(mobile) {
         padding: 1rem 0;
     }
