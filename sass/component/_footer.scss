@@ -119,3 +119,25 @@ footer {
         padding-top: 2rem;
     }
 }
+
+.copyright-area {
+    background-color: #ed1c24;
+
+    .copyright-item {
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        p {
+            margin-bottom: 0;
+            color: #fff;
+            font-weight: 500;
+            font-size: 14px;
+            text-align: center;
+
+            a {
+                display: inline-block;
+                color: #fff;
+            }
+        }
+    }
+}
