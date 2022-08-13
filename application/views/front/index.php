@@ -21,10 +21,12 @@
                 <a href="https://apps.apple.com/us/app/heal/id1582761953" target="_blank">  <img src="<?= base_url(); ?>assets/img/app-store.png" alt="Google Play"> </a>
             </div>
         </div>
-        <div class="banner-right animation-element fadeRight">
+		<div class="banner-right animation-element fadeRight">
             <img src="<?= base_url(); ?>assets/img/banner-right-img.jpg" alt="Heal Banner">
+        </div>
+        <div class="banner-right animation-element fadeRight">
             <img src="<?= base_url(); ?>assets/img/banner-left-img.jpg" alt="Heal Banner">
-        </div>      
+        </div>
     </div>
 
     <div class="top-services-section">
