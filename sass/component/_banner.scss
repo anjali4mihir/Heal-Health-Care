@@ -41,7 +41,9 @@
     }
     .banner-right {
         width: 50%;
-        // background-color: #f2f1f6;
+        padding: 0 20px;
+        margin: auto;
+        text-align: center;
 
         img {
             width: 100%;
@@ -50,6 +52,12 @@
 
             @include media-down(tablet) {
                 object-fit: cover;
+            }
+        }
+
+        &.banner-right-new {
+            img {
+                width: 70%;
             }
         }
 
