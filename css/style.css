@@ -3150,6 +3150,7 @@ header.fixed #logo img {
 @media (max-width: 1023.98px) {
   .book-btm {
     margin-top: 2rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -3177,6 +3178,11 @@ header.fixed #logo img {
 @media (max-width: 767.98px) {
   .work-step img {
     display: none;
+  }
+}
+@media (max-width: 767.98px) {
+  .work-step .book-btm .app-icons img {
+    display: block;
   }
 }
 @media (max-width: 767.98px) {
@@ -4358,6 +4364,25 @@ footer .footer-link ul li a:hover::after {
   .social-media {
     padding-top: 2rem;
   }
+}
+
+.copyright-area {
+  background-color: #ed1c24;
+}
+.copyright-area .copyright-item {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.copyright-area .copyright-item p {
+  margin-bottom: 0;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+}
+.copyright-area .copyright-item p a {
+  display: inline-block;
+  color: #fff;
 }
 
 #scroll {
