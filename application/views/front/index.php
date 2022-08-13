@@ -24,7 +24,7 @@
 		<div class="banner-right animation-element fadeRight">
             <img src="<?= base_url(); ?>assets/img/banner-right-img.jpg" alt="Heal Banner">
         </div>
-        <div class="banner-right animation-element fadeRight">
+        <div class="banner-right banner-right-new animation-element fadeRight">
             <img src="<?= base_url(); ?>assets/img/banner-left-img.jpg" alt="Heal Banner">
         </div>
     </div>

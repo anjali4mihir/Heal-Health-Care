@@ -61,6 +61,15 @@
 	</div>
 </footer>
 
+<div class="copyright-area animation-element fadeUp animation-element-exslow">
+	<div class="container">
+		<div class="copyright-item">
+			<p>Copyright ©2021 <a href="<?= base_url(); ?>" target="_blank"> Heal
+				</a> . All Rights Reserved</p>
+		</div>
+	</div>
+</div>
+
 <a href="javascript:void(0);" id="scroll" style="display: none;"><span></span></a>
 
 <?php $this->load->view('front/common_js'); ?>
