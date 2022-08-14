@@ -6496,4 +6496,9 @@ footer .footer-link ul li a:hover::after {
   right: -30px;
 }
 
+.otp_verify {
+  display: flex;
+  width: 100%;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -39,6 +39,7 @@
 						<li class="form-wizardmove-button"></li>
 					</ul>
 					<div class="form-wizard-content-wrapper">
+						<fieldset id="one">
 						<div class="form-wizard-content show" data-tab-content="info">
 							<h3> Step 1 </h3>
 							<?php if (validation_errors()){   
@@ -148,7 +149,7 @@
 									<div class="full-wdth">
 										<div class="form-group checkbox">
 											<input type="checkbox" id="mon" name="days" value="Monday">
-											<label for="monday">Monday</label>
+											<label for="mon">Monday</label>
 										</div>
 
 										<div class="time-field">
@@ -163,7 +164,7 @@
 									<div class="full-wdth">
 										<div class="form-group checkbox">
 											<input type="checkbox" id="tue" name="days" value="Tuesday">
-											<label for="monday">Tuesday</label>
+											<label for="tue">Tuesday</label>
 										</div>
 
 										<div class="time-field">
@@ -178,7 +179,7 @@
 									<div class="full-wdth">
 										<div class="form-group checkbox">
 											<input type="checkbox" id="wed" name="days" value="Wednesday">
-											<label for="monday">Wednesday</label>
+											<label for="wed">Wednesday</label>
 										</div>
 
 										<div class="time-field">
@@ -193,7 +194,7 @@
 									<div class="full-wdth">
 										<div class="form-group checkbox">
 											<input type="checkbox" id="thu" name="days" value="Thursday">
-											<label for="monday">Thursday</label>
+											<label for="thu">Thursday</label>
 										</div>
 
 										<div class="time-field">
@@ -208,7 +209,7 @@
 									<div class="full-wdth">
 										<div class="form-group checkbox">
 											<input type="checkbox" id="fri" name="days" value="Friday">
-											<label for="monday">Friday</label>
+											<label for="fri">Friday</label>
 										</div>
 
 										<div class="time-field">
@@ -223,7 +224,7 @@
 									<div class="full-wdth">
 										<div class="form-group checkbox">
 											<input type="checkbox" id="sat" name="days" value="Saturday">
-											<label for="monday">Saturday</label>
+											<label for="sat">Saturday</label>
 										</div>
 
 										<div class="time-field">
@@ -238,7 +239,7 @@
 									<div class="full-wdth">
 										<div class="form-group checkbox">
 											<input type="checkbox" id="sun" name="days" value="Sunday">
-											<label for="monday">Sunday</label>
+											<label for="sun">Sunday</label>
 										</div>
 
 										<div class="time-field">
@@ -261,6 +262,8 @@
 								</div>
 							</div>
 						</div>
+						</fieldset>
+                        <fieldset id="two">
 						<div class="form-wizard-content" data-tab-content="ads">
 							<h3> Step 2 </h3>
 							
@@ -335,6 +338,8 @@
 								</div>
 							</div>
 						</div>
+						</fieldset>
+                        <fieldset id="three">
 						<div class="form-wizard-content" data-tab-content="placement">
 							<h3> Step 3 </h3>
 							<div class="full-wdth mt-2">
@@ -416,6 +421,7 @@
 								<input type="submit" id="submit_btn" class="book-now-btn form_btn mt-1" name="save_button" value="Register">
 							</div>
 						</div>
+						</fieldset>
 					</div>
 				</div>
 			</form>
