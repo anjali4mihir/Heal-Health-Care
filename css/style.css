@@ -6385,7 +6385,7 @@ footer .footer-link ul li a:hover::after {
   font-size: 14px;
   color: #fff;
   text-transform: uppercase;
-  padding: 15px 30px;
+  padding: 15px 60px;
   background: #ed1c24;
   display: inline-block;
   border-radius: 5px;
@@ -6494,6 +6494,11 @@ footer .footer-link ul li a:hover::after {
   height: 50px;
   background-repeat: no-repeat;
   right: -30px;
+}
+
+.otp_verify {
+  display: flex;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
