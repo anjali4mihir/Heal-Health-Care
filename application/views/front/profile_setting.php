@@ -31,6 +31,7 @@
 			?>
             <h1><?= $Category;?> <span> Profile </span> </h1>
 			<form method="post" id="form" name="form" accept-charset="utf-8" enctype="multipart/form-data" autocomplete="off">
+			<input type="hidden" name="CategoryID" id="CategoryID" value="<?= $rowd->category; ?>">
 				<div class="form-wizard-wrapper">
 					<ul>
 						<li><a class="form-wizard-link active" href="javascript:;" data-attr="info" id="tab1"><span>General Detail</span></a></li>
@@ -55,7 +56,6 @@
 							{ 
 								echo $error ;
 							} ?>
-							<input type="hidden" name="CategoryID" id="CategoryID" value="<?= $rowd->category; ?>">
 							<div class="form-row">
 								<div class="full-wdth">
 									<label for=""> 
@@ -275,7 +275,7 @@
 								</div>
 								<?php if($rowd->category == 1){ ?>
 								<div class="form-column mt-2">
-                                    <label for=""> Licence No <span> * </span> </label>
+                                    <label for="licence_no"> Licence No <span> * </span> </label>
                                     <input type="text" class="text-field" placeholder="Enter Licence No" id="licence_no" name="licence_no" <?php if($rowd->category == 1){ echo 'required';}?>>
 									<p class="error" id="licence_no_error"></p>
                                 </div>
@@ -431,6 +431,12 @@
 
     <?php $this->load->view('front/common_footer'); ?>
 	
+	<script type="text/javascript">
+    var site_url = '<?php echo base_url(); ?>';
+    var required=true;
+    <?php if($rowd->category == 2 || $rowd->category == 3) { ?>required=false;<?php } ?>
+</script>
+	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
 
@@ -441,10 +447,6 @@
 	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 	
 	<script>
-		var site_url = '<?php echo base_url(); ?>';
-		var required=true;
-		<?php if($rowd->category == 2 || $rowd->category == 3) { ?>required=false;<?php } ?>
-		
 		var current_fs, next_fs, previous_fs;
 		var opacity;
 		$('#error').delay(6000).fadeOut();
@@ -460,10 +462,10 @@
 					errorElement: 'span',
 					errorClass: 'error',
 					highlight: function(element, errorClass, validClass) {
-						$(element).closest('.text-field').addClass("has-error");
+						$(element).closest('.form-column').addClass("has-error");
 					},
 					unhighlight: function(element, errorClass, validClass) {
-						$(element).closest('.text-field').removeClass("has-error");
+						$(element).closest('.form-column').removeClass("has-error");
 					},
 
 					rules: {
@@ -863,7 +865,14 @@
 								required:"Please Select",
 							},
 						},
-						
+						showErrors: function(errorMap, errorList) {
+    if (errorList.length) {
+       this.errorList = [errorList[0]];
+	   console.log(errorList);
+    }
+
+    this.defaultShowErrors();
+  }
 				});
 
 
