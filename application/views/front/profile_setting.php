@@ -12,7 +12,12 @@
 <?php $this->load->view('front/common_css'); ?>
 </head>
 <body>
+	
     <?php $this->load->view('front/common_header'); ?>
+
+	<div class="page-banner">
+        <img class="animation-element fadeUp animation-element-fast" src="<?= base_url(); ?>assets/img/profile-banner.jpg" alt="About Us">
+    </div>
 
     <div class="form-wizard">
         <div class="container">

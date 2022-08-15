@@ -10,7 +10,7 @@
     <?php $this->load->view('front/common_header'); ?>
 		
 	<div class="page-banner">
-        <img class="animation-element fadeUp animation-element-fast" src="<?= base_url(); ?>assets/img/sign-up-banner.jpg" alt="About Us">
+        <img class="animation-element fadeUp animation-element-fast" src="<?= base_url(); ?>assets/img/form-submission.jpg" alt="About Us">
 		<h1 class="animation-element fadeUp animation-element-exslow"> Successfully </h1>
     </div>
 	
