@@ -14,3 +14,17 @@
 [0714/140320.125:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
 [0714/140358.260:ERROR:browser_gpu_channel_host_factory.cc(139)] Failed to launch GPU process.
 [0719/202855.679:ERROR:media_internals.cc(112)] Cannot get RenderProcessHost
+[0816/001652.962:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0816/001657.991:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0816/001805.360:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0816/001810.385:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0816/001815.427:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0816/001820.467:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0816/001825.492:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0816/001830.537:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0816/001835.562:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0816/001840.595:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0816/001845.621:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0816/001850.643:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0816/001855.680:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.
+[0816/001900.709:WARNING:dns_config_service_win.cc(668)] Failed to read DnsConfig.

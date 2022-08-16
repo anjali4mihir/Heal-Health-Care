@@ -6518,4 +6518,9 @@ footer .footer-link ul li a:hover::after {
 .banner-logo img {
   width: 16%;
 }
+.home-banner img {
+  width: 100%;
+  object-fit: cover;
+}
+
 /*# sourceMappingURL=style.css.map */
