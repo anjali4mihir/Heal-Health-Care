@@ -10,7 +10,8 @@
     <?php $this->load->view('front/common_header'); ?>
 
     <div class="home-banner">
-        <div class="banner-left animation-element fadeLeft">
+        <img src="<?= base_url(); ?>assets/img/home-banner.jpg">
+        <!-- <div class="banner-left animation-element fadeLeft">
             <h1>Key for health</h1>
             <p> 1L + Professionals </p>
             <div class="banner-logo">
@@ -29,7 +30,7 @@
         </div>
         <div class="banner-right banner-right-new animation-element fadeRight">
             <img src="<?= base_url(); ?>assets/img/banner-left-img.jpg" alt="Heal Banner">
-        </div>
+        </div> -->
     </div>
 
     <div class="top-services-section">
