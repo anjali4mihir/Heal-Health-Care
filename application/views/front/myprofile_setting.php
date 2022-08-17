@@ -127,13 +127,45 @@
 								<input type="tel" class="text-field" id="hidden_pincode" name="hidden_pincode" maxlength="6" minlength="6" onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;" required disabled placeholder="pincode">
                                 <p class="p-error" id="pincode_error"></p>
 							</div>
-							<div class="full-wdth <?php if($flag==1){ echo 'd-none';} ?>">
-								<label for="">Speciality <span> * </span></label>
-								<input type="text" class="text-field bg-white" placeholder="Choose Your Speciality">
+							<div class="form-column mt-2" <?php if($flag==1){ echo 'd-none';} ?>>
+								<label for="is_online"> Online Consultation <span> * </span> </label>
+								<select name="is_online" id="is_online" class="text-field" required>
+									<option value="1">Yes</option>
+									<option value="0" <?php if($flag==1){ echo 'selected';} ?>>No</option>
+								</select>
 							</div>
+							<div class="<?php if($flag==1){ ?>full-wdth<?}else{?>form-column mt-2<?} ?>">
+								<?php 
+								if($rowd->category == 4){
+									$Category = 'Home Consultation';
+								}else if($rowd->category == 5){
+									$Category = 'Home Consultation';
+								}else {
+									 $Category = 'Home Visit';
+								} ?>
+								<label for="is_homevisit"><?= $Category; ?><span>*</span></label>
+								<select name="is_homevisit" id="is_homevisit" class="text-field" required>
+									<option value="1">Yes</option>
+									<option value="0" <?php if($flag==1){ echo "disabled";} ?>>No</option>
+								</select>
+							</div>
+							<?php if(count($speciality_list) > 0) { ?>
+							<div class="full-wdth <?php if($flag==1){ echo 'd-none';} ?>">
+								<label for="speciality">Speciality <span> * </span></label>
+								<select name="speciality" id="speciality" class="text-field" required>
+									<option value="">Choose your Speciality</option>
+									<?php foreach($speciality_list as $row){ ?>
+									<option value="<?php echo $row->id;?>">
+										<?php echo $row->title;?></option>
+									<?php  } ?>
+								</select>
+								<p class="p-error" id="speciality_error"></p>
+							</div>
+							<?php } ?>
 							<div class="full-wdth">
-								<label for="">Promotional Description <span> * </span></label>
-								<textarea rows="5" class="text-field bg-white" cols="50"></textarea>
+								<label for="comment">Promotional Description <span> * </span></label>
+								<textarea rows="5" class="text-field bg-white" cols="50" id="comment" name="comment"></textarea>
+								<p class="p-error" id="comment_error"></p>
 							</div>
 							<div class="full-wdth clearfix step-btn">
 								<a href="javascript:void(0);" class="form-wizard-next-btn">Next</a>
@@ -143,55 +175,60 @@
                     <div class="form-wizard-content" data-tab-content="ads">
                         <h3> Step 2 </h3>
 						<div class="form-row">
-							<div class="full-wdth two-row">
-								<label for="">Enter Your Name <span> * </span></label>
+							<div class="<?php if($rowd->category == 4){ ?>form-column mt-2 <?}else{?>full-wdth <?} ?> two-row">
+								<label for="">Qualification<span> * </span></label>
 								<div class="multi-row">
-									<input type="text" class="text-field bg-white" placeholder="Name of Course">
-									<input type="text" class="text-field bg-white" placeholder="Name of Speciality">
-								</div>
-
+									<input type="text" class="text-field bg-white" placeholder="Name of Course" id="UG_course" name="UG_course" required>
+									<p class="p-error" id="UG_course_error"></p>
+									<?php if($rowd->category == 4){ ?>
+										<input type="text" class="text-field bg-white" placeholder="Name of Speciality" id="UG_speciality" name="UG_speciality" required>
+										<p class="p-error" id="UG_speciality_error"></p>
+									<?php } ?>
+                                </div>
 								<div class="multi-row-btm">
-									<input type="text" class="text-field bg-white" placeholder="Name of Collage">
-									<input type="text" class="text-field bg-white" placeholder="Name of University">
-									<input type="text" class="text-field bg-white" placeholder="Year">
+									<input type="text" class="text-field bg-white" placeholder="Name of Collage" id="UG_college" name="UG_college" required>
+									<p class="p-error" id="UG_college_error"></p>
+									<input type="text" class="text-field bg-white" placeholder="Name of University" id="UG_uni" name="UG_uni" required>
+									<p class="p-error" id="UG_uni_error"></p>
+									<select name="UG_year" id="UG_year" class="text-field bg-white" required></select>
+                                    <p class="p-error" id="UG_year_error"></p>
 								</div>
 							</div>
+							<?php if($rowd->category == 4 || $rowd->category == 5){ ?>
 							<div class="full-wdth two-row">
 								<label for=""> Registration <span> * </span></label>
 								<div class="multi-row-btm pt-0">
-									<input type="text" class="text-field bg-white" placeholder="Name of MCI">
-									<input type="text" class="text-field bg-white" placeholder="Registration No">
-									<input type="text" class="text-field bg-white" placeholder="Year">
+									<input type="text" class="text-field bg-white" placeholder="Name of MCI" id="UG_MCI" name="UG_MCI" required>
+									<p class="p-error" id="UG_MCI_error"></p>
+									<input type="text" class="text-field bg-white" placeholder="Registration No" id="UG_reg_no" name="UG_reg_no" required>
+                                    <p class="p-error" id="UG_reg_no_error"></p>
+									<select name="UG_MCI_year" id="UG_MCI_year" class="text-field bg-white" required></select>
+                                    <p class="p-error" id="UG_MCI_year_error"></p>
 								</div>
 							</div>
+							<?php } ?>
 							<div class="full-wdth profile-table-top">
-								<label for=""> Work Experience <span> * </span></label>
+								<label for="ProductName"> Work Experience <span> * </span></label>
 								<div class="profile-table">
 									<div id="table" class="table-editable">
-										<span class="table-add glyphicon glyphicon-plus"> Add </span>
-										<table class="table">
+										<span class="table-add glyphicon glyphicon-plus" id="add" onclick="addrow();"> Add </span>
+										<table class="table" id="productdata">
 										  <tr>
+											<th>#</th>
 											<th>Company</th>
-											<th>Register</th>
-											<th>Exp. Year </th>
-											<th data-attr-ignore>#</th>
+											<th>Designation</th>
+											<th>Exp. year</th>
 										  </tr>
 										  <tr>
-											<td contenteditable="true" data-attr-key="42"> <input type="text" class="text-field bg-white"> </td>
-											<td contenteditable="true" data-attr-value="42"> <input type="text" class="text-field bg-white"> </td>
-											<td contenteditable="true" data-attr-key="42"> <input type="text" class="text-field bg-white"> </td>
-											<td contenteditable="true" data-attr-key="42"><span class="table-remove glyphicon glyphicon-remove"> X </span></td>
+											<td contenteditable="true" data-attr-key="42"></td>
+											<td contenteditable="true" data-attr-value="42"> <input type="text" class="text-field bg-white" name="name1" id="name1"> </td>
+											<td contenteditable="true" data-attr-key="42"> <input type="text" class="text-field bg-white" name="designation1" id="designation1"> </td>
+											<td contenteditable="true" data-attr-key="42"><input type="text" name="exp1" id="exp1" class="text-field bg-white"></td>
+											<input type="hidden" id="row" value="1">
 										  </tr>
-										  <tr>
-											<td contenteditable="true" data-attr-key="42"> <input type="text" class="text-field bg-white"> </td>
-											<td contenteditable="true" data-attr-key="42"> <input type="text" class="text-field bg-white"> </td>
-											<td contenteditable="true" data-attr-key="42"> <input type="text" class="text-field bg-white"> </td>
-											<td contenteditable="true" data-attr-key="42"><span class="table-remove glyphicon glyphicon-remove"> X </span></td>
-										  </tr>
-
 										</table>
 									  </div>
-									
+									<input type="hidden" id="TAbleDataArray" name="TAbleDataArray"></input>
 								</div>
 							</div>
 
@@ -206,14 +243,21 @@
 						<div class="form-row">
 							<div class="full-wdth">
 								<label for=""> Choose Id Proof <span> * </span> </label>
-								<div class="select">
+								<div class="select" name="chooseID" id="chooseID" onchange="hideshowID();">
 									<select id="standard-select">
-										<option value="volvo">Choose Your ID</option>
-										<option value="volvo">Male</option>
-										<option value="saab">Female</option>
-										<option value="mercedes">Other</option>
+										<option value="">Choose your ID</option>
+										<?php /* <option value="1">Aadharcard</option> */ ?>
+										<option value="2">Pan Card</option>
 									</select>
 								</div>
+							</div>
+							<div class="full-wdth d-none" id="AdharcardDiv">
+								<label for="">Upload Pancard ID Document <span> * </span></label>
+								<input type="file" class="text-field" id="myfile" name="myfile">
+							</div>
+							<div class="full-wdth">
+								<label for="">Upload Pancard ID Document <span> * </span></label>
+								<input type="file" class="text-field" id="myfile" name="myfile">
 							</div>
 							<div class="full-wdth">
 								<label for="">Upload Pancard ID Document <span> * </span></label>
