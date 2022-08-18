@@ -1,8 +1,3 @@
-<?php 
-// echo "<pre>";
-// print_r($rowd);
-// exit;
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

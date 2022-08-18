@@ -1,465 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Heal – Health & Medical</title>
-    <?php $this->load->view('front/common_css'); ?>
-    <style type="text/css">
-    .p-error {
-        color: red;
-    }
-    </style>
+<title> Heal Health & Medical </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<?php $this->load->view('front/common_css'); ?>
 </head>
 <body>
-    <div class="wrapper">
-        <?php $this->load->view('front/common_header'); ?>
-        <main class="main-content site-wrapper-reveal">
-            <section class="page-title-area bg-img bg-img-top"
-                data-bg-img="<?= base_url()?>assets/img/photos/about-bg1.jpg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-7 m-auto">
-                            <div class="page-title-content content-style5 text-center">
-                                <p>
-                                    <font color="#ed1c24">@</font>Heal App
-                                </p>
-                                <h4 class="title"><?= $page_title?> <span></span></h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="register_page">
-                <div class="container">
-                    <div class="register_form otp_screen profile" id="example-basic">
-                    <?php 
-                    $flag=0;
-                    if($rowd->category == 4){
-                        $Category = 'Doctors';
-                    }else if($rowd->category == 5){
-                        $Category = 'Veterinary Doctors';
-                    }else if($rowd->category == 6){
-                        $Category = 'Nurse';
-                        $flag=1;
-                    }else if($rowd->category == 7){
-                        $Category = 'Physiotherapist';
-                        $flag=1;
-                    }
+	
+    <?php $this->load->view('front/common_header'); ?>
 
-                    ?>
-                        <h2><span><?= $Category; ?></span> Profile</h2>
-                        <form class="form" method="post" id="form" name="form" accept-charset="utf-8"
-                            enctype="multipart/form-data" autocomplete="off">
-                            <?php if (validation_errors()){   
-                        echo '<div class="alert alert-warning alert-dismissible" id="error" role="alert">
-                        <i class="fa fa-check"></i>
-                        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <strong>Warning!</strong> ';
-                        echo validation_errors();
-                        echo '</div>';
-                        }
-                    ?>
-                    <?php if($error != '')
-                    { 
-                        echo $error ;
-                    } ?>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <ul class="tabs">
-                                <li class="tab-link current" data-tab="tab-1" id="tab1">General Details</li>
-                                <li class="tab-link" data-tab="tab-2" id="tab2">Education Details</li>
-                                <li class="tab-link" data-tab="tab-3" id="tab3">Certificate Details</li>
-                            </ul>
-                            <fieldset>
-                            <div id="tab-1" class="tab-content current">
-                                <h3>Step 1</h3>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="name">Enter Name<span class="error">*</span></label>
-                                            <input type="text" class="form-control" placeholder="Enter Name"
-                                                id="fullname" name="fullname" value="<?= $rowd->name ?>"
-                                                required disabled>
-                                            <p class="p-error" id="name_error"></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="name">Upload Profile Image<span
-                                                    class="error">*</span></label>
-                                            <input type="file" class="form-control" id="profile" name="profile" accept="image/png, image/gif, image/jpeg" 
-                                                required />
-                                            <p class="p-error" id="profile_error"></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="name">Select Gender<span class="error">*</span></label>
-                                            <select name="gender" id="gender" class="form-control select2"
-                                                required>
-                                                <option value="">Choose Gender</option>
-                                                <option value="Male">Male</option>
-                                                <option value="Female">Female</option>
-                                            </select>
-                                            <p class="p-error" id="gender_error"></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="email">Birth Date<span class="error">*</span></label>
-                                            <input type="text" data-toggle="datepicker" id="dob" name="dob"
-                                                class="form-control" placeholder="DD-MM-YYYY" readonly='true' required>
-                                            <p class="p-error" id="dob_error"></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="mobile">Mobile No<span class="error">*</span></label>
-                                            <input type="tel" class="form-control" id="mobile" name="mobile"
-                                                value="<?= $rowd->contact_no ?>" required disabled>
-                                            <p class="p-error" id="mobile_error"></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="email">Email Address<span class="error">*</span></label>
-                                            <input type="email" class="form-control"
-                                                placeholder="Enter Email Id" id="email" name="email"
-                                                value="<?= $rowd->email ?>" required disabled>
-                                            <p class="p-error" id="email_error"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php  /* <div class="row">
-                                    <div class="col-md-7 mb-3">
-                                        <label class="radio-inline">
-                                            <input type="radio" name="optradio" value="1" checked>Google address
-                                        </label>
-                                        <label class="radio-inline">
-                                            <input type="radio" name="optradio" value="2">Manually address
-                                        </label>
-                                    </div>
-                                </div> */ ?>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="name">Flat/Block No<span class="error">*</span></label>
-                                            <input type="text" class="form-control" placeholder="Enter Flat or Block No" id="flat_block" name="flat_block" required>
-                                            <p class="p-error" id="flat_block_error"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="name">Choose Google Location<span class="error">*</span></label>
-                                            <input type="text" class="form-control" placeholder="Choose Google Location" id="location" name="location" required>
-                                            <!-- <input type="text" class="form-control d-none" placeholder="Choose Google Location" id="manuallylocation" name="manuallylocation"> -->
-                                            <input type="hidden" name="g_lat" id="g_lat">
-                                            <input type="hidden" name="g_lng" id="g_lng">
-                                            <p class="p-error" id="location_error"></p>
-                                            <!-- <p class="p-error" id="manuallylocation_error"></p> -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row" id="manuallyEntryDiv">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="name">Your Country<span class="error">*</span></label>
-                                            <input type="text" id="hidden_country" value="" class="form-control" name="hidden_country" required disabled placeholder="country">
-                                            <input type="hidden" id="country" value="" class="form-control" name="country">
-                                            <p class="p-error" id="country_error"></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="name">Your State<span class="error">*</span></label>
-                                            <input type="text" id="hidden_state" value="" class="form-control" name="hidden_state" required disabled placeholder="state">
-                                            <input type="hidden" id="state" value="" class="form-control" name="state">
-                                            <?php /* <select name="state" id="state" class="form-control select2"
-                                                required>
-                                                <option value="">Choose your state</option>
-                                                <?php foreach($state as $row){ ?>
-                                                <option value="<?php echo $row->id;?>">
-                                                    <?php echo $row->name;?>
-                                                </option>
-                                                <?php  } ?>
-                                            </select> */ ?>
-                                            <p class="p-error" id="state_error"></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="name">Your City<span class="error">*</span></label>
-                                            
-                                             <input type="text" id="hidden_city" value="" class="form-control" name="hidden_city" required disabled placeholder="city">
-                                            <input type="hidden" id="city" value="" class="form-control" name="city">
-                                           
-                                           <?php /* <select name="city" id="city" class="form-control select2" required>
-                                                <option value="">Choose your City</option>
-                                            </select> */ ?>
-                                            <p class="p-error" id="city_error"></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="name">Pincode<span class="error">*</span></label>
-                                             <input type="hidden" id="pincode" value="" class="form-control" name="pincode">
-                                            <input type="tel" class="form-control" id="hidden_pincode" name="hidden_pincode" maxlength="6" minlength="6" onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;" required disabled placeholder="pincode">
-                                            <p class="p-error" id="pincode_error"></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 <?php if($flag==1){ echo 'd-none';} ?>">
-                                        <div class="form-group">
-                                            <label for="name">Online Consultation<span class="error">*</span></label>
-                                            <select name="is_online" id="is_online" class="form-control select2" required>
-                                               <option value="1">Yes</option>
-                                                <option value="0" <?php if($flag==1){ echo 'selected';} ?>>No</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-<?php if($flag==1){ echo 12;}else{echo 6;} ?>">
-                                        <div class="form-group">
-                                            <?php 
-                                            if($rowd->category == 4){
-                                                $Category = 'Home Consultation';
-                                            }else if($rowd->category == 5){
-                                                $Category = 'Home Consultation';
-                                            }else {
-                                                 $Category = 'Home Visit';
-                                            } ?>
-                                            <label for="name"><?= $Category; ?><span class="error">*</span></label>
-                                            <select name="is_homevisit" id="is_homevisit" class="form-control select2"
-                                                required>
-                                                <option value="1">Yes</option>
-                                                <option value="0" <?php if($flag==1){ echo "disabled";} ?>>No</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                
-                                <div class="row">
-                                    <?php if(count($speciality_list) > 0) { ?>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="name">Speciality<span class="error">*</span></label>
-                                            <select name="speciality" id="speciality" class="form-control select2" required>
-                                                <option value="">Choose your Speciality</option>
-                                                <?php foreach($speciality_list as $row){ ?>
-                                                <option value="<?php echo $row->id;?>">
-                                                    <?php echo $row->title;?></option>
-                                                <?php  } ?>
-                                            </select>
-                                            <p class="p-error" id="speciality_error"></p>
-                                        </div>
-                                    </div>
-                                    <?php } ?>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="name">Promotional Discription<span class="error"></span></label>
-                                            <textarea class="form-control" rows="3" id="comment" name="comment"></textarea>
-                                            <p class="p-error" id="comment_error"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a class="btn btn-primary btnNext">Next</a>
-                            </div>
-                            </fieldset>
-                            <fieldset>
-                            <div id="tab-2" class="tab-content">
-                                <h3>Step 2</h3>
-                                <div class="row">
-                                    
-                                    <div class="<?php if($rowd->category == 4){ echo'col-md-6';}else{'col-md-12';} ?>">
-                                        <div class="form-group">
-                                            <label for="name">Qulification<span
-                                                    class="error">*</span></label>
-                                            <input type="text" class="form-control" placeholder="Name of Course" id="UG_course" name="UG_course" required>
-                                            <p class="p-error" id="UG_course_error"></p>
-                                        </div>
-                                    </div>
-                                    <?php if($rowd->category == 4){ ?>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>&nbsp;</label>
-                                            <input type="text" class="form-control" placeholder="Name Specialty"
-                                                id="UG_speciality" name="UG_speciality" required>
-                                            <p class="p-error" id="UG_speciality_error"></p>
-                                        </div>
-                                    </div>
-                                    <?php } ?>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>&nbsp;</label>
-                                            <input type="text" class="form-control"
-                                                placeholder="Name of College" id="UG_college" name="UG_college" required>
-                                            <p class="p-error" id="UG_college_error"></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label>&nbsp;</label>
-                                            <input type="text" class="form-control"
-                                                placeholder="Name of University" id="UG_uni" name="UG_uni" required>
-                                            <p class="p-error" id="UG_uni_error"></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="form-group">
-                                            <label for="name">&nbsp;</label>
-                                            <select name="UG_year" id="UG_year" class="form-control" required></select>
-                                            <p class="p-error" id="UG_year_error"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php if($rowd->category == 4 || $rowd->category == 5){ ?>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="name"> Registration<span
-                                                    class="error">*</span></label>
-                                            <input type="text" class="form-control" placeholder="Name of MCI"
-                                                id="UG_MCI" name="UG_MCI" required>
-                                            <p class="p-error" id="UG_MCI_error"></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label for="name">&nbsp;</label>
-                                            <input type="text" class="form-control"
-                                                placeholder="Registration No" id="UG_reg_no" name="UG_reg_no"
-                                                required>
-                                            <p class="p-error" id="UG_reg_no_error"></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="form-group">
-                                            <label for="name">&nbsp;</label>
-                                            <select name="UG_MCI_year" id="UG_MCI_year" class="form-control"
-                                                required></select>
-                                            <p class="p-error" id="UG_MCI_year_error"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <?php } ?>
-                                <div class="row">
-                                    <div class="col-md-10">
-                                        <div class="form-group">
-                                            <label for="ProductName">Work Expirience</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="form-group">
-                                            
-                                            <button class="float-right mt-32 btn btn-primary btn-sm" style="cursor: pointer;" type="button" id="add" onclick="addrow();">AddMore</button>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 table-responsive">
-                                        <table class="table table-bordered table-striped table-sm"
-                                            id="productdata">
-                                            <thead>
-                                                <tr style="background-color: #0140381a;">
-                                                    <th>#</th>
-                                                    <th>Company</th>
-                                                    <th>Designation</th>
-                                                    <th>Exp. year</th>
-                                                </tr>
-                                            <tbody>
-                                                <tr id="1">
-                                                    <td></td>
-                                                    <td><input type="text" name="name1" id="name1" class="form-control"></td>
-                                                    <td><input type="text" name="designation1" id="designation1" class="form-control"></td>
-                                                    <td><input type="text" name="exp1" id="exp1" class="form-control"></td>
-                                                    <input type="hidden" id="row" value="1">
-                                                </tr>
-                                            </tbody>
-                                            </thead>
-                                        </table>
-                                    </div>
-                                    <input type="hidden" id="TAbleDataArray" name="TAbleDataArray"></input>
-                                </div>
-                                <a class="btn btn-primary btnPrevious">Previous</a>
-                                <a class="btn btn-primary btnNext">Next</a>
-                            </div>
-                            </fieldset>
-                            <fieldset>
-                            <div id="tab-3" class="tab-content">
-                                <h3>Step 3</h3>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="name">Choose Id Proof<span class="error">*</span></label>
-                                            <select name="chooseID" id="chooseID" required class="form-control" onchange="hideshowID();">
-                                                <option value="">Choose your ID</option>
-                                                <?php /* <option value="1">Aadharcard</option> */ ?>
-                                                <option value="2">Pan Card</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 d-none" id="PancardDiv">
-                                        <div class="form-group">
-                                            <label for="name">Pancard Number<span class="error">*</span></label>
-                                            <input type="text" class="form-control" id="pan" name="pan" maxlength="10" minlength="10" placeholder="Enter PAN" required accept="image/png, image/gif, image/jpeg"  />
-                                            <p class="p-error" id="pancard_no_error"></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 d-none" id="AdharcardDiv">
-                                        <div class="form-group">
-                                            <label for="name">Adhaar Card Number<span class="error" id="AadharErrorSpan">*</span></label>
-                                            <input required type="text" class="form-control" id="adharcard_no" name="adharcard_no" maxlength="12" minlength="12" onkeypress="if(isNaN(this.value + String.fromCharCode(event.keyCode))) return false;"
-                                                placeholder="Enter Adhaar Card No" />
-                                            <p class="p-error" id="adharcard_no_error"></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="name">Upload Pancard ID Document<span class="error" id="AadharPanErrorSpan">*</span></label>
-                                            <input type="file" class="form-control" id="pancard"
-                                                name="pancard" accept="image/png, image/gif, image/jpeg"  required />
-                                            <p class="p-error" id="pancard_error"></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="name">Upload Degree Certificate<span
-                                                    class="error">*</span></label>
-                                            <input type="file"  accept="image/png, image/gif, image/jpeg"  class="form-control" id="UG_certificate"
-                                                name="UG_certificate" required />
-                                            <p class="p-error" id="UG_certificate_error"></p>
-                                        </div>
-                                    </div>
-                                    <?php if($rowd->category == 4 || $rowd->category == 5) { ?> 
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="name">Upload Registration Certificate<span
-                                                    class="error">*</span></label>
-                                            <input type="file" class="form-control" id="UG_MCI_certificate"
-                                                name="UG_MCI_certificate" accept="image/png, image/gif, image/jpeg"  required />
-                                            <p class="p-error" id="UG_MCI_certificate_error"></p>
-                                        </div>
-                                    </div>
-                                    <?php } ?>
-                                </div>
-                                <a class="btn btn-primary btnPrevious">Previous</a>
-                                <input type="submit" id="submit_btn" class="book-now-btn form_btn mt-1" name="save_button" value="Register">
-                            </div>
-                            </fieldset>
-                        </div>
+    <div class="page-banner">
+        <img class="animation-element fadeUp animation-element-fast" src="<?= base_url(); ?>assets/img/profile-banner.jpg" alt="About Us">
+    </div>
+
+    <div class="form-wizard">
+        <div class="container">
+			<?php 
+			$flag=0;
+			if($rowd->category == 4){
+				$Category = 'Doctors';
+			}else if($rowd->category == 5){
+				$Category = 'Veterinary Doctors';
+			}else if($rowd->category == 6){
+				$Category = 'Nurse';
+				$flag=1;
+			}else if($rowd->category == 7){
+				$Category = 'Physiotherapist';
+				$flag=1;
+			}
+
+			?>
+            <h1> <?= $Category; ?> <span> Profile </span> </h1>
+			<form class="form" method="post" id="form" name="form" accept-charset="utf-8" enctype="multipart/form-data" autocomplete="off">
+				<?php if (validation_errors()){   
+					echo '<div class="alert alert-warning alert-dismissible" id="error" role="alert">
+					<i class="fa fa-check"></i>
+					<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<strong>Warning!</strong> ';
+					echo validation_errors();
+					echo '</div>';
+					}
+				?>
+				<?php if($error != '')
+				{ 
+					echo $error ;
+				} ?>
+            <div class="form-wizard-wrapper">
+                <ul>
+                    <li><a class="form-wizard-link active" href="javascript:void(0);" data-attr="info"><span>General Detail</span></a></li>
+                    <li><a class="form-wizard-link" href="javascript:void(0);" data-attr="ads"><span>Education Detail</span></a></li>
+                    <li><a class="form-wizard-link" href="javascript:void(0);" data-attr="placement"><span>Certificate Detail</span></a></li>
+                    <li class="form-wizardmove-button"></li>
+                </ul>
+                <div class="form-wizard-content-wrapper">
+                    <div class="form-wizard-content show" data-tab-content="info">
+                        <h3> Step 1 </h3>
+                        <div class="form-row">
+							<div class="full-wdth">
+								<label for="fullname">Enter Your Name <span> * </span></label>
+								<input type="text" class="text-field" placeholder="Enter Full Name" id="fullname" name="fullname" value="<?= $rowd->name ?>" required disabled>
+                                 <p class="p-error" id="name_error"></p>
+							</div>
+							<div class="full-wdth">
+								<label for="profile">Upload Profile Image <span> * </span></label>
+								<input type="file" class="text-field" id="profile" name="profile" accept="image/png, image/gif, image/jpeg" required>
+								<p class="p-error" id="profile_error"></p>
+							</div>
+							<div class="form-column mt-2">
+								<label for="gender"> Select Geneder <span> * </span> </label>
+								<div class="select" name="gender" id="gender">
+									<select id="standard-select">
+										<option value="">Choose Geneder</option>
+										<option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+									</select>
+									<p class="p-error" id="gender_error"></p>
+								</div>
+							</div>
+							<div class="form-column mt-2">
+								<label for="dob"> Birth Date <span> * </span> </label>
+								<input type="text" class="text-field" data-toggle="datepicker" id="dob" name="dob" placeholder="DD-MM-YYYY" readonly='true' required>
+								<p class="p-error" id="dob_error"></p>
+							</div>
+							<div class="form-column mt-2">
+								<label for="mobile"> Mobile Number <span> * </span> </label>
+								<input type="tel" class="text-field" placeholder="Mobile Number" id="mobile" name="mobile" value="<?= $rowd->contact_no ?>" required disabled>
+								<p class="p-error" id="mobile_error"></p>
+							</div>
+							<div class="form-column mt-2">
+								<label for="email"> Email Address <span> * </span> </label>
+								<input type="email" class="text-field" placeholder="Email Address" id="email" name="email" value="<?= $rowd->email ?>" required disabled>
+								<p class="p-error" id="email_error"></p>
+							</div>
+							<div class="full-wdth">
+								<label for="flat_block">Flat/Block No <span> * </span></label>
+								<input type="text" class="text-field bg-white" placeholder="Enter Flat or Block No" id="flat_block" name="flat_block" required>
+							</div>
+							<div class="full-wdth">
+								<label for="location">Choose Google Location <span> * </span></label>
+								<input type="text" class="text-field" placeholder="Choose Google Location" id="location" name="location" required>
+								<input type="hidden" name="g_lat" id="g_lat">
+								<input type="hidden" name="g_lng" id="g_lng">
+							</div>
+							<div class="form-column mt-2" id="manuallyEntryDiv">
+								<label for="country"> Your Country <span> * </span> </label>
+								<input type="text" class="text-field" placeholder="Country" id="hidden_country" value="" name="hidden_country" required disabled>
+                                <input type="hidden" id="country" value="" class="text-field" name="country">
+                                <p class="p-error" id="country_error"></p>
+							</div>
+							<div class="form-column mt-2">
+								<label for="state"> Your State <span> * </span> </label>
+								<input type="text" class="text-field" placeholder="State" id="hidden_state" value="" name="hidden_state" required disabled>
+                                <input type="hidden" id="state" value="" class="text-field" name="state">
+								<p class="p-error" id="state_error"></p>
+							</div>
+							<div class="form-column mt-2">
+								<label for="city"> Your City <span> * </span> </label>
+								<input type="text" class="text-field" placeholder="City" id="hidden_city" value="" name="hidden_city" required disabled>
+								<input type="hidden" id="city" value="" class="text-field" name="city">
+								<p class="p-error" id="city_error"></p>
+							</div>
+							<div class="form-column mt-2">
+								<label for="pincode"> Pincode <span> * </span> </label>
+								<input type="hidden" id="pincode" value="" class="text-field" placeholder="Pincode">
+								<input type="tel" class="text-field" id="hidden_pincode" name="hidden_pincode" maxlength="6" minlength="6" onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;" required disabled placeholder="pincode">
+                                <p class="p-error" id="pincode_error"></p>
+							</div>
+							<div class="form-column mt-2" <?php if($flag==1){ echo 'd-none';} ?>>
+								<label for="is_online"> Online Consultation <span> * </span> </label>
+								<select name="is_online" id="is_online" class="text-field" required>
+									<option value="1">Yes</option>
+									<option value="0" <?php if($flag==1){ echo 'selected';} ?>>No</option>
+								</select>
+							</div>
+							<div class="<?php if($flag==1){ ?>full-wdth<?}else{?>form-column mt-2<?} ?>">
+								<?php 
+								if($rowd->category == 4){
+									$Category = 'Home Consultation';
+								}else if($rowd->category == 5){
+									$Category = 'Home Consultation';
+								}else {
+									 $Category = 'Home Visit';
+								} ?>
+								<label for="is_homevisit"><?= $Category; ?><span>*</span></label>
+								<select name="is_homevisit" id="is_homevisit" class="text-field" required>
+									<option value="1">Yes</option>
+									<option value="0" <?php if($flag==1){ echo "disabled";} ?>>No</option>
+								</select>
+							</div>
+							<?php if(count($speciality_list) > 0) { ?>
+							<div class="full-wdth <?php if($flag==1){ echo 'd-none';} ?>">
+								<label for="speciality">Speciality <span> * </span></label>
+								<select name="speciality" id="speciality" class="text-field" required>
+									<option value="">Choose your Speciality</option>
+									<?php foreach($speciality_list as $row){ ?>
+									<option value="<?php echo $row->id;?>">
+										<?php echo $row->title;?></option>
+									<?php  } ?>
+								</select>
+								<p class="p-error" id="speciality_error"></p>
+							</div>
+							<?php } ?>
+							<div class="full-wdth">
+								<label for="comment">Promotional Description <span> * </span></label>
+								<textarea rows="5" class="text-field bg-white" cols="50" id="comment" name="comment"></textarea>
+								<p class="p-error" id="comment_error"></p>
+							</div>
+							<div class="full-wdth clearfix step-btn">
+								<a href="javascript:void(0);" class="form-wizard-next-btn">Next</a>
+							</div>
+						</div>
                     </div>
-                    
-                    </form>
+                    <div class="form-wizard-content" data-tab-content="ads">
+                        <h3> Step 2 </h3>
+						<div class="form-row">
+							<div class="<?php if($rowd->category == 4){ ?>form-column mt-2 <?}else{?>full-wdth <?} ?> two-row">
+								<label for="">Qualification<span> * </span></label>
+								<div class="multi-row">
+									<input type="text" class="text-field bg-white" placeholder="Name of Course" id="UG_course" name="UG_course" required>
+									<p class="p-error" id="UG_course_error"></p>
+									<?php if($rowd->category == 4){ ?>
+										<input type="text" class="text-field bg-white" placeholder="Name of Speciality" id="UG_speciality" name="UG_speciality" required>
+										<p class="p-error" id="UG_speciality_error"></p>
+									<?php } ?>
+                                </div>
+								<div class="multi-row-btm">
+									<input type="text" class="text-field bg-white" placeholder="Name of Collage" id="UG_college" name="UG_college" required>
+									<p class="p-error" id="UG_college_error"></p>
+									<input type="text" class="text-field bg-white" placeholder="Name of University" id="UG_uni" name="UG_uni" required>
+									<p class="p-error" id="UG_uni_error"></p>
+									<select name="UG_year" id="UG_year" class="text-field bg-white" required></select>
+                                    <p class="p-error" id="UG_year_error"></p>
+								</div>
+							</div>
+							<?php if($rowd->category == 4 || $rowd->category == 5){ ?>
+							<div class="full-wdth two-row">
+								<label for=""> Registration <span> * </span></label>
+								<div class="multi-row-btm pt-0">
+									<input type="text" class="text-field bg-white" placeholder="Name of MCI" id="UG_MCI" name="UG_MCI" required>
+									<p class="p-error" id="UG_MCI_error"></p>
+									<input type="text" class="text-field bg-white" placeholder="Registration No" id="UG_reg_no" name="UG_reg_no" required>
+                                    <p class="p-error" id="UG_reg_no_error"></p>
+									<select name="UG_MCI_year" id="UG_MCI_year" class="text-field bg-white" required></select>
+                                    <p class="p-error" id="UG_MCI_year_error"></p>
+								</div>
+							</div>
+							<?php } ?>
+							<div class="full-wdth profile-table-top">
+								<label for="ProductName"> Work Experience <span> * </span></label>
+								<div class="profile-table">
+									<div id="table" class="table-editable">
+										<span class="table-add glyphicon glyphicon-plus" id="add" onclick="addrow();"> Add </span>
+										<table class="table" id="productdata">
+										  <tr>
+											<th>#</th>
+											<th>Company</th>
+											<th>Designation</th>
+											<th>Exp. year</th>
+										  </tr>
+										  <tr>
+											<td contenteditable="true" data-attr-key="42"></td>
+											<td contenteditable="true" data-attr-value="42"> <input type="text" class="text-field bg-white" name="name1" id="name1"> </td>
+											<td contenteditable="true" data-attr-key="42"> <input type="text" class="text-field bg-white" name="designation1" id="designation1"> </td>
+											<td contenteditable="true" data-attr-key="42"><input type="text" name="exp1" id="exp1" class="text-field bg-white"></td>
+											<input type="hidden" id="row" value="1">
+										  </tr>
+										</table>
+									  </div>
+									<input type="hidden" id="TAbleDataArray" name="TAbleDataArray"></input>
+								</div>
+							</div>
+
+							<div class="full-wdth clearfix step-btn">
+								<a href="javascript:void(0);" class="form-wizard-previous-btn">Previous</a>
+								<a href="javascript:void(0);" class="form-wizard-next-btn">Next</a>
+							</div>
+						</div>
+                    </div>
+                    <div class="form-wizard-content" data-tab-content="placement">
+                        <h3> Step 3 </h3>
+						<div class="form-row">
+							<div class="full-wdth">
+								<label for=""> Choose Id Proof <span> * </span> </label>
+								<div class="select" name="chooseID" id="chooseID" onchange="hideshowID();">
+									<select id="standard-select">
+										<option value="">Choose your ID</option>
+										<?php /* <option value="1">Aadharcard</option> */ ?>
+										<option value="2">Pan Card</option>
+									</select>
+								</div>
+							</div>
+							<div class="full-wdth d-none" id="AdharcardDiv">
+								<label for="">Upload Pancard ID Document <span> * </span></label>
+								<input type="file" class="text-field" id="myfile" name="myfile">
+							</div>
+							<div class="full-wdth">
+								<label for="">Upload Pancard ID Document <span> * </span></label>
+								<input type="file" class="text-field" id="myfile" name="myfile">
+							</div>
+							<div class="full-wdth">
+								<label for="">Upload Pancard ID Document <span> * </span></label>
+								<input type="file" class="text-field" id="myfile" name="myfile">
+							</div>
+
+							<div class="full-wdth">
+								<label for="">Upload Degree Certificate <span> * </span></label>
+								<input type="file" class="text-field" id="myfile" name="myfile">
+							</div>
+
+							<div class="full-wdth">
+								<label for="">Upload Registration Certificate <span> * </span></label>
+								<input type="file" class="text-field" id="myfile" name="myfile">
+							</div>
+
+							<div class="full-wdth clearfix step-btn">
+								<a href="javascript:void(0);" class="form-wizard-previous-btn">Previous</a>
+								<a href="javascript:void(0);" class="form-wizard-next-btn">Register</a>
+							</div>
+						</div>
                     </div>
                 </div>
-                <input type="hidden" name="address1" id="address1">
-            </section>
-        </main>
-        <?php $this->load->view('front/common_footer'); ?>
+            </div>
+        </div>
     </div>
-    <?php $this->load->view('front/common_js'); ?>
 </body>
+</head>
 </html>
 
 <script>
