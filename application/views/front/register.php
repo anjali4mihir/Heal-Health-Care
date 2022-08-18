@@ -320,6 +320,7 @@
 							<div class="card_terms form-group">
 								<input type="checkbox" name="accept" id="accept" value="1" class="form-control"> <span>I have read and agree to the <a href="<?= base_url() . 'assets/document/terms_and_conditions.pdf'; ?>" target="_blank">Terms of Service</a> & <a href="<?= base_url() . 'assets/document/privacy_policy.pdf'; ?>" target="_blank">privacy policy </a></span>
 							</div>
+							<p style="font-size: 12px;color: #004940;font-weight: 700; padding-top:15px;"><span style="color:red;">Note*:</span> By Continuing you will receive a verification code to your phone number by SMS.Message and data rates may apply.</p>
 							<div class="submit-btn">
 								<button type="submit" class="btn o-button"> Sign In </button>
 							</div>

@@ -1,9 +1,4 @@
-<?php 
-// echo "<pre>";
-// print_r($rowd);
-// exit;
-?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <title> Heal Health & Medical </title>
@@ -12,7 +7,12 @@
 <?php $this->load->view('front/common_css'); ?>
 </head>
 <body>
+	
     <?php $this->load->view('front/common_header'); ?>
+
+	<div class="page-banner">
+        <img class="animation-element fadeUp animation-element-fast" src="<?= base_url(); ?>assets/img/profile-banner.jpg" alt="About Us">
+    </div>
 
     <div class="form-wizard">
         <div class="container">
@@ -31,30 +31,30 @@
 			?>
             <h1><?= $Category;?> <span> Profile </span> </h1>
 			<form method="post" id="form" name="form" accept-charset="utf-8" enctype="multipart/form-data" autocomplete="off">
+				<?php if (validation_errors()){   
+					echo '<div class="alert alert-warning alert-dismissible" id="error" role="alert">
+					<i class="fa fa-check"></i>
+					<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<strong>Warning!</strong> ';
+					echo validation_errors();
+					echo '</div>';
+					}
+				?>
+				<?php if($error != '')
+				{ 
+					echo $error ;
+				} ?>
+				<input type="hidden" name="CategoryID" id="CategoryID" value="<?= $rowd->category; ?>">
 				<div class="form-wizard-wrapper">
 					<ul>
-						<li><a class="form-wizard-link active" href="javascript:;" data-attr="info" id="tab1"><span>General Detail</span></a></li>
-						<li><a class="form-wizard-link" href="javascript:;" data-attr="ads" id="tab2"><span>Education Detail</span></a></li>
-						<li><a class="form-wizard-link" href="javascript:;" data-attr="placement" id="tab3"><span>Certificate Detail</span></a></li>
+						<li><a class="form-wizard-link active" href="javascript:void(0);" data-attr="info"><span>General Detail</span></a></li>
+						<li><a class="form-wizard-link" href="javascript:void(0);" data-attr="ads"><span>Education Detail</span></a></li>
+						<li><a class="form-wizard-link" href="javascript:void(0);" data-attr="placement"><span>Certificate Detail</span></a></li>
 						<li class="form-wizardmove-button"></li>
 					</ul>
 					<div class="form-wizard-content-wrapper">
 						<div class="form-wizard-content show" data-tab-content="info">
 							<h3> Step 1 </h3>
-							<?php if (validation_errors()){   
-								echo '<div class="alert alert-warning alert-dismissible" id="error" role="alert">
-								<i class="fa fa-check"></i>
-								<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-								<strong>Warning!</strong> ';
-								echo validation_errors();
-								echo '</div>';
-								}
-							?>
-							<?php if($error != '')
-							{ 
-								echo $error ;
-							} ?>
-							<input type="hidden" name="CategoryID" id="CategoryID" value="<?= $rowd->category; ?>">
 							<div class="form-row">
 								<div class="full-wdth">
 									<label for=""> 
@@ -66,12 +66,12 @@
 									<input type="text" class="text-field" placeholder="Enter Name" id="storename" name="storename" required>
 								</div>
 								<div class="form-column mt-2">
-									<label for=""> Email Address <span> * </span> </label>
+									<label for="email"> Email Address <span> * </span> </label>
 									<input type="email" class="text-field" placeholder="Enter Email Address" id="email" name="email" value="<?= $rowd->email ?>" required disabled>
 									<p class="error" id="email_error"></p>
 								</div>
 								<div class="form-column mt-2">
-									<label for=""> Appartment Name/Road <span> * </span> </label>
+									<label for="flat_block"> Appartment Name/Road <span> * </span> </label>
 									<input type="text" class="text-field" placeholder="Enter Flat or Block No" id="flat_block" name="flat_block" required>
 									<p class="error" id="flat_block_error"></p>
 								</div>
@@ -83,30 +83,30 @@
 									<p class="error" id="location_error"></p>
 								</div>
 								<div class="form-column mt-2" id="google_address">
-									<label for=""> Enter Google Map Link <span> * </span> </label>
+									<label for="map_link"> Enter Google Map Link <span> * </span> </label>
 									<input type="url" class="text-field" placeholder="Enter Google Map Link" id="map_link" name="map_link">
 									<p class="error" id="map_link_error"></p>
 								</div>
 								<div class="form-column mt-2">
-									<label for=""> Your Country <span> * </span> </label>
+									<label for="country"> Your Country <span> * </span> </label>
 									<input type="text" class="text-field" placeholder="Country" id="hidden_country" value="" name="hidden_country" required disabled>
 									<input type="hidden" id="country" value="" class="text-field" name="country">
 									<p class="error" id="country_error"></p>
 								</div>
 								<div class="form-column mt-2">
-									<label for=""> Your State  <span> * </span> </label>
+									<label for="state"> Your State  <span> * </span> </label>
 									<input type="text" class="text-field" placeholder="State" id="hidden_state" value="" name="hidden_state" required disabled>
 									<input type="hidden" id="state" value="" class="text-field" name="state">
 									<p class="error" id="state_error"></p>
 								</div>
 								<div class="form-column mt-2">
-									<label for=""> Your City <span> * </span> </label>
+									<label for="city"> Your City <span> * </span> </label>
 									<input type="text" class="text-field" placeholder="City" id="hidden_city" value="" name="hidden_city" required disabled>
 									<input type="hidden" id="city" value="" class="text-field" name="city">
 									<p class="error" id="city_error"></p>
 								</div>
 								<div class="form-column mt-2">
-									<label for=""> Pincode  <span> * </span> </label>
+									<label for="Pincode"> Pincode  <span> * </span> </label>
 									<input type="hidden" class="text-field" placeholder="Pincode" id="pincode" value="">
 									<input type="tel" class="text-field" id="hidden_pincode" name="hidden_pincode" maxlength="6" minlength="6" onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;" required disabled placeholder="pincode">
 									<p class="error" id="pincode_error"></p>
@@ -114,22 +114,24 @@
 								<?php if($rowd->category == 2 ) { ?>
 								<div class="form-group checkbox">
 									<input type="checkbox" name="homesample" id="homesample" value="1" checked>
-									<label for="html">Home Sample Collection</label>
+									<label for="homesample">Home Sample Collection</label>
 								</div>
-								<div class="form-column mt-2">
-									<label for=""> Charges  <span> * </span> </label>
-									<select name="charges" id="charges" onchange="Charges()" class="text-field select2" required>
-										<option value="">Choose Charges</option>
-										<option value="Amount">Amount</option>
-										<option value="Free">Free</option>
-									</select>
-									<p class="error" id="charges_error"></p>
-								</div>
-								<div class="form-column mt-2" id="amountDiv">
-									<label for="name">Amount<span>*</span></label>
-									<input type="tel" name="amount" id="amount" maxlength="5" class="text-field" onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;"
-										placeholder="Enter Amount" required>
-									<p class="error" id="amount_error"></p>
+								<div class="form-column" id="sampleChargesDiv">
+									<div class="form-column mt-2">
+										<label for="charges"> Charges  <span> * </span> </label>
+										<select name="charges" id="charges" onchange="Charges()" class="text-field select2" required>
+											<option value="">Choose Charges</option>
+											<option value="Amount">Amount</option>
+											<option value="Free">Free</option>
+										</select>
+										<p class="error" id="charges_error"></p>
+									</div>
+									<div class="form-column mt-2 d-none" id="amountDiv">
+										<label for="amount">Amount<span>*</span></label>
+										<input type="tel" name="amount" id="amount" maxlength="5" class="text-field" onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;"
+											placeholder="Enter Amount" required>
+										<p class="error" id="amount_error"></p>
+									</div>
 								</div>
 								<?php } ?>
 								<div class="radio-btn">
@@ -148,7 +150,7 @@
 									<div class="full-wdth">
 										<div class="form-group checkbox">
 											<input type="checkbox" id="mon" name="days" value="Monday">
-											<label for="monday">Monday</label>
+											<label for="mon">Monday</label>
 										</div>
 
 										<div class="time-field">
@@ -163,7 +165,7 @@
 									<div class="full-wdth">
 										<div class="form-group checkbox">
 											<input type="checkbox" id="tue" name="days" value="Tuesday">
-											<label for="monday">Tuesday</label>
+											<label for="tue">Tuesday</label>
 										</div>
 
 										<div class="time-field">
@@ -178,7 +180,7 @@
 									<div class="full-wdth">
 										<div class="form-group checkbox">
 											<input type="checkbox" id="wed" name="days" value="Wednesday">
-											<label for="monday">Wednesday</label>
+											<label for="wed">Wednesday</label>
 										</div>
 
 										<div class="time-field">
@@ -193,7 +195,7 @@
 									<div class="full-wdth">
 										<div class="form-group checkbox">
 											<input type="checkbox" id="thu" name="days" value="Thursday">
-											<label for="monday">Thursday</label>
+											<label for="thu">Thursday</label>
 										</div>
 
 										<div class="time-field">
@@ -208,7 +210,7 @@
 									<div class="full-wdth">
 										<div class="form-group checkbox">
 											<input type="checkbox" id="fri" name="days" value="Friday">
-											<label for="monday">Friday</label>
+											<label for="fri">Friday</label>
 										</div>
 
 										<div class="time-field">
@@ -223,7 +225,7 @@
 									<div class="full-wdth">
 										<div class="form-group checkbox">
 											<input type="checkbox" id="sat" name="days" value="Saturday">
-											<label for="monday">Saturday</label>
+											<label for="sat">Saturday</label>
 										</div>
 
 										<div class="time-field">
@@ -238,7 +240,7 @@
 									<div class="full-wdth">
 										<div class="form-group checkbox">
 											<input type="checkbox" id="sun" name="days" value="Sunday">
-											<label for="monday">Sunday</label>
+											<label for="sun">Sunday</label>
 										</div>
 
 										<div class="time-field">
@@ -253,7 +255,7 @@
 								</div>
   
 								<div class="full-wdth">
-									<label for="">Promotional Description</label>
+									<label for="comment">Promotional Description</label>
 									<textarea rows="5" class="text-field bg-white" cols="50" id="comment" name="comment"></textarea>
 								</div>
 								<div class="full-wdth clearfix step-btn">
@@ -261,35 +263,35 @@
 								</div>
 							</div>
 						</div>
-						<div class="form-wizard-content" data-tab-content="ads">
+						<div class="form-wizard-content" data-tab-content="ads" style="display:none;">
 							<h3> Step 2 </h3>
 							
 							<div class="form-row">
 								<div class="form-column mt-2">
-									<label for=""> GSTIN <?php if($rowd->category == 4 || $rowd->category == 5 || $rowd->category == 6 || $rowd->category == 7){ ?> <span> * </span> <?php } ?></label>
+									<label for="gstin"> GSTIN <?php if($rowd->category == 4 || $rowd->category == 5 || $rowd->category == 6 || $rowd->category == 7){ ?> <span> * </span> <?php } ?></label>
 									<input type="text" class="text-field" placeholder="GSTIN" id="gstin" name="gstin" maxlength="15" minlength="15">
 									<p class="error" id="gastin_error"></p>
 								</div>
 								<?php if($rowd->category == 1){ ?>
 								<div class="form-column mt-2">
-                                    <label for=""> Licence No <span> * </span> </label>
+                                    <label for="licence_no"> Licence No <span> * </span> </label>
                                     <input type="text" class="text-field" placeholder="Enter Licence No" id="licence_no" name="licence_no" <?php if($rowd->category == 1){ echo 'required';}?>>
 									<p class="error" id="licence_no_error"></p>
                                 </div>
 								<?php } ?>
 								<div class="form-column">
-									<label for="">Upload Profile Image <span> * </span></label>
+									<label for="profile">Upload Profile Image <span> * </span></label>
 									<input type="file" class="text-field" id="profile" name="profile" required>
 									<p class="error" id="profile_error"></p>
 								</div>
 
 								<div class="form-column mt-2">
-									<label for=""> Name of <?php if($rowd->category == 1){ echo 'Owner';} else{echo 'Doctor'; }?> <span> * </span> </label>
+									<label for="name"> Name of <?php if($rowd->category == 1){ echo 'Owner';} else{echo 'Doctor'; }?> <span> * </span> </label>
 									<input type="text" class="text-field" placeholder="Enter Full Name" id="name" name="name" value="<?= $rowd->name ?>">
 									<p class="error" id="name_error"></p>
 								</div>
 								<div class="form-column">
-									<label for=""> Select Geneder <span> * </span> </label>
+									<label for="gender"> Select Geneder <span> * </span> </label>
 									<div class="select">
 										<select name="gender" id="gender" class="select2" required>
 											<option value="">Choose Geneder</option>
@@ -301,13 +303,13 @@
 								</div>
 								<?php if($rowd->category == 1){ ?>
 								<div class="form-column">
-                                    <label for="">Qualification<span> * </span></label>
+                                    <label for="qualification">Qualification<span> * </span></label>
                                     <input type="text" class="text-field" placeholder="Qualification" name="qualification" id="qualification" <?php if($rowd->category == 1){ echo 'required';}?>>
 									<p class="error" id="qualification_error"></p>
                                 </div>
 								<?php }else{ ?>
 								<div class="full-wdth two-row">
-									<label for=""> Qualification <span> * </span></label>
+									<label for="UG_college"> Qualification <span> * </span></label>
 									<div class="multi-row-btm pt-0">
 										<input type="text" class="text-field bg-white" placeholder="Name of College" id="UG_college" name="UG_college" <?php if($rowd->category != 1){ echo 'required';}?>>
 										<p class="error" id="UG_college_error"></p>
@@ -318,7 +320,7 @@
 									</div>
 								</div>
 								<div class="full-wdth two-row">
-									<label for=""> Registration <span> * </span></label>
+									<label for="UG_MCI"> Registration <span> * </span></label>
 									<div class="multi-row-btm pt-0">
 										<input type="text" class="text-field bg-white" placeholder="Name of MCI" id="UG_MCI" name="UG_MCI" <?php if($rowd->category != 1){ echo 'required';}?>>
 										<p class="error" id="UG_MCI_error"></p>
@@ -335,32 +337,32 @@
 								</div>
 							</div>
 						</div>
-						<div class="form-wizard-content" data-tab-content="placement">
+						<div class="form-wizard-content" data-tab-content="placement" style="display:none;">
 							<h3> Step 3 </h3>
 							<div class="full-wdth mt-2">
-								<label for=""> Pancard Number <span> * </span> </label>
+								<label for="pan"> Pancard Number <span> * </span> </label>
 								<input type="text" class="text-field" id="pan" name="pan" maxlength="10" minlength="10" placeholder="Enter PAN">
 							</div>
 
 							<div class="full-wdth">
-								<label for="">Upload ID Document(Pancard)<span> * </span></label>
+								<label for="pancard">Upload ID Document(Pancard)<span> * </span></label>
 								<input type="file" class="text-field" id="pancard" name="pancard">
 							</div>
 
 							<div class="full-wdth">
-								<label for="">Upload GSTIN Certificate <?php if($rowd->category == 2 || $rowd->category == 3) { ?><?php }else { ?><span>*</span></label><?php } ?></label>
+								<label for="gstin_certificate">Upload GSTIN Certificate <?php if($rowd->category == 2 || $rowd->category == 3) { ?><?php }else { ?><span>*</span></label><?php } ?></label>
 								<input type="file" class="text-field" id="gstin_certificate" name="gstin_certificate" required>
 								<p class="error" id="gstin_certificate_error"></p>
 							</div>
 
 							<div class="full-wdth">
-								<label for="">Upload Sign-Board<span> * </span></label>
+								<label for="sign_board">Upload Sign-Board<span> * </span></label>
 								<input type="file" class="text-field" id="sign_board" name="sign_board" required />
 								<p class="error" id="sign_board_error"></p>
 							</div>
 
 							<div class="full-wdth">
-								<label for="">Upload Images Of <?php if($rowd->category == 1){ echo 'Store';} else{echo 'Lab'; }?> (Min 3 - Max 6)(Optional)</label>
+								<label for="store_image">Upload Images Of <?php if($rowd->category == 1){ echo 'Store';} else{echo 'Lab'; }?> (Min 3 - Max 6)(Optional)</label>
 								<input type="file" class="text-field" id="store_image" name="store_image[]" multiple>
 								<p class="error" id="store_image_MAXerror" style="display:none;">Upload Max 5 Files allowed </p>
                                 <p class="error" id="store_image_MINerror" style="display:none;">Upload Min 3 Files allowed <?php echo $rowd->category; ?></p>
@@ -368,51 +370,51 @@
 							
 							<?php if($rowd->category == 1){ ?>
 							<div class="full-wdth">
-								<label for="">DRUG Licence<span> * </span></label>
+								<label for="degree_certi">DRUG Licence<span> * </span></label>
 								<input type="file" class="text-field" id="degree_certi" name="degree_certi" required>
 								<p class="error" id="degree_certi_error"></p>
 							</div>
 
 							<div class="full-wdth">
-								<label for="">Upload Degree Certificate<span> * </span></label>
+								<label for="UG_certificate">Upload Degree Certificate<span> * </span></label>
 								<input type="file" class="text-field" id="UG_certificate" name="UG_certificate">
 								<p class="error" id="UG_certificate_error"></p>
 							</div>
 							<?php } else{ ?>
 
 							<div class="full-wdth">
-								<label for="">Upload Degree Certificate<span> * </span></label>
+								<label for="UG_certificate">Upload Degree Certificate<span> * </span></label>
 								<input type="file" class="text-field" id="UG_certificate" name="UG_certificate">
 								<p class="error" id="UG_certificate_error"></p>
 							</div>
 
 							<div class="full-wdth">
-								<label for="">Upload Registration Certificate<span> * </span></label>
+								<label for="UG_MCI_certificate">Upload Registration Certificate<span> * </span></label>
 								<input type="file" class="text-field" id="UG_MCI_certificate" name="UG_MCI_certificate">
 								<p class="error" id="UG_MCI_certificate_error"></p>
 							</div>
 							<?php } ?>
 
 							<div class="full-wdth">
-								<label for="">Upload Corporation Registration(Optional)</label>
+								<label for="corporation">Upload Corporation Registration(Optional)</label>
 								<input type="file" class="text-field" id="corporation" name="corporation">
 								<p class="error" id="corporation_error"></p>
 							</div>
 
 							<div class="full-wdth">
-								<label for="">Upload Authorized Stamp<span> * </span></label>
+								<label for="stamp">Upload Authorized Stamp<span> * </span></label>
 								<input type="file" class="text-field" id="stamp" name="stamp">
 								<p class="error" id="stamp_error"></p>
 							</div>
 
 							<div class="full-wdth">
-								<label for="">Upload Auhtorized Signature<span> * </span></label>
+								<label for="symbol">Upload Auhtorized Signature<span> * </span></label>
 								<input type="file" class="text-field" id="symbol" name="symbol">
 								<p class="error" id="symbol_error"></p>
 							</div>
 
 							<div class="full-wdth clearfix step-btn">
-								<a href="javascript:;" class="form-wizard-previous-btn">Previous</a>
+								<a href="javascript:void(0);" class="form-wizard-previous-btn">Previous</a>
 								<input type="submit" id="submit_btn" class="book-now-btn form_btn mt-1" name="save_button" value="Register">
 							</div>
 						</div>
@@ -425,6 +427,12 @@
 
     <?php $this->load->view('front/common_footer'); ?>
 	
+	<script type="text/javascript">
+    var site_url = '<?php echo base_url(); ?>';
+    var required=true;
+    <?php if($rowd->category == 2 || $rowd->category == 3) { ?>required=false;<?php } ?>
+</script>
+	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
 
@@ -435,11 +443,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 	
 	<script>
-		var site_url = '<?php echo base_url(); ?>';
-		var required=true;
-		<?php if($rowd->category == 2 || $rowd->category == 3) { ?>required=false;<?php } ?>
-		
-		var current_fs, next_fs, previous_fs;
+		var show_fs, next_fs, previous_fs;
 		var opacity;
 		$('#error').delay(6000).fadeOut();
 
@@ -454,10 +458,10 @@
 					errorElement: 'span',
 					errorClass: 'error',
 					highlight: function(element, errorClass, validClass) {
-						$(element).closest('.text-field').addClass("has-error");
+						$(element).closest('.form-column').addClass("has-error");
 					},
 					unhighlight: function(element, errorClass, validClass) {
-						$(element).closest('.text-field').removeClass("has-error");
+						$(element).closest('.form-column').removeClass("has-error");
 					},
 
 					rules: {
@@ -857,17 +861,15 @@
 								required:"Please Select",
 							},
 						},
-						
 				});
 
-
-				console.log(form.valid());
 				if(form.valid() === true)
 				{
-					console.log(11);
 					var next = jQuery(this);
 					next.parents('.form-wizard-content').removeClass('show');
+					next.parents('.form-wizard-content').hide();
 					next.parents('.form-wizard-content').next('.form-wizard-content').addClass('show');
+					next.parents('.form-wizard-content').next('.form-wizard-content').show();
 					jQuery(document).find('.form-wizard-content').each(function(){
 						if(jQuery(this).hasClass('show')){
 							var formAtrr = jQuery(this).attr('data-tab-content');
@@ -888,7 +890,9 @@
             jQuery('.form-wizard-previous-btn').click(function() {
                 var prev =jQuery(this);
                 prev.parents('.form-wizard-content').removeClass('show');
+				prev.parents('.form-wizard-content').hide();
                 prev.parents('.form-wizard-content').prev('.form-wizard-content').addClass('show');
+				prev.parents('.form-wizard-content').prev('.form-wizard-content').show();
                 jQuery(document).find('.form-wizard-content').each(function(){
                     if(jQuery(this).hasClass('show')){
                         var formAtrr = jQuery(this).attr('data-tab-content');

@@ -2091,21 +2091,23 @@ header.fixed #logo img {
   padding: 8rem 3rem;
 }
 .home-banner .banner-left h1 {
-  padding-bottom: 2rem;
+  padding-bottom: 0;
   color: #004e47;
   width: 100%;
   text-align: center;
+  font-size: 7rem;
+  line-height: 8rem;
 }
 .home-banner .banner-left p {
-  color: #000000;
+  color: #e31e24;
   background-color: #ffffff;
-  padding: 10px 34px;
-  margin: auto;
-  margin-bottom: 4rem;
+  padding: 0;
+  margin: 0 auto;
   display: inline-flex;
   border-radius: 15px;
-  background-color: #dddddd;
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 30px;
 }
 @media (max-width: 1023.98px) {
   .home-banner .banner-left {
@@ -2125,17 +2127,18 @@ header.fixed #logo img {
   text-align: center;
 }
 .home-banner .banner-right img {
-  width: 100%;
+  width: 75%;
   height: 100%;
   object-fit: contain;
 }
 @media (max-width: 1023.98px) {
   .home-banner .banner-right img {
     object-fit: cover;
+    width: 100%;
   }
 }
 .home-banner .banner-right.banner-right-new img {
-  width: 70%;
+  width: 60%;
 }
 @media (max-width: 1023.98px) {
   .home-banner .banner-right {
@@ -6491,9 +6494,33 @@ footer .footer-link ul li a:hover::after {
   margin: auto;
   background-size: 50%;
   width: 50px;
-  height: 50px;
+  height: 40px;
   background-repeat: no-repeat;
-  right: -30px;
+  right: -8px;
+}
+
+.otp_verify {
+  display: flex;
+  width: 100%;
+}
+.registration-form .register-form-left .register-form input#accept {
+  width: auto;
+}
+.register-form .form-group {
+  position: relative;
+}
+.banner-logo {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding: 30px 0 20px 0;
+}
+.banner-logo img {
+  width: 16%;
+}
+.home-banner img {
+  width: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */
