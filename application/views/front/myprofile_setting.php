@@ -172,7 +172,7 @@
 							</div>
 						</div>
                     </div>
-                    <div class="form-wizard-content" data-tab-content="ads">
+                    <div class="form-wizard-content" data-tab-content="ads" style="display:none;">
                         <h3> Step 2 </h3>
 						<div class="form-row">
 							<div class="<?php if($rowd->category == 4){ ?>form-column mt-2 <?}else{?>full-wdth <?} ?> two-row">
@@ -219,7 +219,7 @@
 											<th>Designation</th>
 											<th>Exp. year</th>
 										  </tr>
-										  <tr>
+										  <tr id="1">
 											<td contenteditable="true" data-attr-key="42"></td>
 											<td contenteditable="true" data-attr-value="42"> <input type="text" class="text-field bg-white" name="name1" id="name1"> </td>
 											<td contenteditable="true" data-attr-key="42"> <input type="text" class="text-field bg-white" name="designation1" id="designation1"> </td>
@@ -238,55 +238,390 @@
 							</div>
 						</div>
                     </div>
-                    <div class="form-wizard-content" data-tab-content="placement">
+                    <div class="form-wizard-content" data-tab-content="placement" style="display:none;">
                         <h3> Step 3 </h3>
 						<div class="form-row">
 							<div class="full-wdth">
 								<label for=""> Choose Id Proof <span> * </span> </label>
-								<div class="select" name="chooseID" id="chooseID" onchange="hideshowID();">
-									<select id="standard-select">
+								<div class="select">
+									<select id="standard-select" name="chooseID" id="chooseID" onchange="hideshowID();" required>
 										<option value="">Choose your ID</option>
 										<?php /* <option value="1">Aadharcard</option> */ ?>
 										<option value="2">Pan Card</option>
 									</select>
 								</div>
 							</div>
+							<div class="full-wdth d-none" id="PancardDiv">
+								<label for="pan">Pancard Number<span> * </span></label>
+								<input type="text" class="text-field bg-white" id="pan" name="pan" maxlength="10" minlength="10" placeholder="Enter PAN" required accept="image/png, image/gif, image/jpeg">
+								<p class="p-error" id="pancard_no_error"></p>
+							</div>
 							<div class="full-wdth d-none" id="AdharcardDiv">
-								<label for="">Upload Pancard ID Document <span> * </span></label>
-								<input type="file" class="text-field" id="myfile" name="myfile">
+								<label for="adharcard_no">Adhaar Card Number<span id="AadharErrorSpan"> * </span></label>
+								<input type="text" class="text-field bg-white" id="adharcard_no" name="adharcard_no" maxlength="12" minlength="12" onkeypress="if(isNaN(this.value + String.fromCharCode(event.keyCode))) return false;" placeholder="Enter Adhaar Card No" required>
+								<p class="p-error" id="adharcard_no_error"></p>
 							</div>
 							<div class="full-wdth">
-								<label for="">Upload Pancard ID Document <span> * </span></label>
-								<input type="file" class="text-field" id="myfile" name="myfile">
-							</div>
-							<div class="full-wdth">
-								<label for="">Upload Pancard ID Document <span> * </span></label>
-								<input type="file" class="text-field" id="myfile" name="myfile">
+								<label for="pancard">Upload Pancard ID Document <span id="AadharPanErrorSpan"> * </span></label>
+								<input type="file" class="text-field" id="pancard" name="pancard" accept="image/png, image/gif, image/jpeg" required>
+								<p class="p-error" id="pancard_error"></p>
 							</div>
 
 							<div class="full-wdth">
-								<label for="">Upload Degree Certificate <span> * </span></label>
-								<input type="file" class="text-field" id="myfile" name="myfile">
+								<label for="UG_certificate">Upload Degree Certificate <span> * </span></label>
+								<input type="file" class="text-field" accept="image/png, image/gif, image/jpeg"  class="text-field" id="UG_certificate" name="UG_certificate" required>
+								<p class="p-error" id="UG_certificate_error"></p>
 							</div>
-
+							<?php if($rowd->category == 4 || $rowd->category == 5) { ?>
 							<div class="full-wdth">
 								<label for="">Upload Registration Certificate <span> * </span></label>
-								<input type="file" class="text-field" id="myfile" name="myfile">
+								<input type="file" class="text-field" id="UG_MCI_certificate" name="UG_MCI_certificate" accept="image/png, image/gif, image/jpeg" required>
+								<p class="p-error" id="UG_MCI_certificate_error"></p>
 							</div>
-
+							<?php } ?>
 							<div class="full-wdth clearfix step-btn">
 								<a href="javascript:void(0);" class="form-wizard-previous-btn">Previous</a>
-								<a href="javascript:void(0);" class="form-wizard-next-btn">Register</a>
+								<input type="submit" id="submit_btn" class="book-now-btn form_btn mt-1" name="save_button" value="Register">
 							</div>
 						</div>
                     </div>
                 </div>
             </div>
+			</form>
         </div>
     </div>
+	<?php $this->load->view('front/common_footer'); ?>
 </body>
 </head>
 </html>
+
+<script>
+	jQuery(document).ready(function() {
+		jQuery('.form-wizard-next-btn').click(function() {
+			form.validate({
+				errorElement: 'span',
+				errorClass: 'error',
+				highlight: function(element, errorClass, validClass) {
+					$(element).closest('.form-column').addClass("has-error");
+				},
+				unhighlight: function(element, errorClass, validClass) {
+					$(element).closest('.form-column').removeClass("has-error");
+				},
+
+				rules: {
+					comment:{
+						required:false,
+					},
+					profile:{
+							required:true,  
+							extension: "jpg|jpeg|png",
+					},
+					gender:{
+						required:true,
+					},
+					flat_block:{
+						required:true,
+					},
+					location:{
+						required:true,
+					},
+					map_link:{
+						required:true,
+						url:true,
+					},
+					city:{
+						required:true,
+					},
+					state:{
+						required:true,
+					},
+					dob:{
+						required:true,
+					},
+					pincode:{
+						required:true,
+						number: true,
+						minlength:6,
+						maxlength:6,
+					},
+					is_online:{
+						required:true,
+					},
+					is_homevisit:{
+						required:true,
+					},
+					speciality:{
+						required:true,
+					},
+					UG_course:{
+						required:true,
+					},
+					UG_speciality:{
+						required:true,
+					},
+					UG_college:{
+						required:true,
+					},
+					UG_uni:{
+						required:true,
+					},
+					UG_year:{
+						required:true,
+					},
+					UG_MCI:{
+						required:true,
+					},
+					UG_reg_no:{
+						required:true,
+					},
+					UG_MCI_year:{
+						required:true,
+					},
+					chooseID:{
+						required:true,
+					},
+					pancard: {
+						extension: "jpg|jpeg|png",
+					},
+					pan: {
+						required:function() {
+							return ($("#chooseID option:selected" ).val() == 2);
+						},
+						pan: true,
+						maxlength: 10,
+						minlength: 10,
+						remote: {
+							url: "<?php echo site_url("check_become_partners_pancard_exist_or_not"); ?>",
+							type: "POST",
+						}
+					},
+					adharcard_no: {
+						// required:function() {
+						//     return ($("#chooseID option:selected" ).val() == 2);
+						// },
+						maxlength: 12,
+						minlength: 12,
+						number: true,
+						remote: {
+							url: "<?php echo site_url("check_become_partners_adharcard_exist_or_not"); ?>",
+							type: "POST",
+						}
+					},
+					UG_certificate: {
+						required: true,
+						extension: "jpg|jpeg|png",
+
+					},
+					UG_MCI_certificate: {
+						required: function() {
+								return ('<?= $rowd->category ?>' == 4);
+							},
+						extension: "jpg|jpeg|png",
+
+					},
+				},
+				messages: {
+					// comment:{
+					//     required:"Add Promotional Details",
+					// },
+					profile:{
+							required:"Please Select File",
+							extension: "Image Extension Must be jpg|jpeg|png",  
+					},
+					gender:{
+						required:"Select Gender",
+					},
+					flat_block:{
+						required:"Enter flat or block no",
+					},
+					location:{
+						required:"Enter location",
+					},
+					map_link:{
+						required:"Add Map-link",
+						url:"Enter Valid Url",
+					},
+					city:{
+						required:"Please enter your city name",
+					},
+					state:{
+						required:"Please enter your state name",
+					},
+					dob:{
+						required:"Add Birth Date",
+					},
+					pincode:{
+						required:"Please enter your pincode",
+						minlength:"minimum length is 6",
+						maxlength:"maximum length is 6",
+					},
+					is_online:{
+						required:"Please Select Above",
+					},
+					is_homevisit:{
+						required:"Please Select Above",
+					},
+					speciality:{
+						required:"Please Select Your Speciality",
+					},
+					UG_course:{
+						required:"Please Enter Course Name",
+					},
+					UG_speciality:{
+						required:"Please Enter Course Speciality Name",
+					},
+					UG_college:{
+						required:"Please Enter College Name",
+					},
+					UG_uni:{
+						required:"Please Enter University Name",
+					},
+					UG_year:{
+						required:"Select Year",
+					},
+					UG_MCI:{
+						required:"Enter Name of MCI",
+					},
+					UG_reg_no:{
+						required:"Please Enter Registration No",
+					},
+					UG_MCI_year:{
+						required:"Please Enter Year",
+					},
+					chooseID:{
+						required:"Please Select Proof",
+					},
+					pancard: {
+						required: "Please Select File",
+					},
+					pan: {
+						required: "Please Enter PAN Number",
+						remote: "This PAN No Is Already Exist!",
+					},
+					adharcard_no: {
+						required: "Please Enter AdharCard Number",
+						remote: "This Adhaar Card  Is Already Exist!",
+					},
+					UG_certificate: {
+						required: "Please Select File",
+						extension: "Image Extension Must be jpg|jpeg|png",
+					},
+					UG_MCI_certificate: {
+						required: "Please Select File",
+						extension: "Image Extension Must be jpg|jpeg|png",
+					},
+				},
+			});
+
+
+
+			if(form.valid() === true)
+			{
+				var next = jQuery(this);
+				next.parents('.form-wizard-content').removeClass('show');
+				next.parents('.form-wizard-content').hide();
+				next.parents('.form-wizard-content').next('.form-wizard-content').addClass('show');
+				next.parents('.form-wizard-content').next('.form-wizard-content').show();
+				jQuery(document).find('.form-wizard-content').each(function(){
+					if(jQuery(this).hasClass('show')){
+						var formAtrr = jQuery(this).attr('data-tab-content');
+						jQuery(document).find('.form-wizard-wrapper li a').each(function(){
+							if(jQuery(this).attr('data-attr') == formAtrr){
+								jQuery(this).addClass('active');
+								var innerWidth = jQuery(this).innerWidth();
+								var position = jQuery(this).position();
+								jQuery(document).find('.form-wizardmove-button').css({"left": position.left, "width": innerWidth});
+							}else{
+								jQuery(this).removeClass('active');
+							}
+						});
+					}
+				});
+			}
+		});
+		jQuery('.form-wizard-previous-btn').click(function() {
+			var prev =jQuery(this);
+			prev.parents('.form-wizard-content').removeClass('show');
+			prev.parents('.form-wizard-content').hide();
+			prev.parents('.form-wizard-content').prev('.form-wizard-content').addClass('show');
+			prev.parents('.form-wizard-content').prev('.form-wizard-content').show();
+			jQuery(document).find('.form-wizard-content').each(function(){
+				if(jQuery(this).hasClass('show')){
+					var formAtrr = jQuery(this).attr('data-tab-content');
+					jQuery(document).find('.form-wizard-wrapper li a').each(function(){
+						if(jQuery(this).attr('data-attr') == formAtrr){
+							jQuery(this).addClass('active');
+							var innerWidth = jQuery(this).innerWidth();
+							var position = jQuery(this).position();
+							jQuery(document).find('.form-wizardmove-button').css({"left": position.left, "width": innerWidth});
+						}else{
+							jQuery(this).removeClass('active');
+						}
+					});
+				}
+			});
+		});
+		});
+
+</script>
+
+<!--for add remove row in form-->
+<script>
+	var $TABLE = $('#table');
+	var $BTN = $('#export-btn');
+	var $EXPORT = $('#export');
+
+	$('.table-add').click(function() {
+	var $clone = $TABLE.find('tr.hide').clone(true).removeClass('hide table-line');
+	$TABLE.find('table').append($clone);
+	});
+
+	$('.table-remove').click(function() {
+	$(this).parents('tr').detach();
+	});
+
+	$('.table-up').click(function() {
+	var $row = $(this).parents('tr');
+	if ($row.index() === 1) return; // Don't go above the header
+	$row.prev().before($row.get(0));
+	});
+
+	$('.table-down').click(function() {
+	var $row = $(this).parents('tr');
+	$row.next().after($row.get(0));
+	});
+
+	// A few jQuery helpers for exporting only
+	jQuery.fn.pop = [].pop;
+	jQuery.fn.shift = [].shift;
+
+	$BTN.click(function() {
+	var $rows = $TABLE.find('tr:not(:hidden)');
+	var headers = [];
+	var data = [];
+
+	// Get the headers (add special header logic here)
+	$($rows.shift()).find('th:not(:empty):not([data-attr-ignore])').each(function() {
+		headers.push($(this).text().toLowerCase());
+	});
+
+	// Turn all existing rows into a loopable array
+	$rows.each(function() {
+		var $td = $(this).find('td');
+		var h = {};
+
+		// Use the headers from earlier to name our hash keys
+		headers.forEach(function(header, i) {
+		h[header] = $td.eq(i).text(); // will adapt for inputs if text is empty
+		});
+
+		data.push(h);
+	});
+
+	// Output the result
+	$EXPORT.text(JSON.stringify(data));
+	});
+</script>
 
 <script>
 $(document).ready(function(){
@@ -302,7 +637,7 @@ $('#dob').datepicker({
     format: 'dd/mm/yyyy',
 }).on('change', function(ev) {
     if($('#dob').valid()){
-       $('#dob_error').removeClass('p-error');   
+       $('#dob_error').removeClass('error');   
     }
  });
 var current_fs, next_fs, previous_fs;
@@ -320,391 +655,6 @@ $('#error').delay(6000).fadeOut();
     $.validator.addMethod("pan", function(value, element) {
         return this.optional(element) || /^[A-Z]{5}\d{4}[A-Z]{1}$/.test(value);
     }, "Invalid Pan Number");
-
-$(".btnNext").click(function(){
-    
-    form.validate({
-        errorElement: 'span',
-        errorClass: 'p-error',
-        highlight: function(element, errorClass, validClass) {
-            $(element).closest('.form-group').addClass("has-error");
-        },
-        unhighlight: function(element, errorClass, validClass) {
-            $(element).closest('.form-group').removeClass("has-error");
-        },
-
-        rules: {
-            comment:{
-                required:false,
-            },
-            profile:{
-                    required:true,  
-                    extension: "jpg|jpeg|png",
-            },
-            gender:{
-                required:true,
-            },
-            flat_block:{
-                required:true,
-            },
-            location:{
-                required:true,
-            },
-            map_link:{
-                required:true,
-                url:true,
-            },
-            city:{
-                required:true,
-            },
-            state:{
-                required:true,
-            },
-            dob:{
-                required:true,
-            },
-            pincode:{
-                required:true,
-                number: true,
-                minlength:6,
-                maxlength:6,
-            },
-            is_online:{
-                required:true,
-            },
-            is_homevisit:{
-                required:true,
-            },
-            speciality:{
-                required:true,
-            },
-            UG_course:{
-                required:true,
-            },
-            UG_speciality:{
-                required:true,
-            },
-            UG_college:{
-                required:true,
-            },
-            UG_uni:{
-                required:true,
-            },
-            UG_year:{
-                required:true,
-            },
-            UG_MCI:{
-                required:true,
-            },
-            UG_reg_no:{
-                required:true,
-            },
-            UG_MCI_year:{
-                required:true,
-            },
-            chooseID:{
-                required:true,
-            },
-            pancard: {
-                extension: "jpg|jpeg|png",
-            },
-            pan: {
-                required:function() {
-                    return ($("#chooseID option:selected" ).val() == 2);
-                },
-                pan: true,
-                maxlength: 10,
-                minlength: 10,
-                remote: {
-                    url: "<?php echo site_url("check_become_partners_pancard_exist_or_not"); ?>",
-                    type: "POST",
-                }
-            },
-            adharcard_no: {
-                // required:function() {
-                //     return ($("#chooseID option:selected" ).val() == 2);
-                // },
-                maxlength: 12,
-                minlength: 12,
-                number: true,
-                remote: {
-                    url: "<?php echo site_url("check_become_partners_adharcard_exist_or_not"); ?>",
-                    type: "POST",
-                }
-            },
-            UG_certificate: {
-                required: true,
-                extension: "jpg|jpeg|png",
-
-            },
-            UG_MCI_certificate: {
-                required: function() {
-                        return ('<?= $rowd->category ?>' == 4);
-                    },
-                extension: "jpg|jpeg|png",
-
-            },
-        },
-        messages: {
-            // comment:{
-            //     required:"Add Promotional Details",
-            // },
-            profile:{
-                    required:"Please Select File",
-                    extension: "Image Extension Must be jpg|jpeg|png",  
-            },
-            gender:{
-                required:"Select Gender",
-            },
-            flat_block:{
-                required:"Enter flat or block no",
-            },
-            location:{
-                required:"Enter location",
-            },
-            map_link:{
-                required:"Add Map-link",
-                url:"Enter Valid Url",
-            },
-            city:{
-                required:"Please enter your city name",
-            },
-            state:{
-                required:"Please enter your state name",
-            },
-            dob:{
-                required:"Add Birth Date",
-            },
-            pincode:{
-                required:"Please enter your pincode",
-                minlength:"minimum length is 6",
-                maxlength:"maximum length is 6",
-            },
-            is_online:{
-                required:"Please Select Above",
-            },
-            is_homevisit:{
-                required:"Please Select Above",
-            },
-            speciality:{
-                required:"Please Select Your Speciality",
-            },
-            UG_course:{
-                required:"Please Enter Course Name",
-            },
-            UG_speciality:{
-                required:"Please Enter Course Speciality Name",
-            },
-            UG_college:{
-                required:"Please Enter College Name",
-            },
-            UG_uni:{
-                required:"Please Enter University Name",
-            },
-            UG_year:{
-                required:"Select Year",
-            },
-            UG_MCI:{
-                required:"Enter Name of MCI",
-            },
-            UG_reg_no:{
-                required:"Please Enter Registration No",
-            },
-            UG_MCI_year:{
-                required:"Please Enter Year",
-            },
-            chooseID:{
-                required:"Please Select Proof",
-            },
-            pancard: {
-                required: "Please Select File",
-            },
-            pan: {
-                required: "Please Enter PAN Number",
-                remote: "This PAN No Is Already Exist!",
-            },
-            adharcard_no: {
-                required: "Please Enter AdharCard Number",
-                remote: "This Adhaar Card  Is Already Exist!",
-            },
-            UG_certificate: {
-                required: "Please Select File",
-                extension: "Image Extension Must be jpg|jpeg|png",
-            },
-            UG_MCI_certificate: {
-                required: "Please Select File",
-                extension: "Image Extension Must be jpg|jpeg|png",
-            },
-        },
-    });
-
-
-
-    if(form.valid() === true)
-    {
-
-        current_fs = $(this).parent();
-        next_fs = $(this).parent().parent().next();
-        //alert($(this).parent().html());
-        //alert(index(next_fs));
-        //alert(current_fs.html());
-        //alert(next_fs.html());
-
-        //$(".ul li").eq(1).addClass("active");
-        //alert(current_fs.html());
-        //$(".tabs li").eq($("div:first").index(current_fs-2)).removeClass("current");
-        //$(".tabs li").eq($("div:first").index(next_fs)).addClass("current");
-        //$('ul.tabs li').removeClass('current');
-        //$('.tab-content').removeClass('current');
-        //alert()
-        //show the next fieldset
-        //$("#tabs li").
-        var c_id = $(this).parent().attr('id');
-        //alert(c_id);
-
-        //alert();
-        //$(".tabs li").find(c_id).removeClass("current");
-        //$(".tabs li .tab-link").toggleClass('current');
-            if(c_id === 'tab-1') {
-                $("#tab1").removeClass('current');
-                $("#tab2").addClass('current');
-            }
-
-            if(c_id === 'tab-2') {
-                $("#tab2").removeClass('current');
-                $("#tab3").addClass('current');
-            }
-
-            if(c_id === 'tab-3') {
-                $("#tab3").removeClass('current');
-            }
-
-        $(this).parent().parent().next().find('div:first').addClass("current");
-
-        $(this).parent().removeClass("current");
-        //next_fs.first().addClass("current");
-        next_fs.show();
-        current_fs.hide();
-        //current_fs.hide();
-        
-        //hide the current fieldset with style
-
-        /*current_fs.animate({opacity: 0}, {
-        step: function(now) {
-        opacity = 1 - now;
-
-        current_fs.css({
-            'display': 'none',
-            'position': 'relative'
-        });
-        next_fs.css({'opacity': opacity});
-        },
-        duration: 600
-        });*/
-    }
-});
-        /*$("#submit_btn").addClass('d-none');
-
-        $('ul.tabs li').click(function() {
-            var tab_id = $(this).attr('data-tab');
-            if (tab_id == 'tab-1') {
-                $("#submit_btn").addClass('d-none');
-                $('ul.tabs li').removeClass('current');
-                $('.tab-content').removeClass('current');
-
-                $(this).addClass('current');
-                $("#" + tab_id).addClass('current');
-            } else if (tab_id == 'tab-2') {
-
-                    $("#submit_btn").addClass('d-none');
-                    $('ul.tabs li').removeClass('current');
-                    $('.tab-content').removeClass('current');
-                    $(this).addClass('current');
-                    $("#" + tab_id).addClass('current');
-            } else if (tab_id == 'tab-3') {
-                    $("#submit_btn").removeClass('d-none');
-                    $('ul.tabs li').removeClass('current');
-                    $('.tab-content').removeClass('current');
-                    $(this).addClass('current');
-                    $("#" + tab_id).addClass('current');
-            }
-        });
-
-        $('.btnNext').click(function() {
-
-        if ($('#tab-1').hasClass('current')) {
-            $("#submit_btn").addClass('d-none');
-            $('.tabs > .current').next('li').trigger('click');
-        }else if ($('#tab-2').hasClass('current')) {
-            $("#submit_btn").removeClass('d-none');
-            $('.tabs > .current').next('li').trigger('click');
-        }
-        });
-        $('.btnPrevious').click(function() {
-            if ($('#tab-1').hasClass('current')) {
-                $("#submit_btn").addClass('d-none');
-            } else if ($('#tab-2').hasClass('current')) {
-                $("#submit_btn").addClass('d-none');
-            } else if ($('#tab-3').hasClass('current')) {
-                $("#submit_btn").removeClass('d-none');
-            }
-            $('.tabs > .current').prev('li').trigger('click');
-        });
-    }*/
-
-$(".btnPrevious").click(function(){
-
-current_fs = $(this).parent();
-previous_fs = $(this).parent().parent().prev();
-var c_id = $(this).parent().attr('id');
-if(c_id === 'tab-1') {
-    $("#tab1").removeClass('current');
-}
-if(c_id === 'tab-2') {
-    $("#tab2").removeClass('current');
-    $("#tab1").addClass('current');
-}
-if(c_id === 'tab-3') {
-    $("#tab3").removeClass('current');
-    $("#tab2").addClass('current');
-}
-
-//alert()
-//Remove class active
-//$(".tabs li").eq($("fieldset").index(current_fs)).addClass("current");
-//$(".tabs li").eq($("fieldset").index(previous_fs)).removeClass("current");
-//alert($(this).)
-$(this).parent().removeClass("current");
-$(this).parent().parent().prev().find('div:first').addClass("current").removeAttr('style');
-
-
-//$(".tabs li").eq($("fieldset").index(current_fs)).removeClass("current");
-
-//show the previous fieldset
-
-previous_fs.show();
-
-
-//hide the current fieldset with style
-/*current_fs.animate({opacity: 0}, {
-step: function(now) {
-// for making fielset appear animation
-opacity = 1 - now;
-current_fs.css({
-'display': 'none',
-'position': 'relative'
-});
-previous_fs.css({'opacity': opacity});
-},
-
-});*/
-});
-
-
-
-
-
-
 });
 
 
