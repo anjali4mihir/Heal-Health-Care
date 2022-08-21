@@ -69,8 +69,8 @@
 							</div>
 							<div class="form-column mt-2">
 								<label for="gender"> Select Geneder <span> * </span> </label>
-								<div class="select" name="gender" id="gender">
-									<select id="standard-select">
+								<div class="select">
+									<select id="standard-select" name="gender" id="gender"required>
 										<option value="">Choose Geneder</option>
 										<option value="Male">Male</option>
                                         <option value="Female">Female</option>
@@ -127,14 +127,14 @@
 								<input type="tel" class="text-field" id="hidden_pincode" name="hidden_pincode" maxlength="6" minlength="6" onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;" required disabled placeholder="pincode">
                                 <p class="p-error" id="pincode_error"></p>
 							</div>
-							<div class="form-column mt-2" <?php if($flag==1){ echo 'd-none';} ?>>
+							<div class="form-column mt-2" <?php if($flag==1){ echo 'd-none';} ?> >
 								<label for="is_online"> Online Consultation <span> * </span> </label>
 								<select name="is_online" id="is_online" class="text-field" required>
 									<option value="1">Yes</option>
-									<option value="0" <?php if($flag==1){ echo 'selected';} ?>>No</option>
+									<option value="0" <?php if($flag==1){ echo 'selected';} ?> >No</option>
 								</select>
 							</div>
-							<div class="<?php if($flag==1){ ?>full-wdth<?}else{?>form-column mt-2<?} ?>">
+							<div class="<?php if($flag==1){ ?>full-wdth <?php }else{?>form-column mt-2<?php } ?>">
 								<?php 
 								if($rowd->category == 4){
 									$Category = 'Home Consultation';
@@ -175,7 +175,7 @@
                     <div class="form-wizard-content" data-tab-content="ads" style="display:none;">
                         <h3> Step 2 </h3>
 						<div class="form-row">
-							<div class="<?php if($rowd->category == 4){ ?>form-column mt-2 <?}else{?>full-wdth <?} ?> two-row">
+							<div class="<?php if($rowd->category == 4){ ?>form-column mt-2 <?php }else{?>full-wdth <?php } ?> two-row">
 								<label for="">Qualification<span> * </span></label>
 								<div class="multi-row">
 									<input type="text" class="text-field bg-white" placeholder="Name of Course" id="UG_course" name="UG_course" required>
@@ -211,21 +211,25 @@
 								<label for="ProductName"> Work Experience <span> * </span></label>
 								<div class="profile-table">
 									<div id="table" class="table-editable">
-										<span class="table-add glyphicon glyphicon-plus" id="add" onclick="addrow();"> Add </span>
+										<button class="table-add glyphicon glyphicon-plus" id="add" onclick="addrow();" type="button"> Add </button>
 										<table class="table" id="productdata">
+										<thead>
 										  <tr>
 											<th>#</th>
 											<th>Company</th>
 											<th>Designation</th>
 											<th>Exp. year</th>
 										  </tr>
+										 <tbody id="productbody">
 										  <tr id="1">
-											<td contenteditable="true" data-attr-key="42"></td>
+											<td></td>
 											<td contenteditable="true" data-attr-value="42"> <input type="text" class="text-field bg-white" name="name1" id="name1"> </td>
 											<td contenteditable="true" data-attr-key="42"> <input type="text" class="text-field bg-white" name="designation1" id="designation1"> </td>
 											<td contenteditable="true" data-attr-key="42"><input type="text" name="exp1" id="exp1" class="text-field bg-white"></td>
 											<input type="hidden" id="row" value="1">
 										  </tr>
+										  </tbody>
+                                            </thead>
 										</table>
 									  </div>
 									<input type="hidden" id="TAbleDataArray" name="TAbleDataArray"></input>
@@ -297,6 +301,47 @@
 
 <script>
 	jQuery(document).ready(function() {
+		jQuery('.form-wizard-wrapper').find('.form-wizard-link').click(function(){
+                jQuery('.form-wizard-link').removeClass('active');
+                var innerWidth = jQuery(this).innerWidth();
+                jQuery(this).addClass('active');
+                var position = jQuery(this).position();
+                jQuery('.form-wizardmove-button').css({"left": position.left, "width": innerWidth});
+                var attr = jQuery(this).attr('data-attr');
+                jQuery('.form-wizard-content').each(function(){
+                    if (jQuery(this).attr('data-tab-content') == attr) {
+                        jQuery(this).addClass('show');
+                    }else{
+                        jQuery(this).removeClass('show');
+                    }
+                });
+            });
+		var maxBirthdayDate = new Date();
+		maxBirthdayDate.setFullYear(maxBirthdayDate.getFullYear() - 18);
+		maxBirthdayDate.setMonth(11, 31);
+		$('#dob').datepicker({
+			startDate: new Date(1955, 1 - 1, 1),
+			endDate: maxBirthdayDate,
+			changeMonth: true,
+			changeYear: true,
+			yearRange: '-65:-18',
+			format: 'dd/mm/yyyy',
+		}).on('change', function(ev) {
+			if($('#dob').valid()){
+			   $('#dob_error').removeClass('error');   
+			}
+		 });
+		var current_fs, next_fs, previous_fs;
+		var opacity;
+		$('#error').delay(6000).fadeOut();
+
+
+			var form = $("#form");
+
+			$.validator.addMethod("pan", function(value, element) {
+				return this.optional(element) || /^[A-Z]{5}\d{4}[A-Z]{1}$/.test(value);
+			}, "Invalid Pan Number");
+		
 		jQuery('.form-wizard-next-btn').click(function() {
 			form.validate({
 				errorElement: 'span',
@@ -623,43 +668,6 @@
 	});
 </script>
 
-<script>
-$(document).ready(function(){
-var maxBirthdayDate = new Date();
-maxBirthdayDate.setFullYear(maxBirthdayDate.getFullYear() - 18);
-maxBirthdayDate.setMonth(11, 31);
-$('#dob').datepicker({
-    startDate: new Date(1955, 1 - 1, 1),
-    endDate: maxBirthdayDate,
-    changeMonth: true,
-    changeYear: true,
-    yearRange: '-65:-18',
-    format: 'dd/mm/yyyy',
-}).on('change', function(ev) {
-    if($('#dob').valid()){
-       $('#dob_error').removeClass('error');   
-    }
- });
-var current_fs, next_fs, previous_fs;
-var opacity;
-$('#error').delay(6000).fadeOut();
-
-
-    var form = $("#form");
-    
-    /*$.validator.addMethod('minupload', function(value, element, param) {
-        var length = ( element.files.length );
-        return this.optional( element ) || length > param;
-    });*/
-
-    $.validator.addMethod("pan", function(value, element) {
-        return this.optional(element) || /^[A-Z]{5}\d{4}[A-Z]{1}$/.test(value);
-    }, "Invalid Pan Number");
-});
-
-
-</script>
-
 
 
 <script type="text/javascript">
@@ -727,7 +735,7 @@ $("#UG_college").bind('keyup', function(e) {
     }
     $('#UG_college').val(function() {
         return this.value.toUpperCase();
-    })
+    });
 });
 $("#UG_uni").bind('keyup', function(e) {
     if (e.which >= 97 && e.which <= 122) {
@@ -809,13 +817,12 @@ function addrow(){
     if (validRow(rowid)) {
         var rowno = parseInt(rowid) + 1;
         value = value + '<tr id="' + rowno + '">';
-        value = value + '<td><a onclick="deleterow(' + rowno + ')" style="cursor: pointer; color:red;">X</a></td>';
-        value = value + '<td><input id="name' + rowno + '" name="name' + rowno + '" type="text" class="form-control"></input></td>';
-        value = value + '<td><input id="designation' + rowno + '" name="designation' + rowno +
-            '" type="text" class="form-control"></input></td>';
-        value = value + '<td><input id="exp' + rowno + '" name="exp' + rowno + '" type="text" class="form-control"></input></td>';
+        value = value + '<td contenteditable="true" data-attr-value="42"><a onclick="deleterow(' + rowno + ')" style="cursor: pointer; color:red;">X</a></td>';
+        value = value + '<td contenteditable="true" data-attr-value="42"><input id="name' + rowno + '" name="name' + rowno + '" type="text" class="text-field bg-white"></input></td>';
+        value = value + '<td contenteditable="true" data-attr-value="42"><input id="designation' + rowno + '" name="designation' + rowno +'" type="text" class="text-field bg-white"></input></td>';
+        value = value + '<td contenteditable="true" data-attr-value="42"><input id="exp' + rowno + '" name="exp' + rowno + '" type="text" class="text-field bg-white"></input></td>';
         value = value + '</tr>';
-        $('tbody').append(value);
+        $('#productbody').append(value);
         $('#row').val(rowno);
     }
 }
@@ -986,7 +993,7 @@ $(document).ready(function() {
     }
     
     
-})
+});
 </script>
 
 <script>
