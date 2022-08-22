@@ -68,10 +68,10 @@
 								<p class="p-error" id="profile_error"></p>
 							</div>
 							<div class="form-column mt-2">
-								<label for="gender"> Select Geneder <span> * </span> </label>
+								<label for="gender"> Select Gender <span> * </span> </label>
 								<div class="select">
 									<select id="standard-select" name="gender" id="gender"required>
-										<option value="">Choose Geneder</option>
+										<option value="">Choose Gender</option>
 										<option value="Male">Male</option>
                                         <option value="Female">Female</option>
 									</select>
@@ -163,7 +163,7 @@
 							</div>
 							<?php } ?>
 							<div class="full-wdth">
-								<label for="comment">Promotional Description <span> * </span></label>
+								<label for="comment">Promotional Description </label>
 								<textarea rows="5" class="text-field bg-white" cols="50" id="comment" name="comment"></textarea>
 								<p class="p-error" id="comment_error"></p>
 							</div>
@@ -175,7 +175,7 @@
                     <div class="form-wizard-content" data-tab-content="ads" style="display:none;">
                         <h3> Step 2 </h3>
 						<div class="form-row">
-							<div class="<?php if($rowd->category == 4){ ?>form-column mt-2 <?php }else{?>full-wdth <?php } ?> two-row">
+							<div class="<?php if($rowd->category == 4){ ?>full-wdth mt-2 <?php }else{?>full-wdth <?php } ?> two-row">
 								<label for="">Qualification<span> * </span></label>
 								<div class="multi-row">
 									<input type="text" class="text-field bg-white" placeholder="Name of Course" id="UG_course" name="UG_course" required>
@@ -208,7 +208,7 @@
 							</div>
 							<?php } ?>
 							<div class="full-wdth profile-table-top">
-								<label for="ProductName"> Work Experience <span> * </span></label>
+								<label for="ProductName"> Work Experience </label>
 								<div class="profile-table">
 									<div id="table" class="table-editable">
 										<button class="table-add glyphicon glyphicon-plus" id="add" onclick="addrow();" type="button"> Add </button>

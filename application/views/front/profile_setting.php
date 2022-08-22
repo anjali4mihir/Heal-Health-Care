@@ -291,10 +291,10 @@
 									<p class="error" id="name_error"></p>
 								</div>
 								<div class="form-column">
-									<label for="gender"> Select Geneder <span> * </span> </label>
+									<label for="gender"> Select Gender <span> * </span> </label>
 									<div class="select">
 										<select name="gender" id="gender" class="select2" required>
-											<option value="">Choose Geneder</option>
+											<option value="">Choose Gender</option>
 											<option value="Male">Male</option>
 											<option value="Female">Female</option>
 											<p class="error" id="gender_error"></p>
