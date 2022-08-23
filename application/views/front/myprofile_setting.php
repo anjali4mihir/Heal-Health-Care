@@ -248,7 +248,7 @@
 							<div class="full-wdth">
 								<label for=""> Choose Id Proof <span> * </span> </label>
 								<div class="select">
-									<select id="standard-select" name="chooseID" id="chooseID" onchange="hideshowID();" required>
+									<select name="chooseID" id="chooseID" onchange="hideshowID();" required>
 										<option value="">Choose your ID</option>
 										<?php /* <option value="1">Aadharcard</option> */ ?>
 										<option value="2">Pan Card</option>
