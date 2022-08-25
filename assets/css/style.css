@@ -5902,6 +5902,9 @@ footer .footer-link ul li a:hover::after {
   margin-top: 20px;
   text-decoration: none;
 }
+.form-wizard .form-wizard-wrapper .form-wizard-content .form-wizard-next-btn {
+	padding: 12px 50px;
+}
 @media (max-width: 767.98px) {
   .form-wizard .form-wizard-wrapper .form-wizard-content .form-wizard-next-btn,
 .form-wizard .form-wizard-wrapper .form-wizard-content .form-wizard-previous-btn {

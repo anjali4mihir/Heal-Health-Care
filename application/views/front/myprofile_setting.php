@@ -127,7 +127,7 @@
 								<input type="tel" class="text-field" id="hidden_pincode" name="hidden_pincode" maxlength="6" minlength="6" onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;" required disabled placeholder="pincode">
                                 <p class="p-error" id="pincode_error"></p>
 							</div>
-							<div class="form-column mt-2" <?php if($flag==1){ echo 'd-none';} ?> >
+							<div class="form-column mt-2 <?php if($flag==1){ echo ' d-none';} ?>" >
 								<label for="is_online"> Online Consultation <span> * </span> </label>
 								<select name="is_online" id="is_online" class="text-field" required>
 									<option value="1">Yes</option>
@@ -285,7 +285,7 @@
 							<?php } ?>
 							<div class="full-wdth clearfix step-btn">
 								<a href="javascript:void(0);" class="form-wizard-previous-btn">Previous</a>
-								<input type="submit" id="submit_btn" class="book-now-btn form_btn mt-1" name="save_button" value="Register">
+								<input type="submit" id="submit_btn" class="form-wizard-next-btn" name="save_button" value="Register">
 							</div>
 						</div>
                     </div>

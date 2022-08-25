@@ -415,7 +415,7 @@
 
 							<div class="full-wdth clearfix step-btn">
 								<a href="javascript:void(0);" class="form-wizard-previous-btn">Previous</a>
-								<input type="submit" id="submit_btn" class="book-now-btn form_btn mt-1" name="save_button" value="Register">
+								<input type="submit" id="submit_btn" class="form-wizard-next-btn" name="save_button" value="Register">
 							</div>
 						</div>
 					</div>

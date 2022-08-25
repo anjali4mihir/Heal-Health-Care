@@ -255,7 +255,7 @@
 
     <div class="specialities-section">
         <div class="container">
-            <h2 class="animation-element fadeUp animation-element-fast"> Meet Specalists Pan India</h2>
+            <h2 class="animation-element fadeUp animation-element-fast"> Meet Specialist Pan India</h2>
             <p class="speci-count animation-element fadeUp animation-element-slow"> 30+ Specialities</p>
 
             <div class="specialities-option animation-element fadeUp animation-element-slow">
@@ -315,7 +315,7 @@
                     <div class="service-card">
                         <a id="myBtn7" class="modal-trigger no-select viewDesc" data-url="dietician">
                             <img src="<?= base_url(); ?>assets/img/dietician.jpg" alt="Doctors"> 
-                            <p> Dieticion & Nutritionist </p> 
+                            <p> Dietician & Nutritionist </p> 
                         </a>
                     </div>
                     <div class="service-card">
@@ -466,7 +466,7 @@
 
     <div class="consultant-section">
         <div class="container">
-            <h2 class="animation-element fadeLeft animation-element-exfast"> Consult Top Vaterinarians Across India</h2>
+            <h2 class="animation-element fadeLeft animation-element-exfast"> Consult Top Veterinarians Across India</h2>
             <p class="animation-element fadeLeft animation-element-exfast"> Now Care For Your Beloved Pet </p>
 
             <img src="<?= base_url(); ?>assets/img/veterinarians.jpg" class="veterians-img animation-element zoom animation-element-fast">
