@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <?php $this->load->view('front/common_css'); ?>
 </head>
-<body><div class="wrapper"><div class="preloader-wrap"><div class="preloader"><span class="dot"></span><div class="dots"><span></span><span></span><span></span></div></div></div><main class="main-content site-wrapper-reveal"><section class="login"><div class="container"><div class="login-form"><div class="close-btn" id="close">+</div><img src="<?= base_url() ?>assets/img/logo-2.png"><form class="form" method="post" id="form" name="form" action="" accept-charset="utf-8" enctype="multipart/form-data">
+<body><div class="wrapper"><div class="preloader-wrap"><div class="preloader"><span class="dot"></span><div class="dots"><span></span><span></span><span></span></div></div></div><main class="main-content site-wrapper-reveal"><section class="login"><div class="container"><div class="login-form"><div class="close-btn" id="close">+</div><img src="<?= base_url() ?>assets/img/heal-logo.png"><form class="form" method="post" id="form" name="form" action="" accept-charset="utf-8" enctype="multipart/form-data">
                             <div class="row">
                                 <?php if(isset($error)){ echo $error; }
                                    echo $this->session->flashdata("message"); ?>
